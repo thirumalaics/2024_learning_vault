@@ -1,0 +1,135 @@
+- IP addr: 32 bit int
+	- 12 digits split into 4 parts
+	- 4 billion unique IP addresses
+- IPv6 addresses the limitation of IPv4
+	- 128 bit
+- each message sent should have sender and receiver IP addr details
+- Internet protocol
+	- rules of sending data over the internet
+- every packet has a reserved amount of space for the md called the header
+	- IP packet
+- sending huge data requires us to break them up
+	- how it will be reassembled in the receiver?
+		- in IP, it is not possible
+		- IP does not provide the ability to reorder
+	- that is where TCP comes in, it solves this problem and many other probs
+		- Transport Control Protocol
+	- When using TCP, the packet will have an extra TCP header(in addition to IP header)
+	- TCP header includes sequence number to allow reassembling
+	- IP header helps in data being transferred bw systems
+	- TCP header helps in reassembling data the is received
+	- the data portion of the packet would contain would contain the HTTP request or response detail
+	- IP is concerned with Network layer
+	- TCP is concerned with the Transport layer
+	- HTTP is app layer
+
+## Public v Private
+- client machine does not necessarily need a public IP
+	- bunch of machines are connected to a nw through a device such as router
+	- routers have their own public IP
+	- this public IP can be used for requests and responses
+	- a private IP is assigned with the nw created by the router
+	- which each machine in the nw can use to comms
+		- this comms can be further constrained using other techs like firewall etc..
+- static v Dynamic
+	- static IP important for a server
+	- dynamic IP is possible for servers and it is made possible using dynamic domain name resolution
+- ports
+	- 16 bit value for a machine
+	- uniquely identifies a connection endpoint
+	- at a sw level, a port is a logical construct that identifies a specific process
+	- 127.0.0.1 - local host : used to point to self
+	- only single app for a single port
+
+## TCP and UDP
+- TCP/IP, TCP runs on top of IP
+- IP is barebone
+- TCP adds enhancements such as ordering
+	- adds reliability
+		- ex: missed packets of data are resent
+	- not possible with UDP
+- TCP establishes a two way connection channel bw the two systems using a 3-way handshake
+	- overhead
+	- adds latency to set up
+	- slower
+	- most protocols such as HTTP, SMTP are built on top of TCP
+- UDP is user datagram protocol
+	- datagram = packet
+	- no establishing connections
+	- no resending
+	- data might arrive out of order
+		- no correction from UDP
+	- faster
+	- useful for streaming
+
+## DNS
+- similar to contacts in phone
+![[Pasted image 20240126192308.png]]
+- `nslookup google.com`
+- ICANN org that owns all the domain names
+- from the above diagram the ISP is missing, ISP sits bw us and the DNS
+- DNS record has it's types
+	- one such is `A` - address record
+		- means there is a string that points to IP addr
+- client can cache IPAs so that it does not have to go through the cycle repeatedly
+- for public servers, firewalls are configured to allow external traffic
+- the component .com is called Top Level Domain
+`protocol://subdomain.primarydomain.TLD/path`
+`https://domains.google.com/get-started`
+- www is not necessary anymore
+- what is Application layer
+
+## Application layer protocols
+- client does not have to be an end-user
+	- client is one that makes the request
+	- client can be another server
+	- servers are allowed to communicate with each other
+- RPC - remote procedure call
+	- way that machines can communicate with each other separated by a nw
+	- executing code over the nw
+	- makes it look like the code is in local to the client
+	- nw calls also fall under this term
+- HTTP
+	- protocol of the internet
+	- IP - for moving data across the nw
+	- TCP - adds reliability to IP
+	- both of the above are bare bone structures that we need to build apps
+	- app layer(HTTP) protocol built on top of the above
+	- we have control over only http
+	- request response protocol
+		- under the hood TCP connection is set up
+	- no state management bw the client and server
+	- https is a variation of http
+	- every request has 2 comps
+		- header and body
+	- 3 types of headers
+		- general
+			- URL that we request
+			- request method
+		- request headers
+- GET, POST, PUT(UPDATE), DELETE
+	- GET request does not have a body, so any extra information should be embedded in the URL
+- HTTPS(Hyper Text Transfer protocol with SSL(Secure Socket Layer)) 
+	- SSL came b4 TLS(Transport Layer Security)
+		- SSL is outdated, but still the term is used with TLS
+	- SSL/TLS encrypts anything that we send over HTTP
+- Websocket protocol can fill in the gaps of HTTP
+
+- polling can be implemented by HTTP
+	- we send a request for all the twitch stream messages as of some time, we get all the messages as of that time as one response, the connection closes
+		- this is repeated as needed and this is polling
+	- how do we time the polling?
+	- but we cannot keep polling every one second using HTTP, because it is TCP and TCP comes with the over head of 3 way handshake
+	- websocket protocol solves this
+- websocket
+	- first we call websocket handshake:
+		- client sends a HTTP request to establish a websocket connection
+		- that request is responded with status 101, means the connection is upgraded to websocket connection
+	- after this a persistent connection is established bw the server and the client
+	- this allows us to send info in both directions
+	- the server pushes all the infor when needed
+	- less expensive than HTTP
+	- there is a state established bw the client and the server
+- HTTP does not do bidirectional communication
+	- not until HTTP2, which introduces streaming and makes websocket obsolete
+	- but still websocket protocol is widespread

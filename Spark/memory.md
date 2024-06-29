@@ -1,0 +1,30 @@
+- execution memory is used for storing objects required during the execution of spark tasks
+- data is loaded into execution memory and computations are performed in execution mem
+- storage mem contains
+	- cached data, broadcast variables
+- execution memory
+	- used for computation
+	- loads relevant dataframes into execution memory
+- user mem
+	- custom datastructures or variables, UDfs that we create, lineage
+- reserved memory
+	- spark internal objects
+- dynamic allocation bw execution and storage mem
+	- but there is a limit to how much execution mem can take away from storage
+	- after the threshold, no eviction takes place and the data is spilled
+	- same happens when storage mem requires more space but hits the limit it can borrow from execution memory
+![[Pasted image 20240122083526.png]]
+
+- disk spill can come from either storage mem(when the cached data frames are too big) or execution mem(when operations require significant amounts of intermediate data storage)
+- disk spill is costly because spark has to write(already computed partitions) and read (partitions that are yet to be computed)
+- CPU cycles that could be used for computations are used on read/write operations
+- cost
+- causes
+	- large datasets
+	- complex operations
+		- wide transformations
+	- too few partitions
+	- huge caches
+	- skew
+	- inadequate configuration
+	- 

@@ -1,0 +1,49 @@
+- metaprogramming
+	- potential for a program to have knowledge of or manipulate itself
+	- in py, metaprogramming capability for classes is called ***metaclasses***
+- metaclasses is an OOP concept
+	- this is prevalent in all py code
+	- we are using them without being aware of it
+- py capability: get under the hood and define custom metaclasses
+	- use of metaclass is somewhat controversial
+- in py, a class can be one of two varieties:
+	- old-style v new-style
+	- informal terminology
+- old-style
+	- \_\_class\_\_ attr and type of an object are not quite the same thing
+	- if obj is an instance of an old style class, obj.\_\_class\_\_ designates the class, but the type is always `instance`
+	- ![[Pasted image 20240526182228.png]]
+- new-style classes
+	- type(obj) == obj.\_\_class\_\_
+		- meaning the type fn prints the same as the class attribute
+		- ![[Pasted image 20240526182550.png]]
+- in py3, all classes are new style classes
+	- it is reasonable to refer to an object's type and its class interchangeably
+- in py 2, all classes are old style by default
+	- until py 2.2, there was no support for new-style classes
+	- from 2.2, new style classes can be created by explicitly declaring as new-style
+- classes are objects as well
+	- as everything in python is an object [Everything is an object in python - object class and type class (archive.org)](https://web.archive.org/web/20151210024637/https://mail.python.org/pipermail/python-list/2015-June/691689.html)
+	- classes themselves should have a type
+	- type of any new-style class is type
+![[Pasted image 20240526183109.png]]
+![[Pasted image 20240526183456.png]]
+- type of many built-in classes are type as well
+![[Pasted image 20240526183303.png]]
+- type is a metaclass, of which classes are instances
+- new-style classes in python are instances of type metaclass
+![[Pasted image 20240526183713.png]]
+- type also accepts 3 arguments
+	- ***name*** specifies the class name(str)
+		- this becomes the \_\_name\_\_ attr of the class
+			- object of the class does not have this attr, only the class does
+	- ***bases*** specifies a tuple of the base classes from which the class inherits
+		- this becomes the \_\_bases\_\_ attr of the class
+			- this attribute is only available on the class and not on the object
+	- ***dct*** specifies a namespace dictionary containing definitions for the class body
+		- this becomes the \_\_dict\_\_ attr of the class
+		- this attr is available on both object and class
+			- but the contents are not the same
+			- dict of class only contains the values passed in dct
+- calling type in this manner creates a new instance of the ***type*** metaclass
+	- it dynamically creates a new class

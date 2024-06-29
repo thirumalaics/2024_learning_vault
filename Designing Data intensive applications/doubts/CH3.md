@@ -1,0 +1,1 @@
+- how binary files work and how do they store data?

@@ -1,0 +1,27 @@
+- move data
+- store data
+- transform data
+- design choices are expensive to correct
+- design is about tradeoffs, no single correct ans
+	- how to compare/measure the tradeoffs
+- one important measurement is availability
+	- uptime/(uptime + downtime)
+- availability is used to define SLO
+	- Service level objectives = target for the app/design
+	- SLA diff from SLO
+	- SLA = SLO + extra stuff
+	- SLA is what the customer can expect and what will be the consequences when it is not met
+- vertically scaling can improve availability but not the reliability
+- redundancy enables fault tolerance which in turn enables reliability
+- throughput
+	- amount of data we can handle over some period of time
+- horizontally scaling data might be complicated
+	- some data stored in some db
+	- when adding redundance, keeping all the dbs in sync is complicated
+- latency: amount of time it takes for an operation to complete
+- lowering latency helps increasing the throughput
+- latency can be reduced by scaling
+	- if not distributed, horizontal scaling can help
+	- if distributed, vertical scaling can help
+- CDN - content delivery nw
+	- another tech to reduce latency

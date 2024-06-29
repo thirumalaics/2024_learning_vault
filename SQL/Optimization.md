@@ -1,0 +1,8 @@
+- select only the required columns
+- use having clause only for filtering on an agg
+- reduce the number of subqueries
+- IN operator has the slowest performance
+	- most efficient when most of the filter criteria is in the sub-query
+- use exists instead of left semi join
+- try to use UNION all in stead of UNION
+- BETWEEN better than >= and <=

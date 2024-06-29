@@ -1,0 +1,41 @@
+- computers are built with transistors
+## Components
+- disk
+	- primary storage device
+	- data remains intact irrespective of the state of the machine(turned on or off)
+	- byte is 8 bits
+	- bit is the smallest unit of information in computers, expressed as 0 or 1
+	- HDD collects more wear and tear because of a moving piece inside
+		- wear and tear slows them down over time
+	- SSD relies on reading and writing data electronically(similar to RAM)
+- RAM
+	- relatively smaller in size when compared to disk
+	- expensive, faster
+	- holds any variable that our program has created and apps that we are running
+	- volatile memory
+	- RAM and disk do not directly comms with each other
+		- CPU to facilitate data transfer bw them
+- CPU
+	- intermediary bw RAM and disk
+	- when we write code and run it, the code is translated into a set of binary instructions stored in RAM
+		- which component does this translation?
+			- compiler ig
+		- The CPU reads and executes these instructions, which may involve manipulating data stored in RAM or disk
+	- all computations occur within CPU
+		- fetches instructions from the RAM, executes them
+		- CPU executes a program that is stored as a sequence of machine language instructions in main memory
+		- follows fetch and execute cycle
+	- CPU can (read/write) from/to disk and RAM
+	- CPU contains cache
+		- extremely fast memory
+	- speed wise: cache > RAM > Disk
+		- cache is mainly used as a substitute for the RAM
+		- the data that gets into cache is chosen intelligently
+- Caches
+	- Kbs to 10s of MBs of data
+	- whenever a read operation is requested, the cache is checked before the RAM and the disk
+	- if data requested is in the cache and is unchanged since the last time it was accessed, it will be fetched from the cache
+	- aka SRAM
+- moore's law states that every two years, the number of transistors in a CPU double and the cost tend to halve
+
+https://math.hws.edu/eck/cs124/javanotes6/c1/s1.html

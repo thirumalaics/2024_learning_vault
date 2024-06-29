@@ -1,0 +1,6 @@
+1. [[2024-02-10#History of data management and analytics]]
+2. [[2024-06-15#DataBricks lakehouse platform]]
+3. [[2024-06-15#DLHPf Architecture and Security fundamentals]]
+4. [[2024-06-15#Importance of data reliability and performance on pf arch]]
+5. [[2024-06-15#delta lake]]
+6. [[2024-06-15#Photon]]

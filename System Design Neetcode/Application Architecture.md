@@ -1,0 +1,22 @@
+- dev perspective
+	- writes code that gets deployed to a server
+	- server: computer that handles requests from another computer
+	- server requires persistent storage to store the app's data
+		- we need external storage sys
+		- server's built in storage is limited
+		- storage is connected through nw
+- from a user's perspective, they request the server for data
+	- when multiple users request, there will be bottleneck
+	- straightforward way to deal with server bottleneck is scaling
+		- vertical or horizontal
+	- one problem with horizontal scaling is deciding which server should serve the request
+		- that is where the load balancer comes in
+		- distributes the requests equally
+- it is also possible that our server talks to other servers for different purposes
+- logging from the server should be redirected to a logging service to better track activity
+- we also need metrics to track what is happening with our server
+	- some metrics can be derived from the logging service
+	- but not all metrics can be sourced from logs, hence we need a separate system that takes care of tracking logs
+- metrics system feeds into an alerting service which sends us a push notification
+- if the above components are running in different systems, network comes into picture
+![[Pasted image 20240120105626.png]]

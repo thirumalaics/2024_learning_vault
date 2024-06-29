@@ -1,0 +1,72 @@
+- process of re-distributing data across nodes
+- transformations that can cause a shuffle
+	- join
+	- aggregations
+	- distinct
+	- repartitioning operations
+- use coalesce when we want to reduce the number of partitions
+
+- reasons for shuffling/data redistribution
+	- redistribute an existing distributed data collection
+	- the need could be there in order to increase or decrease the num of data partition, when existing number of partitions
+		- are not sufficient to maximize usage of existing resources
+		- are too heavy to be computed reliably without memory overruns
+		- are too high in number, which increases the task scheduling overhead
+	- perform aggregation/join on data collection
+		- because for performing the above operations, all the records belonging to aggregation or join key should reside in a single partition
+		- when the existing partitioning scheme does not satisfy, redistribution occurs
+- partitioner and num of shuffle partitions
+	- num shuffle partition: number of output partitions after the shuffle is executed on a data collection
+	- partitioner decides which record goes into which partition
+	- two partitioners provided out-of-the box
+	- hash partitioner decides the output partition based on hash code computed for key object for the data records
+	- range partitioner
+		- a range of key values are estimated for each of the shuffled partition
+		- decides the op partition based on the comparison of the key value against each of the above ranges
+	- by default most of the operations use hash partitioner when there is need for the shuffle
+	- very few dataset/df apis use range partitioner implicitly
+	- custom partitioner can be specified and can be used in limited RDD APIs
+	- we cannot specify custom partitioner in any of the df/ds API
+- provision of number of shuffle partitions varies bw RDD and df/ds APIs
+	- in RDD, it is either assumed to be same as b4 shuffling, or should be explicitly mentioned as an argument
+	- in Ds/Df, set through a configuration
+- shuffle block
+	- is produced from a shuffle write operation on a single input partition during the shuffle write stage
+	- uniquely identifies a block of data which belongs to a single shuffled partition
+	- unique identifier is given to each shuffle block (shuffleID, MapID, ReduceID)
+	- shuffleid uniquely identifies each shuffle stage
+	- mapid uniquely identifies each of the input partition(of the data collection to be shuffled) and reduceID uniquely identifies each of the output shuffle partition
+	- a shuffle block is hosted in a disk file on cluster nodes
+		- is either serviced by the block manager of an executor, or via external shuffle service
+	- ![[Pasted image 20240127173317.png]]
+- shuffle read/write
+	- a shuffle operation introduces a pair of stage in spark application
+	- shuffle write happens in one stage and the shuffle read happens in the subsequent stage
+	- both of these operations are executed independently for each of the output(write)/input(read) partitions
+	- Shuffle write operation performed using SortShuffleWriter or UnsafeShuffleWriter
+		- former used for RDD(data records stored as JAVA objects), latter for Df/Ds(tungsten format)
+		- both produces "an" index file and "a" data file corresponding to each of the ip partition to be shuffled
+		- index files contain locations inside data file for each of the shuffled partition
+		- data file contains actual shuffled data records ordered by shuffled partitions
+![[Pasted image 20240127174831.png]]
+
+- shuffle read operation performed using BlockStoreShuffleReader which first queries for all the relevant shuffle blocks and their locations
+	- followed by pulling/fetching of those blocks from respective locations using block manager module
+- where is the shuffle data file is written? how it is shared across?
+- Shuffle spill
+	- during shuffle write operation, before writing to a final index and data file, a buffer is used to store the data records
+	- this buffer is used to sort the records on the basis of targeted shuffled partitions
+		- so that before writing we can group the rows of the same op partition
+	- when the buffer runs out of mem for the next data, the contents are sorted and written to disk as a temp shuffle file
+		- this is called shuffle spilling
+		- if the breach happens multiple times, then multiple spill files can be created
+		- after the tmp file writing is complete, the spilled files are read and merged to produce the final shuffle index and data files
+		- how is it possible to read multiple files now?
+	- a similar buffer is used during shuffle read operation
+		- when the data records in the shuffle blocks are required to be sorted on the basis of columns
+		- here as well, the buffer can run out of space
+		- data is spilled, read again and merged
+		- especially when dealing with records of Java objects, ser/deser cycles are added as well
+		- ![[Pasted image 20240128153010.png]]
+
+https://freedium.cfd/https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142

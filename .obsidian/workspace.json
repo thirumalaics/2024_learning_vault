@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "42c0d1226485471c",
+    "type": "split",
+    "children": [
+      {
+        "id": "f298059383464c86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25f7809d54ab143b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Db Data Engineer Associate/2024-06-25.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3d2acc326f51bcc5",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "2b5f9abc0a2d1cd5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JDBC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c2adf9c63ee96009",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3f3d37b0c88a3e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2aabead516d3d8bb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a8f3dca424d6cd09",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cdf25c6fc12451cc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "eb5959fabeee5f4e",
+    "type": "split",
+    "children": [
+      {
+        "id": "a76fddf359f4f623",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65ec467dc03b7703",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b90f9566594f5290",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "432ec6df00cee09e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "85a71ad28a54cedf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3d2acc326f51bcc5",
+  "lastOpenFiles": [
+    "JDBC.md",
+    "Db Data Engineer Associate/2024-06-28.md",
+    "Pasted image 20240628090022.png",
+    "Pasted image 20240628085335.png",
+    "Db Data Engineer Associate/2024-06-26.md",
+    "Pasted image 20240626190607.png",
+    "Pasted image 20240626100228.png",
+    "Pasted image 20240626095756.png",
+    "Pasted image 20240626095644.png",
+    "Pasted image 20240626095250.png",
+    "Pasted image 20240626094741.png",
+    "Pasted image 20240626094728.png",
+    "Pasted image 20240626094340.png",
+    "Db Data Engineer Associate/2024-06-25.md",
+    "Db Data Engineer Associate/2024-06-24.md",
+    "GCP/GCS.md",
+    "GCP/Data.md",
+    "GCP/BQ.md",
+    "Db Data Engineer Associate/Summary.md",
+    "Db Data Engineer Associate/2024-06-21.md",
+    "Db Data Engineer Associate/2024-06-23.md",
+    "Databricks Data Lakehouse/2023-06-23.md",
+    "Airflow.md",
+    "Databricks Data Lakehouse/2024-06-22.md",
+    "Databricks Data Lakehouse/2024-06-15.md",
+    "Databricks Data Lakehouse/Summary.md",
+    "Airflow Interview Questions.md",
+    "interview questions.md",
+    "SQL/Optimization.md",
+    "Db Data Engineer Associate/2024-06-17.md",
+    "Db Data Engineer Associate/2024-06-20.md",
+    "Designing Data intensive applications/feb/Week3/14.md",
+    "Designing Data intensive applications/feb/Week4/18.md",
+    "Designing Data intensive applications/summary/ch2.md",
+    "Designing Data intensive applications/feb/Week3/17.md",
+    "Python",
+    "Designing Data intensive applications/APR/Week2",
+    "Designing Data intensive applications/APR/Week1",
+    "Designing Data intensive applications/APR",
+    "Designing Data intensive applications/Mar/Week5",
+    "Designing Data intensive applications/doubts",
+    "Designing Data intensive applications/Mar/Week1",
+    "Designing Data intensive applications/Mar/Week3",
+    "Designing Data intensive applications/Mar/Week2",
+    "Designing Data intensive applications/Mar"
+  ]
+}
