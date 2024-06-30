@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-06-25.md",
+                "file": "Airflow.md",
                 "mode": "source",
                 "source": false
               }
@@ -39,8 +39,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,6 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Airflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,6 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Airflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Airflow.md"
+              }
             }
           }
         ]
@@ -163,8 +166,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3d2acc326f51bcc5",
+  "active": "25f7809d54ab143b",
   "lastOpenFiles": [
+    "Db Data Engineer Associate/2024-06-25.md",
     "JDBC.md",
     "Db Data Engineer Associate/2024-06-28.md",
     "Pasted image 20240628090022.png",
@@ -178,7 +182,6 @@
     "Pasted image 20240626094741.png",
     "Pasted image 20240626094728.png",
     "Pasted image 20240626094340.png",
-    "Db Data Engineer Associate/2024-06-25.md",
     "Db Data Engineer Associate/2024-06-24.md",
     "GCP/GCS.md",
     "GCP/Data.md",
