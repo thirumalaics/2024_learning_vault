@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-01.md",
+                "file": "Db Data Engineer Associate/2024-07-02.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-01.md",
+                "file": "Db Data Engineer Associate/2024-07-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-01.md",
+                "file": "Db Data Engineer Associate/2024-07-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-01.md"
+                "file": "Db Data Engineer Associate/2024-07-02.md"
               }
             }
           }
@@ -160,11 +160,12 @@
   },
   "active": "25f7809d54ab143b",
   "lastOpenFiles": [
+    "Db Data Engineer Associate/2024-07-01.md",
+    "Db Data Engineer Associate/2024-07-02.md",
     "Pasted image 20240701095151.png",
     "Pasted image 20240701094858.png",
     "Pasted image 20240701094305.png",
     "Db Data Engineer Associate/2024-06-28.md",
-    "Db Data Engineer Associate/2024-07-01.md",
     "Pasted image 20240701093423.png",
     "Pasted image 20240701093025.png",
     "Pasted image 20240701092628.png",
@@ -178,7 +179,6 @@
     "Pasted image 20240628090022.png",
     "Pasted image 20240628085335.png",
     "Db Data Engineer Associate/2024-06-26.md",
-    "Pasted image 20240626190607.png",
     "Db Data Engineer Associate/2024-06-24.md",
     "GCP/GCS.md",
     "GCP/Data.md",
