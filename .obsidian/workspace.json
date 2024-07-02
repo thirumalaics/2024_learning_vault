@@ -81,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -160,6 +161,10 @@
   },
   "active": "25f7809d54ab143b",
   "lastOpenFiles": [
+    "Pasted image 20240702091530.png",
+    "Pasted image 20240702091156.png",
+    "Pasted image 20240702090811.png",
+    "Pasted image 20240702090411.png",
     "Db Data Engineer Associate/2024-07-01.md",
     "Db Data Engineer Associate/2024-07-02.md",
     "Pasted image 20240701095151.png",
@@ -171,13 +176,10 @@
     "Pasted image 20240701092628.png",
     "Pasted image 20240701092305.png",
     "Neetcode Algos/2024-06-30.md",
-    "Pasted image 20240630173820.png",
     "Airflow.md",
     "Neetcode Algos",
     "Db Data Engineer Associate/2024-06-25.md",
     "JDBC.md",
-    "Pasted image 20240628090022.png",
-    "Pasted image 20240628085335.png",
     "Db Data Engineer Associate/2024-06-26.md",
     "Db Data Engineer Associate/2024-06-24.md",
     "GCP/GCS.md",
@@ -196,7 +198,6 @@
     "Db Data Engineer Associate/2024-06-17.md",
     "Db Data Engineer Associate/2024-06-20.md",
     "Designing Data intensive applications/feb/Week3/14.md",
-    "Designing Data intensive applications/feb/Week4/18.md",
     "Python",
     "Designing Data intensive applications/APR/Week2",
     "Designing Data intensive applications/APR/Week1",
