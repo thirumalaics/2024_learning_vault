@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "interview questions.md",
+                "file": "Db Data Engineer Associate/2024-07-04.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "interview questions.md",
+                "file": "Db Data Engineer Associate/2024-07-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "interview questions.md",
+                "file": "Db Data Engineer Associate/2024-07-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "interview questions.md"
+                "file": "Db Data Engineer Associate/2024-07-04.md"
               }
             }
           }
@@ -161,6 +162,8 @@
   "active": "25f7809d54ab143b",
   "lastOpenFiles": [
     "Db Data Engineer Associate/2024-07-02.md",
+    "Db Data Engineer Associate/2024-07-04.md",
+    "interview questions.md",
     "Pasted image 20240702091530.png",
     "Pasted image 20240702091156.png",
     "Pasted image 20240702090811.png",
@@ -191,7 +194,6 @@
     "Databricks Data Lakehouse/2024-06-15.md",
     "Databricks Data Lakehouse/Summary.md",
     "Airflow Interview Questions.md",
-    "interview questions.md",
     "SQL/Optimization.md",
     "Db Data Engineer Associate/2024-06-17.md",
     "Db Data Engineer Associate/2024-06-20.md",
