@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "671d125e6dc1f9af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Db Data Engineer Associate/2024-07-05.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "4daf5116bd2e7a84",
             "type": "leaf",
             "state": {
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-04.md",
+                "file": "Db Data Engineer Associate/2024-07-05.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-04.md",
+                "file": "Db Data Engineer Associate/2024-07-05.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-04.md"
+                "file": "Db Data Engineer Associate/2024-07-05.md"
               }
             }
           }
@@ -159,15 +172,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "25f7809d54ab143b",
+  "active": "671d125e6dc1f9af",
   "lastOpenFiles": [
+    "Db Data Engineer Associate/2024-07-04.md",
+    "Db Data Engineer Associate/2024-07-05.md",
     "Pasted image 20240704095649.png",
     "Pasted image 20240704095317.png",
     "Pasted image 20240704095111.png",
     "Pasted image 20240704094945.png",
     "Pasted image 20240704094307.png",
     "Db Data Engineer Associate/2024-07-02.md",
-    "Db Data Engineer Associate/2024-07-04.md",
     "interview questions.md",
     "Pasted image 20240702091530.png",
     "Pasted image 20240702091156.png",
@@ -175,7 +189,6 @@
     "Pasted image 20240702090411.png",
     "Db Data Engineer Associate/2024-07-01.md",
     "Pasted image 20240701095151.png",
-    "Pasted image 20240701094858.png",
     "Db Data Engineer Associate/2024-06-28.md",
     "Neetcode Algos/2024-06-30.md",
     "Airflow.md",
