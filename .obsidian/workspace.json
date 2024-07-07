@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GCP/GCS.md",
+                "file": "GCP/BQ.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GCP/GCS.md",
+                "file": "GCP/BQ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GCP/GCS.md",
+                "file": "GCP/BQ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GCP/GCS.md"
+                "file": "GCP/BQ.md"
               }
             }
           }
@@ -173,6 +173,7 @@
   },
   "active": "671d125e6dc1f9af",
   "lastOpenFiles": [
+    "GCP/GCS.md",
     "GCP/Data.md",
     "GCP/BQ.md",
     "Db Data Engineer Associate/2024-07-05.md",
@@ -198,7 +199,6 @@
     "JDBC.md",
     "Db Data Engineer Associate/2024-06-26.md",
     "Db Data Engineer Associate/2024-06-24.md",
-    "GCP/GCS.md",
     "Db Data Engineer Associate/Summary.md",
     "Db Data Engineer Associate/2024-06-21.md",
     "Db Data Engineer Associate/2024-06-23.md",

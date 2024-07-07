@@ -2,8 +2,10 @@
 - serverless architecture
 - dwh = consolidates data from disparate sources and performs detailed analysis
 	- 360* view of the data
-	- be aware of realtime events
+	- be aware of real-time events
 	- reduce time to insights
+	- for analytics and decision support
+		- detailed examination
 - decoupled storage and compute
 	- allows independent scaling
 	- data can be analyzed using std SQL(2011 compliant)
