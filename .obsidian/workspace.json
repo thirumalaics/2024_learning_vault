@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GCP/BQ.md",
+                "file": "GCP/Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GCP/BQ.md",
+                "file": "GCP/Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GCP/BQ.md",
+                "file": "GCP/Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GCP/BQ.md"
+                "file": "GCP/Data.md"
               }
             }
           }
@@ -171,11 +171,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "671d125e6dc1f9af",
+  "active": "2aabead516d3d8bb",
   "lastOpenFiles": [
+    "GCP/BQ.md",
     "GCP/GCS.md",
     "GCP/Data.md",
-    "GCP/BQ.md",
     "Db Data Engineer Associate/2024-07-05.md",
     "Db Data Engineer Associate/2024-07-04.md",
     "Pasted image 20240704095649.png",

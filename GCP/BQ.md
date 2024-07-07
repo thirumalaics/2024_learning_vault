@@ -14,8 +14,13 @@
 
 ## Anatomy of a BQ query
 - BQ democratizes Big Data
+- four components
+	- dremel
+	- Colossus
+	- Jupiter
+	- Borg
 ## Infra
-- BQ employs infra tech sych as Dremel, Colossus, Jupiter and Borg
+- BQ employs infra tech such as Dremel, Colossus, Jupiter and Borg
 - Dremel is query engine
 	- turns SQL into execution tree
 	- branches of the tree are mixers, which perform the aggregation
@@ -46,12 +51,12 @@
 	- on-demand
 		- we will have access to up to 2000 concurrent slots for a project
 		- BQ will temporarily go beyond this limit to accelerate smaller queries
-		- cost based on columns selected ever if we limit rows
+		- cost based on columns selected even if we limit rows
 		- we can cap the max bytes billed by the query
 		- user and project level custom cost controls
 			- project level quota limit the aggregate usage of all users
 			- user-level are separately applied to all users and service accounts within a project
-				- not for a specific user
+				- not for a specific user, groups then?
 	- capacity compute pricing
 		- predictable cost
 - storage pricing
@@ -64,7 +69,7 @@
 - slots are assigned to queries fairly
 - purchased slots must be assigned to one or more projects, folders or orgs
 - projects that do not have an assigned or inherited reservation use on-demand pricing automatically
-- 
+
 
 - GoogleSQL procedural language lets us execute as a multi-statement query
 	- run multiple statements in a sequence, with shared state
@@ -72,7 +77,7 @@
 	- complex programming logic such as If and WHILE
 `DECLARE hello INT64 DEfAULT 0;`
 - if no default, then null
-- if variable type is omitted, DEfault is mandatory
+- if variable type is omitted, Default is mandatory
 - variable declarations must appear before other procedural statements
 `SET (a, b, c) = (1 + 3, 'foo', false);`
 
@@ -100,7 +105,7 @@ https://cloud.google.com/bigquery/docs/reservations-intro#assignments
 
 ## How spark BQ connector works
 - SBQC is built on top of BQ storage API and BQ API
-- BQ Storage writ API combines streaming and batching into one API
+- BQ Storage write API combines streaming and batching into one API
 - in airflow, we can pass a list of jar paths as an argument to the operator
 	- DataprocSubmitPysparkJobOperator
 - writing dfs can be done using two methods: direct and indirect

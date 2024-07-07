@@ -6,7 +6,7 @@
 - snowflake schema
 	- extension of star schema
 	- where DTs are broken into subdimensions
-- centralized repository that allows to store all our structured and unstructured data at any scale
+- centralized repository that allows to store all our structured and unstructured data at any scale - data lake
 	- written to as is
 	- no data model applicable
 	- dw is a db optimized to analyze data coming from different sources
@@ -49,7 +49,7 @@ END
 	- usages: session management
 	- shopping cart
 	- here key is called primary key
-	- the schema of the value is defined per value
+	- the schema of the value is ***defined per value***
 	- redis
 	- limited operations
 	- ![[Pasted image 20240121091327.png]]
@@ -60,7 +60,7 @@ END
 		- one table to hold the entities
 		- one to store attrs
 		- one for attr values
-		- these tables are linked through PK and fks, establishing relaationships
+		- these tables are linked through PK and fks, establishing relationships
 		- 
 https://stackoverflow.com/questions/62010368/what-exactly-is-a-wide-column-store
 https://blog.logrocket.com/nosql-wide-column-stores-guide/
