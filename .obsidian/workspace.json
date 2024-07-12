@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-04.md",
+                "file": "Neetcode Algos/2024-07-12.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "058e262efff6e0e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Neetcode Algos/2024-06-30.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "TIME",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,12 +89,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-04.md",
+                "file": "Neetcode Algos/2024-07-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-04.md",
+                "file": "Neetcode Algos/2024-07-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-04.md"
+                "file": "Neetcode Algos/2024-07-12.md"
               }
             }
           }
@@ -161,10 +173,13 @@
   },
   "active": "25f7809d54ab143b",
   "lastOpenFiles": [
+    "Pasted image 20240712185655.png",
+    "Neetcode Algos/2024-06-30.md",
+    "Neetcode Algos/2024-07-12.md",
+    "Db Data Engineer Associate/2024-07-04.md",
     "Db Data Engineer Associate/2024-06-25.md",
     "Db Data Engineer Associate/2024-07-01.md",
     "Db Data Engineer Associate/2024-07-05.md",
-    "Db Data Engineer Associate/2024-07-04.md",
     "GCP/BQ.md",
     "GCP/GCS.md",
     "GCP/Data.md",
@@ -181,7 +196,6 @@
     "Pasted image 20240702090411.png",
     "Pasted image 20240701095151.png",
     "Db Data Engineer Associate/2024-06-28.md",
-    "Neetcode Algos/2024-06-30.md",
     "Airflow.md",
     "Neetcode Algos",
     "JDBC.md",
@@ -196,8 +210,6 @@
     "Databricks Data Lakehouse/Summary.md",
     "Airflow Interview Questions.md",
     "SQL/Optimization.md",
-    "Db Data Engineer Associate/2024-06-17.md",
-    "Db Data Engineer Associate/2024-06-20.md",
     "Python",
     "Designing Data intensive applications/APR/Week2",
     "Designing Data intensive applications/APR/Week1",
