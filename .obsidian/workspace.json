@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "run",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -149,6 +150,7 @@
   },
   "active": "25f7809d54ab143b",
   "lastOpenFiles": [
+    "Pasted image 20240713094504.png",
     "Neetcode Algos/2024-06-30.md",
     "Db Data Engineer Associate/2024-07-13.md",
     "Db Data Engineer Associate/2024-07-05.md",
@@ -185,7 +187,6 @@
     "Databricks Data Lakehouse/2024-06-15.md",
     "Databricks Data Lakehouse/Summary.md",
     "Airflow Interview Questions.md",
-    "SQL/Optimization.md",
     "Python",
     "Designing Data intensive applications/APR/Week2",
     "Designing Data intensive applications/APR/Week1",
