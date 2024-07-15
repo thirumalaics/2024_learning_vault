@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LOCATION",
+                "query": "serialization",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,13 +89,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -172,7 +170,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "25f7809d54ab143b",
+  "active": "2aabead516d3d8bb",
   "lastOpenFiles": [
     "Pasted image 20240714101838.png",
     "Pasted image 20240714101141.png",
