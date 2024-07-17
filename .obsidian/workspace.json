@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-14.md",
+                "file": "Db Data Engineer Associate/2024-07-15.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "serialization",
+                "query": "TEMP VIEW",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,11 +89,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -109,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-14.md",
+                "file": "Db Data Engineer Associate/2024-07-15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-14.md",
+                "file": "Db Data Engineer Associate/2024-07-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-14.md"
+                "file": "Db Data Engineer Associate/2024-07-15.md"
               }
             }
           }
@@ -170,31 +172,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2aabead516d3d8bb",
+  "active": "25f7809d54ab143b",
   "lastOpenFiles": [
+    "Pasted image 20240715101403.png",
+    "Pasted image 20240715094135.png",
+    "Pasted image 20240715094054.png",
+    "Db Data Engineer Associate/2024-07-05.md",
+    "Pasted image 20240715093612.png",
+    "Pasted image 20240715093609.png",
+    "Db Data Engineer Associate/2024-07-15.md",
+    "Db Data Engineer Associate/2024-07-14.md",
     "Pasted image 20240714101838.png",
     "Pasted image 20240714101141.png",
     "Pasted image 20240714100922.png",
     "Pasted image 20240714100602.png",
     "Pasted image 20240714095840.png",
     "Db Data Engineer Associate/2024-07-02.md",
-    "Db Data Engineer Associate/2024-07-14.md",
     "Db Data Engineer Associate/2024-07-13.md",
     "Pasted image 20240713094504.png",
     "Neetcode Algos/2024-06-30.md",
-    "Db Data Engineer Associate/2024-07-05.md",
     "Neetcode Algos/2024-07-12.md",
-    "Pasted image 20240712185655.png",
     "Db Data Engineer Associate/2024-07-04.md",
     "Db Data Engineer Associate/2024-06-25.md",
     "Db Data Engineer Associate/2024-07-01.md",
     "GCP/BQ.md",
     "GCP/GCS.md",
     "GCP/Data.md",
-    "Pasted image 20240704095649.png",
-    "Pasted image 20240704095317.png",
-    "Pasted image 20240704095111.png",
-    "Pasted image 20240704094945.png",
     "interview questions.md",
     "Db Data Engineer Associate/2024-06-28.md",
     "Airflow.md",
@@ -208,7 +211,6 @@
     "Databricks Data Lakehouse/2023-06-23.md",
     "Databricks Data Lakehouse/2024-06-22.md",
     "Databricks Data Lakehouse/2024-06-15.md",
-    "Databricks Data Lakehouse/Summary.md",
     "Python",
     "Designing Data intensive applications/APR/Week2",
     "Designing Data intensive applications/APR/Week1",
