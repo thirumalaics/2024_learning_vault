@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-18.md",
+                "file": "Db Data Engineer Associate/2024-07-19.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-18.md",
+                "file": "Db Data Engineer Associate/2024-07-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-18.md",
+                "file": "Db Data Engineer Associate/2024-07-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-18.md"
+                "file": "Db Data Engineer Associate/2024-07-19.md"
               }
             }
           }
@@ -161,20 +161,21 @@
   },
   "active": "25f7809d54ab143b",
   "lastOpenFiles": [
+    "Pasted image 20240719095254.png",
+    "Pasted image 20240719095016.png",
+    "Db Data Engineer Associate/2024-07-18.md",
+    "Pasted image 20240719093704.png",
+    "Pasted image 20240719093230.png",
+    "Pasted image 20240719093006.png",
+    "Pasted image 20240719092442.png",
+    "Pasted image 20240719091706.png",
+    "Db Data Engineer Associate/2024-07-19.md",
     "Pasted image 20240718094551.png",
     "Pasted image 20240718092136.png",
     "Pasted image 20240718091955.png",
     "Pasted image 20240718091455.png",
     "Db Data Engineer Associate/2024-07-15.md",
-    "Db Data Engineer Associate/2024-07-18.md",
-    "Pasted image 20240718091032.png",
-    "Pasted image 20240718090922.png",
-    "Pasted image 20240715101403.png",
-    "Pasted image 20240715094135.png",
-    "Pasted image 20240715094054.png",
     "Db Data Engineer Associate/2024-07-05.md",
-    "Pasted image 20240715093612.png",
-    "Pasted image 20240715093609.png",
     "Db Data Engineer Associate/2024-07-14.md",
     "Db Data Engineer Associate/2024-07-02.md",
     "Db Data Engineer Associate/2024-07-13.md",
@@ -197,7 +198,6 @@
     "Db Data Engineer Associate/2024-06-21.md",
     "Db Data Engineer Associate/2024-06-23.md",
     "Databricks Data Lakehouse/2023-06-23.md",
-    "Databricks Data Lakehouse/2024-06-22.md",
     "Python",
     "Designing Data intensive applications/APR/Week2",
     "Designing Data intensive applications/APR/Week1",
