@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-31.md",
+                "file": "Db Data Engineer Associate/2024-08-01.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-31.md",
+                "file": "Db Data Engineer Associate/2024-08-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-31.md",
+                "file": "Db Data Engineer Associate/2024-08-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-31.md"
+                "file": "Db Data Engineer Associate/2024-08-01.md"
               }
             }
           }
@@ -148,9 +149,10 @@
   },
   "active": "a038b505ad8b63db",
   "lastOpenFiles": [
+    "Db Data Engineer Associate/2024-07-31.md",
+    "Db Data Engineer Associate/2024-08-01.md",
     "Db Data Engineer Associate/2024-07-28.md",
     "Db Data Engineer Associate/2024-07-25.md",
-    "Db Data Engineer Associate/2024-07-31.md",
     "Db Data Engineer Associate/2024-07-30.md",
     "Pasted image 20240730095356.png",
     "Db Data Engineer Associate/2024-07-26.md",
@@ -184,7 +186,6 @@
     "Db Data Engineer Associate/2024-07-04.md",
     "Db Data Engineer Associate/2024-06-25.md",
     "Db Data Engineer Associate/2024-07-01.md",
-    "GCP/BQ.md",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
