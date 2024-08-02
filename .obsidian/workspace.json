@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5d24a545462172d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Db Data Engineer Associate/2024-08-01.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -148,8 +160,12 @@
   },
   "active": "a038b505ad8b63db",
   "lastOpenFiles": [
-    "Db Data Engineer Associate/2024-07-31.md",
+    "Db Data Engineer Associate/2024-08-02.md",
+    "Pasted image 20240802091833.png",
+    "Pasted image 20240802091353.png",
+    "Pasted image 20240802091111.png",
     "Db Data Engineer Associate/2024-08-01.md",
+    "Db Data Engineer Associate/2024-07-31.md",
     "Db Data Engineer Associate/2024-07-28.md",
     "Db Data Engineer Associate/2024-07-25.md",
     "Db Data Engineer Associate/2024-07-30.md",
@@ -172,10 +188,7 @@
     "Untitled",
     "Db Data Engineer Associate/2024-07-19.md",
     "Pasted image 20240719095932.png",
-    "Pasted image 20240719095254.png",
-    "Pasted image 20240719095016.png",
     "Db Data Engineer Associate/2024-07-18.md",
-    "Pasted image 20240719093704.png",
     "Db Data Engineer Associate/2024-07-05.md",
     "Db Data Engineer Associate/2024-07-14.md",
     "Db Data Engineer Associate/2024-07-02.md",
@@ -183,8 +196,6 @@
     "Neetcode Algos/2024-06-30.md",
     "Neetcode Algos/2024-07-12.md",
     "Db Data Engineer Associate/2024-07-04.md",
-    "Db Data Engineer Associate/2024-06-25.md",
-    "Db Data Engineer Associate/2024-07-01.md",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
