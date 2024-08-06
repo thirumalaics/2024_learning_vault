@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-08-05.md",
+                "file": "Db Data Engineer Associate/2024-0.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-08-05.md",
+                "file": "Db Data Engineer Associate/2024-0.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-08-05.md",
+                "file": "Db Data Engineer Associate/2024-0.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-08-05.md"
+                "file": "Db Data Engineer Associate/2024-0.md"
               }
             }
           }
@@ -160,9 +160,11 @@
   },
   "active": "a038b505ad8b63db",
   "lastOpenFiles": [
+    "Db Data Engineer Associate/2024-08-05.md",
+    "Db Data Engineer Associate/2024-0.md",
+    "Db Data Engineer Associate/2024-08-06.md",
     "Pasted image 20240805081359.png",
     "Db Data Engineer Associate/2024-08-04.md",
-    "Db Data Engineer Associate/2024-08-05.md",
     "Pasted image 20240804100115.png",
     "Pasted image 20240804095413.png",
     "Pasted image 20240804095348.png",
@@ -188,7 +190,6 @@
     "Db Data Engineer Associate/2024-07-23.md",
     "Db Data Engineer Associate/2024-07-22.md",
     "Db Data Engineer Associate/2024-07-15.md",
-    "Pasted image 20240722091655.png",
     "Db Data Engineer Associate/2024-07-20.md",
     "SQL.md",
     "Untitled",
@@ -196,7 +197,6 @@
     "Db Data Engineer Associate/2024-07-18.md",
     "Db Data Engineer Associate/2024-07-05.md",
     "Db Data Engineer Associate/2024-07-14.md",
-    "Db Data Engineer Associate/2024-07-02.md",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
