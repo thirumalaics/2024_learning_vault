@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f298059383464c86",
+        "id": "0ab4ba073aa2a683",
         "type": "tabs",
         "children": [
           {
-            "id": "a038b505ad8b63db",
+            "id": "cb87f42d33e06ce9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Db Data Engineer Associate/2024-0.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5d24a545462172d1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Db Data Engineer Associate/2024-08-01.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -97,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-0.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-0.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Db Data Engineer Associate/2024-0.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -158,10 +138,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a038b505ad8b63db",
+  "active": "cb87f42d33e06ce9",
   "lastOpenFiles": [
-    "Db Data Engineer Associate/2024-08-05.md",
+    "Db Data Engineer Associate/2024-08-01.md",
     "Db Data Engineer Associate/2024-0.md",
+    "Db Data Engineer Associate/2024-08-05.md",
     "Db Data Engineer Associate/2024-08-06.md",
     "Pasted image 20240805081359.png",
     "Db Data Engineer Associate/2024-08-04.md",
@@ -172,7 +153,6 @@
     "Db Data Engineer Associate/2024-08-03.md",
     "Db Data Engineer Associate/2024-08-02.md",
     "Databricks Data Lakehouse/2024-02-10.md",
-    "Db Data Engineer Associate/2024-08-01.md",
     "Pasted image 20240802091833.png",
     "Pasted image 20240802091353.png",
     "Pasted image 20240802091111.png",
