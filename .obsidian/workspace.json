@@ -11,8 +11,12 @@
             "id": "cb87f42d33e06ce9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Db Data Engineer Associate/2024-08-07.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Db Data Engineer Associate/2024-08-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Db Data Engineer Associate/2024-08-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Db Data Engineer Associate/2024-08-07.md"
+              }
             }
           }
         ]
@@ -140,9 +149,9 @@
   },
   "active": "cb87f42d33e06ce9",
   "lastOpenFiles": [
-    "Db Data Engineer Associate/2024-08-01.md",
-    "Db Data Engineer Associate/2024-0.md",
     "Db Data Engineer Associate/2024-08-05.md",
+    "Db Data Engineer Associate/2024-08-07.md",
+    "Db Data Engineer Associate/2024-08-01.md",
     "Db Data Engineer Associate/2024-08-06.md",
     "Pasted image 20240805081359.png",
     "Db Data Engineer Associate/2024-08-04.md",
