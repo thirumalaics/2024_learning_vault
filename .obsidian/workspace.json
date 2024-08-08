@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Db Data Engineer Associate/2024-08-08.md",
+                "file": "Db Data Engineer Associate/2024-08-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Db Data Engineer Associate/2024-08-08.md",
+                "file": "Db Data Engineer Associate/2024-08-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Db Data Engineer Associate/2024-08-08.md"
+                "file": "Db Data Engineer Associate/2024-08-07.md"
               }
             }
           }
@@ -159,10 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c91fd03b7434b008",
+  "active": "cb87f42d33e06ce9",
   "lastOpenFiles": [
-    "Db Data Engineer Associate/2024-08-07.md",
     "Db Data Engineer Associate/2024-08-08.md",
+    "Db Data Engineer Associate/2024-08-07.md",
     "Db Data Engineer Associate/2024-08-05.md",
     "Db Data Engineer Associate/2024-08-01.md",
     "Db Data Engineer Associate/2024-08-06.md",
