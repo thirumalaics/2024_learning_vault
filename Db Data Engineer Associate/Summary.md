@@ -3,5 +3,5 @@
 3. [[2024-06-17#DBfs]]
 4. [[2024-06-20#Cluster config shown in the Course]]
 5. [[2024-06-21#Notebook fundamentals]]
-6. [[2024-06-23#DB repo]]
+6. [[Db Data Engineer Associate/2024-06-23#DB repo]]
 7. 
