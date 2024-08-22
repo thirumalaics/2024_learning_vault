@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "interview questions.md",
+                "file": "Designing Data intensive applications/JAN/Week1/18.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "fault tolerance",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "interview questions.md",
+                "file": "Designing Data intensive applications/JAN/Week1/18.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "interview questions.md",
+                "file": "Designing Data intensive applications/JAN/Week1/18.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "interview questions.md"
+                "file": "Designing Data intensive applications/JAN/Week1/18.md"
               }
             }
           }
@@ -148,6 +149,13 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Python/Decorators.md",
+    "Spark/A tale of three Apache Spark API.md",
+    "Spark/Long running jobs.md",
+    "Spark/Data Shuffling.md",
+    "SQL/Optimization.md",
+    "Airflow Interview Questions.md",
+    "interview questions.md",
     "Interview/inito.md",
     "Databricks Data Lakehouse/2024-08-09.md",
     "Pasted image 20240809154023.png",
@@ -157,7 +165,6 @@
     "Databricks Data Lakehouse/2024-02-10.md",
     "Databricks Data Lakehouse/Summary.md",
     "Db Data Engineer Associate/2024-08-09.md",
-    "SQL/Optimization.md",
     "Pasted image 20240809090428.png",
     "Db Data Engineer Associate/2024-08-08.md",
     "Db Data Engineer Associate/2024-08-07.md",
@@ -178,11 +185,6 @@
     "Db Data Engineer Associate/2024-07-31.md",
     "Db Data Engineer Associate/2024-07-28.md",
     "Db Data Engineer Associate/2024-07-25.md",
-    "Db Data Engineer Associate/2024-07-30.md",
-    "Db Data Engineer Associate/2024-07-26.md",
-    "Db Data Engineer Associate/2024-07-27.md",
-    "Db Data Engineer Associate/2024-07-29.md",
-    "[What.md",
     "Untitled",
     "Neetcode Algos",
     "Python",
