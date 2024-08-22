@@ -5,22 +5,28 @@
 	- skew
 		- some tasks taking longer that others
 	- shuffle
+		- large amount of data shuffled across executors
 		- join operation
 	- storage
 		- small files or highly nested dir structure
 	- serialization
+		- inefficient spark code, or serialization issues 
 
 ## Skew
 - skew is caused by imbalance partitions
+- to fix skew, try to repartition data, or set skew hint when reading in data from disk to mem
+- if skew is caused by partition imbalance after shuffling stage, enable skewJoin with AQE
+- set the correct shuffle partition size
 - skew can lead to spill
-- to avoid skew while reading maxPartitionBytes can be used
+- to avoid skew while reading, maxPartitionBytes can be used
+- but it is possible that after shuffling, for transformations, some partitions may end up having significantly more data than others
 - how to identify skew in UI
 	- uneven distribution of tasks in the event timeline of a long-running stage
 	- uneven shuffle read/write size in a stage's summary metrics
 - soln
 	- repartition data
 	- enable skew join option with AQE, if skew after shuffling
-		- AQE can adapt quer plans at run time based on accurate metrics
+		- AQE can adapt query plans at run time based on accurate metrics
 		- split skewed partitions
 		- most effective
 		- `spark.sql.adaptive.enabled` and 'spark.sql.adaptive.skewedJoin.enabled'
