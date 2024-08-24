@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fault tolerance",
+                "query": "salt",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -147,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c91fd03b7434b008",
+  "active": "a8f3dca424d6cd09",
   "lastOpenFiles": [
     "Designing Data intensive applications/Unicode and Character sets.md",
     "Designing Data intensive applications/JAN/Week1/18.md",
