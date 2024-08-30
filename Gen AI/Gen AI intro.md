@@ -1,0 +1,10 @@
+- subset of traditional machine learning
+- Gen AI describes algorithms that can be used to create new content, including audio, code, images, text, simulations, and videos
+- GPT - Generative pretrained transformer
+- machine learning is a type of AI
+	- through ml, ai is developed through models that can learn from data patterns without human direction
+	- until recently ML was limited to predictive models, used to observe and classify patterns in content
+	- Gen AI is a breakthrough where, rather than simply classifying, machine learning is now capable to create an image or text description of a cat on demand
+	- supervised model - humans do the teaching by pre-labeling
+	- next generation of text-based models rely on self-supervised learning
+	- the results generated depend on the quality of the model and the match between the model and the use case, or input

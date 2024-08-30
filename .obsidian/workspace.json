@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spark/Long running jobs.md",
+                "file": "Gen AI/Gen AI intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spark/Long running jobs.md",
+                "file": "Gen AI/Gen AI intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spark/Long running jobs.md",
+                "file": "Gen AI/Gen AI intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spark/Long running jobs.md"
+                "file": "Gen AI/Gen AI intro.md"
               }
             }
           }
@@ -146,13 +147,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2aabead516d3d8bb",
+  "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Spark/Long running jobs.md",
+    "Gen AI/Gen AI intro.md",
+    "Gen AI",
+    "[What.md",
     "Designing Data intensive applications/Unicode and Character sets.md",
     "Designing Data intensive applications/JAN/Week1/18.md",
     "Python/Decorators.md",
     "Spark/A tale of three Apache Spark API.md",
-    "Spark/Long running jobs.md",
     "Spark/Data Shuffling.md",
     "SQL/Optimization.md",
     "Airflow Interview Questions.md",
@@ -179,11 +183,9 @@
     "Pasted image 20240804095348.png",
     "Pasted image 20240804094703.png",
     "Db Data Engineer Associate/2024-08-03.md",
-    "Db Data Engineer Associate/2024-08-02.md",
     "Pasted image 20240802091833.png",
     "Pasted image 20240802091353.png",
     "Pasted image 20240802091111.png",
-    "Db Data Engineer Associate/2024-07-31.md",
     "Untitled",
     "Neetcode Algos",
     "Python",
@@ -192,7 +194,6 @@
     "Designing Data intensive applications/APR",
     "Designing Data intensive applications/Mar/Week5",
     "Designing Data intensive applications/doubts",
-    "Designing Data intensive applications/Mar/Week1",
-    "Designing Data intensive applications/Mar/Week3"
+    "Designing Data intensive applications/Mar/Week1"
   ]
 }
