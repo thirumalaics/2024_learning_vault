@@ -1,0 +1,45 @@
+- hadoop - open source implementation of the distributed batch processing system using the MapReduce Paradigm
+	- the data is stored in a shared and distributed file system (HDFS)
+	- data is divided into splits, which are the logical data divisions for MapReduce processing
+- to process these splits using the MapReduce paradigm,
+	- the map task reads the splits and passes all of its key/value pairs to a map function
+		- writes the results to intermediate files
+	- after the map phase is completed, the reducer reads intermediate files sent through the shuffle process and passes them to reduce function
+		- reduce task writes results to the final output files
+- advantages of MapReduce model:
+	- makes distributed programming easier
+	- near-linear speed-up, good scalability, as well as fault tolerance
+- disadvantages of MapReduce
+	- unable to execute recursive or iterative jobs
+	- all input must be ready by map before the reduce job starts, which makes MapReduce unsuitable for online or stream-processing use cases
+- real time processing
+	- used to process data and get the result almost immediately
+	- the concept of real time ad hoc queries over big data was first implemented in dremel by google
+	- columnar storage format for nested structures with fast index 
+	- scalable aggregation algos for computing query results in parallel instead of batch sequences
+	- these two characteristics are used by Imala, Presto, Drill
+		- using parquet, orc, carbon data and arrow
+- in-mem computing offers very high bandwidth, which is more than 10GBs/s compared to a hard disk's 200 MB/s
+- stream-processing
+	- continuously process and act on the live stream data to get a result
+	- two commonly used general purpose stream processing fws: Storm, Flink
+	- both fws run on the JVM and both process keyed streams
+	- storm gives us basic tools to build a fw, while flink gives us a well defined and easily used fw
+- hadoop was designed as both a computing and storage pf from the very beginning
+- hadoop is not the solution for all, hence it attracted lots of other sw to resolve big data questions and merges into a hadoop centric big data ecosystem
+- HDFS - distributed storage fw
+	- parquet, orc and avro used along with snappy compression algo is commonly used as file formats
+- yarn - resource manager
+- spark and ignite - in memory computing engines
+- kafka, flink and storm - stream processing
+- hbase - nosql db
+	- especially on hadoop clusters
+- ml: Spark, MadLib along with mahout
+- sqoop: exchanging data between hadoop and rdbs
+- flume - log collecting tool
+- impala and drill - interactive query against data in hadoop
+- spark/tez along with live log and process offers ability to run a query in long-lived processes on different computing fws(diff than mr)
+- ambari/zookeeper: new gen cluster management tool
+- airflo/oozie - scheduling and workflow management
+- atlas: open source governance and md service
+	- tracking lineage

@@ -1,0 +1,34 @@
+- 3 words to describe big data : volume, velocity and variety
+- the big word does not just describe the volume but also the scope
+- but data has been varying in other dimensions such as: 
+	- veracity, variability, volatility, visualization and value
+- volume
+	- amount of generated within seconds
+- velocity
+	- speed at which the data is generated, stored, analyzed and moved around
+- variety
+	- refers to different data formats
+	- structured, semi structured, un structured
+	- structured - data stored as fixed fields within a record
+	- one of the major challenges is dealing with varieties of data formats
+		- by dealing, I mean analyzing and storing
+- veracity
+	- quality of data, such as trustworthiness, biases, noise and abnormality
+	- we have to make sure data is correct and the processes to do that is very important
+- variability
+	- changing of data
+	- same data could have different meanings in different contexts
+- volatility
+	- how long the data is valid and stored
+- visualization
+	- way of making data well understood
+- value
+	- refers to knowledge gained from data analysis on big data
+
+## The relation and NoSQL dbs versus Hadoop
+- when dealing with big amount of data, hadoop is the best choice
+	- linear scalable, fast, and stable to deal with the big volume of data
+- when we deal with a small amount of data, a rdb is always the best choice
+	- since it is fast and agile to deal with a small or moderate amount of data
+- nosql dbs are said to offer characteristics and balance from both rdb and hadoop  
+	- in terms of good performance and various data format support for moderate to large amounts of data

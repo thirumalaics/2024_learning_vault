@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gen AI/Gen AI intro.md",
+                "file": "Hive/Overview of Hadoop Ecosystem.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Gen AI/Gen AI intro.md",
+                "file": "Hive/Overview of Hadoop Ecosystem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Gen AI/Gen AI intro.md",
+                "file": "Hive/Overview of Hadoop Ecosystem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Gen AI/Gen AI intro.md"
+                "file": "Hive/Overview of Hadoop Ecosystem.md"
               }
             }
           }
@@ -149,8 +149,11 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
-    "Spark/Long running jobs.md",
+    "Hive/Introducing Big Data.md",
+    "Hive/Overview of Hadoop Ecosystem.md",
     "Gen AI/Gen AI intro.md",
+    "Hive",
+    "Spark/Long running jobs.md",
     "Gen AI",
     "[What.md",
     "Designing Data intensive applications/Unicode and Character sets.md",
@@ -177,16 +180,13 @@
     "Db Data Engineer Associate/2024-08-01.md",
     "Db Data Engineer Associate/2024-08-06.md",
     "Pasted image 20240805081359.png",
-    "Db Data Engineer Associate/2024-08-04.md",
     "Pasted image 20240804100115.png",
     "Pasted image 20240804095413.png",
     "Pasted image 20240804095348.png",
     "Pasted image 20240804094703.png",
-    "Db Data Engineer Associate/2024-08-03.md",
     "Pasted image 20240802091833.png",
     "Pasted image 20240802091353.png",
     "Pasted image 20240802091111.png",
-    "Untitled",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
