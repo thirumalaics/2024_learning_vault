@@ -43,3 +43,6 @@
 - airflo/oozie - scheduling and workflow management
 - atlas: open source governance and md service
 	- tracking lineage
+- MR - programming model, for breaking up computation tasks into units that can be distributed around a cluster of commodity, server class hardware
+	- providing cost-effective horizontal scalability
+	- underneath this computation model is a distributed file system called the HDFS

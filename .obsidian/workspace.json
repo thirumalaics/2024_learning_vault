@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Hive/working of MR.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0d0cc3712894da05",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Hive/Overview of Hadoop Ecosystem.md",
                 "mode": "source",
                 "source": false
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/Overview of Hadoop Ecosystem.md",
+                "file": "Hive/working of MR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/Overview of Hadoop Ecosystem.md",
+                "file": "Hive/working of MR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/Overview of Hadoop Ecosystem.md"
+                "file": "Hive/working of MR.md"
               }
             }
           }
@@ -149,8 +161,11 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Hive/Intro to Hive.md",
     "Hive/Introducing Big Data.md",
     "Hive/Overview of Hadoop Ecosystem.md",
+    "Hive/working of MR.md",
+    "Pasted image 20240901091251.png",
     "Gen AI/Gen AI intro.md",
     "Hive",
     "Spark/Long running jobs.md",
@@ -177,8 +192,6 @@
     "Db Data Engineer Associate/2024-08-08.md",
     "Db Data Engineer Associate/2024-08-07.md",
     "Db Data Engineer Associate/2024-08-05.md",
-    "Db Data Engineer Associate/2024-08-01.md",
-    "Db Data Engineer Associate/2024-08-06.md",
     "Pasted image 20240805081359.png",
     "Pasted image 20240804100115.png",
     "Pasted image 20240804095413.png",
@@ -186,7 +199,6 @@
     "Pasted image 20240804094703.png",
     "Pasted image 20240802091833.png",
     "Pasted image 20240802091353.png",
-    "Pasted image 20240802091111.png",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",

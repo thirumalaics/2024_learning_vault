@@ -1,0 +1,29 @@
+- each input box on the lhs is a separate doc
+	- 3rd doc is empty
+![[Pasted image 20240901091251.png]]
+
+- by default, a separate mapper process is invoked for each doc
+- in real scenario, large doc might be split and each split would be sent to separate mapper
+- also there are techniques for combining many small docs into a single split for a mapper
+- fundamental data structure for ip and op in MR is the key value pair
+- after each mapper is started, it is called repeatedly for each line of text from the document
+- for each call, the key passed to the mapper is the character offset into the doc at the start of the line
+	- what is character offset: position of different sections or data within the file
+	- value is text of the line
+- in word count, the character offset is discarded
+- the value, the line of text is tokenized into words, using one of several possible techniques
+	- ex: splitting based on whitespaces, simplest but it can leave in undesirable punctuation
+	- in the above example, the mapper converts words into lowercase
+- finally for each word in the line, the mapper outputs a kvp with the word as the key and number 1 as the value
+	- the types of keys and values are different from the ip types
+- part of Hadoop's magic is the sort and shuffle phase that comes next
+- hadoop sorts the kvp by key and it shuffles all pairs with the same key to the same reducer
+- several techniques to decide which reducer gets which range of keys
+- for the mapper to output a count of 1 every time a word is seen is a bit wasteful of nw and disk IO used in sort and shuffle
+	- it does minimize the memory used in the mappers
+- one optimization is to keep track of the count for each word and then output only one count for each word when the mapper finishes
+	- there are several ways to do this optimization
+- ips to each reducer are again kvp
+	- each key will be one of the words found by mappers and value will be a collection all the counts emitted by all the mappers for that one word
+	- type of key and value(in the collection) is the same as the types used in mapper's output
+- all the reducer has to do is add up all the counts in the value collection and write a final kvp consisting of each word and count for that word

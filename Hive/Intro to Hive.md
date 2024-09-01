@@ -1,0 +1,52 @@
+- tool that provides SQL dialect(HQL) for querying data stored in HDFS, other file systems that integrate with Hadoop
+	- such as MapR-FS and Amazon S3
+	- if it wasn't for Hive, we would have had to map familiar sql operations to low level MapReduce Java API
+	- hive translates most queries in to map reduce jobs
+		- there by exploiting the scalability of hadoop, while presenting a familiar SQL abstraction
+- Hive allows us to use hadoop as a dwh
+- hive eases migration from traditional rdbs to hadoop by providing SQL access over the data
+- hive is suitable for datawarehouse applications, where relatively static data is analayzed
+	- fast response times are not required
+	- data is not changing rapidly
+- hive is not a full db
+- design constraints and limitations of hadoop and hdfs impose limits on what Hive can do
+	- hive does not provide record level update, delete or insert
+- we can generate new tables from queries or output query results to files
+- since hadoop is a batch oriented system, hive queries have higher latency due to the startup overhead for MR jobs
+	- higher latency than a db query over small datasets
+- hive does not provide txns
+	- crucial feature for OLTP
+- closer to being an OLAP tool
+	- but hive is not ideal for satisfying the online part of OLAP because of significant latency
+		- both due to overhead of hadoop and due to the data size
+- if we need OLTP features for large scale data, we should consider nosql db
+	- ex: HBase, Cassandra, DynamoDB
+- HiveQL does not conform to ANSI SQL standard and it differs in various ways from the familiar SQL dialects provided by major DB vendors
+	- closest to MySQL
+
+## MapReduce
+- computing model that decomposes large data manipulation jobs into individual tasks that can be executed in parallel across a cluster of servers
+- the results of tasks can be joined together to compute final results
+- map - operation that converts the elements of a collection from one form to another
+	- in this case input key value pairs are converted to zero-to-many output key value pairs 
+	- where the input and output keys might be completely different and the input and output values might be completely different
+- in MapReduce, all the key-pairs for a given key are sent to the same reduce operation
+	- key and a collection of values are passed to the reducer
+- the goal of reduction, is to convert the collection to a value, such as summing or averaging a collection of numbers
+	- or even converting to another collection
+- a final kvp is emitted by the reducer
+	- ip v op keys and values may be different
+- if a job requires no reduction step, it can be skipped(the job or the reduction step?)
+- implementation infra like the one provided by Hadoop takes care of many things
+	- like how to decompose the job into individual map and reduce tasks to run
+	- scheduling tasks given the available resources
+	- decide where to send a particular task in the cluster
+		- hadoop might decide to send the data based on where the corresponding data is located, when possible, to minimize nw overhead
+	- monitors each task and restarts in case of failure
+- HDFS
+	- manages data across the cluster
+	- each block is replicated several times(3 by default)
+		- fault tolerance
+	- block size of 64MB or multiples are used so that large blocks can be stored contiguously on disks
+		- they can be written and read with minimal seeking of the drive heads
+
