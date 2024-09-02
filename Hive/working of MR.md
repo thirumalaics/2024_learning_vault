@@ -2,10 +2,10 @@
 	- 3rd doc is empty
 ![[Pasted image 20240901091251.png]]
 
-- by default, a separate mapper process is invoked for each doc
-- in real scenario, large doc might be split and each split would be sent to separate mapper
-- also there are techniques for combining many small docs into a single split for a mapper
-- fundamental data structure for ip and op in MR is the key value pair
+- by default, a separate mapper process is invoked for each doc #question
+- in real scenario, large doc might be split and each split would be sent to separate mapper #question
+- also there are techniques for combining many small docs into a single split for a mapper #question
+- fundamental data structure for ip and op in MR is the key value pair #question 
 - after each mapper is started, it is called repeatedly for each line of text from the document
 - for each call, the key passed to the mapper is the character offset into the doc at the start of the line
 	- what is character offset: position of different sections or data within the file

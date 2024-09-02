@@ -50,3 +50,15 @@
 	- block size of 64MB or multiples are used so that large blocks can be stored contiguously on disks
 		- they can be written and read with minimal seeking of the drive heads
 
+- hive only for structured data that can be stored into tables
+- efficient for batch processing
+- hive provides us various storage file formats like parquet, sequence file, orc, text file with significant compression
+- hive is not a db
+	- points to files lying on HDFS
+	- stores md of hdfs files
+	- in later versions of hive, support for insert, update and delete were introduced
+		- but not as efficient
+	- some operations are compatible with selected file formats only
+		- ex: update is only possible with ORC file format
+- not used where fast response time is required as in RDBMS
+- used where high latency is acceptable with batch processing
