@@ -1,5 +1,7 @@
 - multi-paradigm language
 - object oriented and functional
+- leverage the advantages of JVM
+- keep Java libraries
 - statically typed
 - scalable from simple scripts to sophisticated(but still easy to use) lib
 - scala runs in the java virtual machine
