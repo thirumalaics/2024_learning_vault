@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/working of MR.md",
+                "file": "Scala/Intro to Scala.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/working of MR.md",
+                "file": "Scala/Intro to Scala.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/working of MR.md",
+                "file": "Scala/Intro to Scala.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/working of MR.md"
+                "file": "Scala/Intro to Scala.md"
               }
             }
           }
@@ -160,10 +161,12 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Hive/working of MR.md",
+    "Scala/Intro to Scala.md",
+    "Scala",
     "Hive/Intro to Hive.md",
     "Hive/Introducing Big Data.md",
     "Hive/Overview of Hadoop Ecosystem.md",
-    "Hive/working of MR.md",
     "Pasted image 20240901091251.png",
     "Gen AI/Gen AI intro.md",
     "Hive",
@@ -190,7 +193,6 @@
     "Pasted image 20240809090428.png",
     "Db Data Engineer Associate/2024-08-08.md",
     "Db Data Engineer Associate/2024-08-07.md",
-    "Db Data Engineer Associate/2024-08-05.md",
     "Pasted image 20240805081359.png",
     "Pasted image 20240804100115.png",
     "Pasted image 20240804095413.png",
@@ -204,7 +206,6 @@
     "Designing Data intensive applications/APR/Week1",
     "Designing Data intensive applications/APR",
     "Designing Data intensive applications/Mar/Week5",
-    "Designing Data intensive applications/doubts",
-    "Designing Data intensive applications/Mar/Week1"
+    "Designing Data intensive applications/doubts"
   ]
 }

@@ -1,0 +1,35 @@
+- multi-paradigm language
+- object oriented and functional
+- statically typed
+- scalable from simple scripts to sophisticated(but still easy to use) lib
+- scala runs in the java virtual machine
+- works with Java VM tools/libraries/infrastructure
+- used for big-iron projects in industry
+- pragmatic choice as successor to java
+- types: Int, Double, Boolean, String - not primitive type, everything is a class
+- arithmetic operators: +, -, *,/,%
+- variable type is inferred:
+	- `val answer = 8*5+2`  int -> val means immutable value
+	- can specify type after the name
+		- var greeting: String = null - > mutable variable and value
+		- in this case if there was no type, scala will not be able to infer the type as it is null
+	- semicolons at the end of a statement are optional
+	- strongly typed
+- commonly used types:
+	- Int, Double, Byte, Char, Short, Long, float(caps), Boolean
+	- everythin in scala is an objects, so methods can be applied on objects
+	- 1.to(10) // apply to method to 1, returns Range(1,2,3,4,5,6,7,8,9,10)
+		- applied to an integers: to method
+		- before calling any method on int, the int is converted to rich int
+	- java.lang.String available in Scala
+		- augmented by > 100 methods in string ops
+		- "Hello".intersect("World") // yields lo
+		- before calling any method on string, the string is converted to string ops
+	- val x:BigInt = 123456789
+	- x * x * x
+	- infix notation
+		- 1 to 10 same as 1.to(10)
+		- applicable only when one argument is required by the method
+		- val result = 1.+(10) // + is the name of the method here # regular method notation
+- ++, -- does not exist
+	- counter+=1
