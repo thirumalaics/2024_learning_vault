@@ -81,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -160,11 +161,12 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Scala/invoking functions and methods.md",
+    "Scala/Intro to Scala.md",
     "Hive/2024-09-02.md",
     "Pasted image 20240902084431.png",
     "Hive/Intro to Hive.md",
     "Hive/working of MR.md",
-    "Scala/Intro to Scala.md",
     "Scala",
     "Hive/Introducing Big Data.md",
     "Hive/Overview of Hadoop Ecosystem.md",

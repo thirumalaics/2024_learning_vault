@@ -33,3 +33,4 @@
 		- val result = 1.+(10) // + is the name of the method here # regular method notation
 - ++, -- does not exist
 	- counter+=1
+- compiled language that feels dynamic
