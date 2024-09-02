@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/2024-09-02.md",
+                "file": "Scala/Intro to Scala.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/2024-09-02.md",
+                "file": "Scala/Intro to Scala.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/2024-09-02.md",
+                "file": "Scala/Intro to Scala.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/2024-09-02.md"
+                "file": "Scala/Intro to Scala.md"
               }
             }
           }
@@ -161,9 +160,9 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Hive/2024-09-02.md",
     "Pasted image 20240902084431.png",
     "Hive/Intro to Hive.md",
-    "Hive/2024-09-02.md",
     "Hive/working of MR.md",
     "Scala/Intro to Scala.md",
     "Scala",
@@ -199,7 +198,6 @@
     "Pasted image 20240804095348.png",
     "Pasted image 20240804094703.png",
     "Pasted image 20240802091833.png",
-    "Pasted image 20240802091353.png",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
