@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Variables in scala.md",
+                "file": "Hive/2024-09-03.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Variables in scala.md",
+                "file": "Hive/2024-09-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Variables in scala.md",
+                "file": "Hive/2024-09-03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Variables in scala.md"
+                "file": "Hive/2024-09-03.md"
               }
             }
           }
@@ -161,11 +161,12 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Hive/2024-09-02.md",
+    "Hive/2024-09-03.md",
+    "Scala/Variables in scala.md",
     "Pasted image 20240902205930.png",
     "Scala/Intro to Scala.md",
-    "Scala/Variables in scala.md",
     "Scala/invoking functions and methods.md",
-    "Hive/2024-09-02.md",
     "Pasted image 20240902084431.png",
     "Hive/Intro to Hive.md",
     "Hive/working of MR.md",
@@ -199,7 +200,6 @@
     "Pasted image 20240804095413.png",
     "Pasted image 20240804095348.png",
     "Pasted image 20240804094703.png",
-    "Pasted image 20240802091833.png",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
