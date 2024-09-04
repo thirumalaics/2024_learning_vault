@@ -1,0 +1,48 @@
+- all files that I created for this learning day are of scala class object file
+```
+object ValuesVariablesTypes extends App{
+
+}
+```
+- above extends App is equivalent to creating a main function, which makes this application runnable
+- an alternative way is to skip extends App and in the body of the object inside {}, type in main, then hit ctrl-space to generate the function that will be called when running the app
+- variables declared using the keyword val cannot be reassigned
+	- vals are immutable
+	- vals are similar to final in java and const in c
+	- vals are not literally regarded as constants, they are more like intermediate computations to later use in bigger computations
+- types of vals are optional
+	- compiler can infer type from the right
+	- `val x = 42`
+	- he also mentioned for vars in a separate statement, compiler can infer type
+	- `val x: Int = "hello there"` this will obviously show in red in ide
+- semicolons are necessary if we write multiple expressions on the same line
+	- not recommended to write such expressions
+- Boolean, String, Int,Char,Short, Long,Float, Double
+- boolean accepts true or false
+- Char objects are single character value enclosed by single quotes
+- Short is smaller version of Int
+	- compiler will complain if the number is too big
+	- 1/2 the representation of int
+- Long
+	- double the repr of int
+	- to mark big numbers as long, we need to mark them with L in the end:
+		- 34567890456789L
+		- not necessary
+		- same syntax as Java
+	- even though I get a red mark below, I was able to run the program without an issue
+	- ![[Pasted image 20240903191645.png]]
+- Float
+	- 2.0f
+		- I initialized without giving f and it did not complain even b4 running
+		- if I give multiple zeros with or without f, the output is 2.0
+		- he mentions that if the f is not given, the number is interpreted as double and not as a float
+		- but I did not get any such exception
+	- f marks the value as float, otherwise the IDE will complain
+- vars are mutable
+	- hence reassignment possible
+	- variables are used in fnal programming for side effects
+	- side effects are useful because they allow us to see what our program is doing
+		- side effects can be changing variable, printing something
+		- programs without side effects are easier to understand
+- double definitions are not allowed, variables with same name cannot be defined in a script
+	- even if they are defined with same value and type

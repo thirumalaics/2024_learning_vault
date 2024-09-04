@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/2024-09-03.md",
+                "file": "Scala/rock the scala/Values vars and types.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/2024-09-03.md",
+                "file": "Scala/rock the scala/Values vars and types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/2024-09-03.md",
+                "file": "Scala/rock the scala/Values vars and types.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/2024-09-03.md"
+                "file": "Scala/rock the scala/Values vars and types.md"
               }
             }
           }
@@ -161,11 +160,14 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
-    "Hive/2024-09-02.md",
-    "Hive/2024-09-03.md",
+    "Pasted image 20240903191645.png",
     "Scala/Variables in scala.md",
-    "Pasted image 20240902205930.png",
+    "Scala/rock the scala/Values vars and types.md",
+    "Scala/rock the scala",
     "Scala/Intro to Scala.md",
+    "Hive/2024-09-03.md",
+    "Hive/2024-09-02.md",
+    "Pasted image 20240902205930.png",
     "Scala/invoking functions and methods.md",
     "Pasted image 20240902084431.png",
     "Hive/Intro to Hive.md",
@@ -192,8 +194,6 @@
     "Pasted image 20240809154023.png",
     "Databricks Data Lakehouse/2024-06-23.md",
     "Databricks Data Lakehouse/2024-06-22.md",
-    "Databricks Data Lakehouse/2024-06-15.md",
-    "Databricks Data Lakehouse/2024-02-10.md",
     "Pasted image 20240809090428.png",
     "Pasted image 20240805081359.png",
     "Pasted image 20240804100115.png",
@@ -205,7 +205,6 @@
     "Designing Data intensive applications/APR/Week2",
     "Designing Data intensive applications/APR/Week1",
     "Designing Data intensive applications/APR",
-    "Designing Data intensive applications/Mar/Week5",
-    "Designing Data intensive applications/doubts"
+    "Designing Data intensive applications/Mar/Week5"
   ]
 }

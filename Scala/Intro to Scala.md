@@ -1,6 +1,9 @@
 - multi-paradigm language
 - object oriented and functional
 - leverage the advantages of JVM
+- why do we need JDK for scala?
+	- scala runs on top of JVM
+	- scala compiler compiles scala code to java byte code
 - keep Java libraries
 - statically typed
 - scalable from simple scripts to sophisticated(but still easy to use) lib
