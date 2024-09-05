@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/Values vars and types.md",
+                "file": "Scala/rock the scala/Expressions.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/Values vars and types.md",
+                "file": "Scala/rock the scala/Expressions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/Values vars and types.md",
+                "file": "Scala/rock the scala/Expressions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/Values vars and types.md"
+                "file": "Scala/rock the scala/Expressions.md"
               }
             }
           }
@@ -160,9 +161,10 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Scala/rock the scala/Values vars and types.md",
+    "Scala/rock the scala/Expressions.md",
     "Pasted image 20240903191645.png",
     "Scala/Variables in scala.md",
-    "Scala/rock the scala/Values vars and types.md",
     "Scala/rock the scala",
     "Scala/Intro to Scala.md",
     "Hive/2024-09-03.md",
@@ -199,7 +201,6 @@
     "Pasted image 20240804100115.png",
     "Pasted image 20240804095413.png",
     "Pasted image 20240804095348.png",
-    "Pasted image 20240804094703.png",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
