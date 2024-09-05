@@ -1,0 +1,60 @@
+```
+def aFunction(a: String, b: Int): String = {// function definition or signature
+	a+ " " +b
+}
+
+println(aFunction("Hello", 3))
+```
+- it is not necessary to define return type like in the above, we can remove it and the compiler does not complain
+- calling a function is also an expression
+- functions that do not take any arguments can be called with just their name without the parentheses
+	- this behavior is only allowed in scala 2
+	- from scala 3 onwards(which is the version that I have):
+		- functions with parentheses must be called with parentheses
+		- functions without parentheses must be called without parentheses
+```
+println(aParantheseslessFunction)  
+def aParantheseslessFunction: Int = 22  
+println(aParantheseslessFunction)
+```
+- surprisingly the above code worked without any errors
+	- in the above there are two things:
+		- parentheses less function
+		- a function called before the snipper where the function is defined
+- I am still unsure on how to write a proper if elif else
+- the following is the way to write if else if, else statement in scala 3
+	- the syntax is different for scala 2
+```
+if x < 0 then
+	println("vanakkam")
+else if x == 0 then
+	println("sonakkam")
+else
+	print("poda venna")
+
+// scala 2 code below
+if (x < 0)
+	println("vanakkam")
+else if (x == 0)
+	println("sonakkam")
+else
+	println("poda venna")
+```
+- fundamental idea of functional programming is to use recursion when we need loops
+	- one important rule is that when writing recursion function it is important to provide the function return type
+- Unit is a valid return type of functions
+	- it can be used to denote that there are side effects in the function
+- a function can be defined inside another function just like in python
+	- think of it like this, the function body is a code block assigned to the function name variable
+	- def can be thought of like a key word denoting that we are dealing with a function
+```
+def parentFunction(n: Int): Int = {  
+  def nsquare(n2: Int, n1: Int): Int = {  
+    n*n1  
+  }  
+  nsquare(n,n-1)  
+}
+```
+- the above function works without any issue
+	- see that I am referencing a variable from the parent function in the nested function
+	- 
