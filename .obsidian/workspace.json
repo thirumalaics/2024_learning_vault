@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/2024-09-06.md",
+                "file": "Scala/rock the scala/4. Type inference and recursion.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/Expressions.md",
+                "file": "Scala/rock the scala/2.Expressions.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/2024-09-06.md",
+                "file": "Scala/rock the scala/4. Type inference and recursion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/2024-09-06.md",
+                "file": "Scala/rock the scala/4. Type inference and recursion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/2024-09-06.md"
+                "file": "Scala/rock the scala/4. Type inference and recursion.md"
               }
             }
           }
@@ -173,13 +172,14 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
-    "Scala/rock the scala/functions.md",
+    "Scala/rock the scala/3.functions.md",
+    "Scala/rock the scala/4. Type inference and recursion.md",
+    "Scala/rock the scala/2.Expressions.md",
+    "Scala/rock the scala/1.Values vars and types.md",
     "Hive/2024-09-06.md",
-    "Scala/rock the scala/Expressions.md",
     "Hive/2024-09-05.md",
     "Pasted image 20240905091441.png",
     "Hive/2024-09-03.md",
-    "Scala/rock the scala/Values vars and types.md",
     "Pasted image 20240903191645.png",
     "Scala/Variables in scala.md",
     "Scala/rock the scala",
@@ -207,7 +207,6 @@
     "SQL/Optimization.md",
     "Airflow Interview Questions.md",
     "interview questions.md",
-    "Interview/inito.md",
     "Pasted image 20240809154023.png",
     "Pasted image 20240809090428.png",
     "Pasted image 20240805081359.png",
