@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/4. Type inference and recursion.md",
+                "file": "Hive/2024-09-07.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/4. Type inference and recursion.md",
+                "file": "Hive/2024-09-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/4. Type inference and recursion.md",
+                "file": "Hive/2024-09-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/4. Type inference and recursion.md"
+                "file": "Hive/2024-09-07.md"
               }
             }
           }
@@ -172,11 +172,13 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
-    "Scala/rock the scala/3.functions.md",
+    "Hive/2024-09-06.md",
+    "Hive/2024-09-07.md",
+    "Hive/2024-09-07.md",
     "Scala/rock the scala/4. Type inference and recursion.md",
+    "Scala/rock the scala/3.functions.md",
     "Scala/rock the scala/2.Expressions.md",
     "Scala/rock the scala/1.Values vars and types.md",
-    "Hive/2024-09-06.md",
     "Hive/2024-09-05.md",
     "Pasted image 20240905091441.png",
     "Hive/2024-09-03.md",
@@ -205,8 +207,6 @@
     "Spark/A tale of three Apache Spark API.md",
     "Spark/Data Shuffling.md",
     "SQL/Optimization.md",
-    "Airflow Interview Questions.md",
-    "interview questions.md",
     "Pasted image 20240809154023.png",
     "Pasted image 20240809090428.png",
     "Pasted image 20240805081359.png",
