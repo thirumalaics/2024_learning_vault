@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
+                "file": "Hive/2024-09-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
+                "file": "Hive/2024-09-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
+                "file": "Hive/2024-09-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md"
+                "file": "Hive/2024-09-08.md"
               }
             }
           }
@@ -173,8 +172,9 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
-    "Hive/2024-09-07.md",
     "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
+    "Hive/2024-09-08.md",
+    "Hive/2024-09-07.md",
     "Hive/2024-09-06.md",
     "Scala/rock the scala/4. Type inference and recursion.md",
     "Scala/rock the scala/3.functions.md",
