@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/2024-09-07.md",
+                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/2024-09-07.md",
+                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/2024-09-07.md",
+                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/2024-09-07.md"
+                "file": "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md"
               }
             }
           }
@@ -172,9 +173,9 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
+    "Hive/2024-09-07.md",
+    "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Hive/2024-09-06.md",
-    "Hive/2024-09-07.md",
-    "Hive/2024-09-07.md",
     "Scala/rock the scala/4. Type inference and recursion.md",
     "Scala/rock the scala/3.functions.md",
     "Scala/rock the scala/2.Expressions.md",
@@ -206,7 +207,6 @@
     "Python/Decorators.md",
     "Spark/A tale of three Apache Spark API.md",
     "Spark/Data Shuffling.md",
-    "SQL/Optimization.md",
     "Pasted image 20240809154023.png",
     "Pasted image 20240809090428.png",
     "Pasted image 20240805081359.png",
