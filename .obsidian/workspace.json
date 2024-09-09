@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+                "file": "Hive/2024-09-09.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+                "file": "Hive/2024-09-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+                "file": "Hive/2024-09-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md"
+                "file": "Hive/2024-09-09.md"
               }
             }
           }
@@ -173,8 +173,10 @@
   },
   "active": "c91fd03b7434b008",
   "lastOpenFiles": [
-    "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+    "Hive/2024-09-09.md",
+    "Scala/rock the scala/Untitled.md",
+    "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Hive/2024-09-08.md",
     "Hive/2024-09-07.md",
     "Hive/2024-09-06.md",
@@ -206,8 +208,6 @@
     "[What.md",
     "Designing Data intensive applications/Unicode and Character sets.md",
     "Designing Data intensive applications/JAN/Week1/18.md",
-    "Python/Decorators.md",
-    "Spark/A tale of three Apache Spark API.md",
     "Pasted image 20240809154023.png",
     "Pasted image 20240809090428.png",
     "Pasted image 20240805081359.png",
