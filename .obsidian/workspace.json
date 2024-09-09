@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/2024-09-09.md",
+                "file": "Scala/rock the scala/7. OO Basics contd..md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a8ff970d03e06b74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/2024-09-09.md",
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/2024-09-09.md",
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/2024-09-09.md"
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md"
               }
             }
           }
@@ -171,11 +184,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c91fd03b7434b008",
+  "active": "a8ff970d03e06b74",
   "lastOpenFiles": [
+    "Scala/rock the scala/7. OO Basics contd..md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Hive/2024-09-09.md",
-    "Scala/rock the scala/Untitled.md",
     "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Hive/2024-09-08.md",
     "Hive/2024-09-07.md",
