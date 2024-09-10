@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/7. OO Basics contd..md",
+                "file": "Hive/2024-09-10.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/7. OO Basics contd..md",
+                "file": "Hive/2024-09-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/7. OO Basics contd..md",
+                "file": "Hive/2024-09-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/7. OO Basics contd..md"
+                "file": "Hive/2024-09-10.md"
               }
             }
           }
@@ -148,11 +148,12 @@
   },
   "active": "3532535882af66a3",
   "lastOpenFiles": [
+    "Hive/2024-09-09.md",
+    "Hive/2024-09-10.md",
+    "Scala/rock the scala/7. OO Basics contd..md",
     "Hive/Overview of Hadoop Ecosystem.md",
     "Scala/rock the scala/2.Expressions.md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
-    "Scala/rock the scala/7. OO Basics contd..md",
-    "Hive/2024-09-09.md",
     "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Hive/2024-09-08.md",
     "Hive/2024-09-07.md",
@@ -182,7 +183,6 @@
     "Gen AI",
     "[What.md",
     "Designing Data intensive applications/Unicode and Character sets.md",
-    "Designing Data intensive applications/JAN/Week1/18.md",
     "Pasted image 20240809154023.png",
     "Pasted image 20240809090428.png",
     "Pasted image 20240805081359.png",
