@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/2024-09-10.md",
+                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/2024-09-10.md",
+                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/2024-09-10.md",
+                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/2024-09-10.md"
+                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md"
               }
             }
           }
@@ -148,9 +149,15 @@
   },
   "active": "3532535882af66a3",
   "lastOpenFiles": [
-    "Hive/2024-09-09.md",
-    "Hive/2024-09-10.md",
+    "Pasted image 20240910184112.png",
+    "Pasted image 20240910183140.png",
+    "Pasted image 20240910181807.png",
+    "Pasted image 20240910180834.png",
+    "Pasted image 20240910180310.png",
     "Scala/rock the scala/7. OO Basics contd..md",
+    "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+    "Hive/2024-09-10.md",
+    "Hive/2024-09-09.md",
     "Hive/Overview of Hadoop Ecosystem.md",
     "Scala/rock the scala/2.Expressions.md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
@@ -181,13 +188,7 @@
     "Hive",
     "Spark/Long running jobs.md",
     "Gen AI",
-    "[What.md",
-    "Designing Data intensive applications/Unicode and Character sets.md",
     "Pasted image 20240809154023.png",
-    "Pasted image 20240809090428.png",
-    "Pasted image 20240805081359.png",
-    "Pasted image 20240804100115.png",
-    "Pasted image 20240804095413.png",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
