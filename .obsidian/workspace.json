@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+                "file": "Hive/Programming Hive/2024-09-11.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+                "file": "Hive/Programming Hive/2024-09-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+                "file": "Hive/Programming Hive/2024-09-11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md"
+                "file": "Hive/Programming Hive/2024-09-11.md"
               }
             }
           }
@@ -149,14 +148,19 @@
   },
   "active": "3532535882af66a3",
   "lastOpenFiles": [
+    "Pasted image 20240911093557.png",
+    "Pasted image 20240911085843.png",
+    "Hive/2024-09-11.md",
+    "Hive/Programming Hive/2024-09-11.md",
+    "Hive/Programming Hive",
+    "Hive/2024-09-10.md",
+    "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
     "Pasted image 20240910184112.png",
     "Pasted image 20240910183140.png",
     "Pasted image 20240910181807.png",
     "Pasted image 20240910180834.png",
     "Pasted image 20240910180310.png",
     "Scala/rock the scala/7. OO Basics contd..md",
-    "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
-    "Hive/2024-09-10.md",
     "Hive/2024-09-09.md",
     "Hive/Overview of Hadoop Ecosystem.md",
     "Scala/rock the scala/2.Expressions.md",
@@ -183,17 +187,12 @@
     "Hive/working of MR.md",
     "Scala",
     "Hive/Introducing Big Data.md",
-    "Pasted image 20240901091251.png",
-    "Gen AI/Gen AI intro.md",
     "Hive",
-    "Spark/Long running jobs.md",
     "Gen AI",
-    "Pasted image 20240809154023.png",
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
     "Designing Data intensive applications/APR/Week1",
-    "Designing Data intensive applications/APR",
-    "Designing Data intensive applications/Mar/Week5"
+    "Designing Data intensive applications/APR"
   ]
 }
