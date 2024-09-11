@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-11.md",
+                "file": "Scala/rock the scala/9. Scala Objects.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-11.md",
+                "file": "Scala/rock the scala/9. Scala Objects.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-11.md",
+                "file": "Scala/rock the scala/9. Scala Objects.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-11.md"
+                "file": "Scala/rock the scala/9. Scala Objects.md"
               }
             }
           }
@@ -148,10 +149,12 @@
   },
   "active": "3532535882af66a3",
   "lastOpenFiles": [
+    "Hive/Programming Hive/2024-09-11.md",
+    "Scala/rock the scala/9. Scala Objects.md",
+    "Scala/rock the scala/9. Objects.md",
     "Pasted image 20240911093557.png",
     "Pasted image 20240911085843.png",
     "Hive/2024-09-11.md",
-    "Hive/Programming Hive/2024-09-11.md",
     "Hive/Programming Hive",
     "Hive/2024-09-10.md",
     "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
@@ -182,11 +185,9 @@
     "Hive/2024-09-02.md",
     "Pasted image 20240902205930.png",
     "Scala/invoking functions and methods.md",
-    "Pasted image 20240902084431.png",
     "Hive/Intro to Hive.md",
     "Hive/working of MR.md",
     "Scala",
-    "Hive/Introducing Big Data.md",
     "Hive",
     "Gen AI",
     "Neetcode Algos",
