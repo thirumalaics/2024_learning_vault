@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-13.md",
+                "file": "Scala/rock the scala/10. Inheritance.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-13.md",
+                "file": "Scala/rock the scala/10. Inheritance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-13.md",
+                "file": "Scala/rock the scala/10. Inheritance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hive/Programming Hive/2024-09-13.md"
+                "file": "Scala/rock the scala/10. Inheritance.md"
               }
             }
           }
@@ -160,12 +161,13 @@
   },
   "active": "3532535882af66a3",
   "lastOpenFiles": [
+    "Scala/rock the scala/9. Scala Objects.md",
+    "Scala/rock the scala/10. Inheritance.md",
+    "Hive/Programming Hive/2024-09-13.md",
     "Pasted image 20240913091816.png",
     "Pasted image 20240913090209.png",
     "Hive/Programming Hive/2024-09-11.md",
-    "Hive/Programming Hive/2024-09-13.md",
     "Pasted image 20240913083148.png",
-    "Scala/rock the scala/9. Scala Objects.md",
     "Scala/rock the scala/9. Objects.md",
     "Pasted image 20240911093557.png",
     "Pasted image 20240911085843.png",
@@ -191,7 +193,6 @@
     "Scala/rock the scala/3.functions.md",
     "Scala/rock the scala/1.Values vars and types.md",
     "Hive/2024-09-05.md",
-    "Pasted image 20240905091441.png",
     "Hive/2024-09-03.md",
     "Scala/Variables in scala.md",
     "Scala/rock the scala",
