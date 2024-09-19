@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/3.functions.md",
+                "file": "Scala/rock the scala/12. Traits.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/3.functions.md",
+                "file": "Scala/rock the scala/12. Traits.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/3.functions.md",
+                "file": "Scala/rock the scala/12. Traits.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/3.functions.md"
+                "file": "Scala/rock the scala/12. Traits.md"
               }
             }
           }
@@ -161,6 +161,7 @@
   "active": "3532535882af66a3",
   "lastOpenFiles": [
     "Scala/rock the scala/11. Inheritance Contd.md",
+    "Scala/rock the scala/12. Traits.md",
     "Scala/rock the scala/3.functions.md",
     "Pasted image 20240914164834.png",
     "Scala/rock the scala/10. Inheritance.md",
