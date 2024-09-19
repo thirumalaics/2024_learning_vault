@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/10. Inheritance.md",
+                "file": "Scala/rock the scala/3.functions.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/10. Inheritance.md",
+                "file": "Scala/rock the scala/3.functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/10. Inheritance.md",
+                "file": "Scala/rock the scala/3.functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/10. Inheritance.md"
+                "file": "Scala/rock the scala/3.functions.md"
               }
             }
           }
@@ -161,12 +160,16 @@
   },
   "active": "3532535882af66a3",
   "lastOpenFiles": [
-    "Scala/rock the scala/9. Scala Objects.md",
+    "Scala/rock the scala/11. Inheritance Contd.md",
+    "Scala/rock the scala/3.functions.md",
+    "Pasted image 20240914164834.png",
     "Scala/rock the scala/10. Inheritance.md",
+    "Hive/Programming Hive/2024-09-11.md",
     "Hive/Programming Hive/2024-09-13.md",
+    "Hive/Programming Hive/2024-09-14.md",
+    "Scala/rock the scala/9. Scala Objects.md",
     "Pasted image 20240913091816.png",
     "Pasted image 20240913090209.png",
-    "Hive/Programming Hive/2024-09-11.md",
     "Pasted image 20240913083148.png",
     "Scala/rock the scala/9. Objects.md",
     "Pasted image 20240911093557.png",
@@ -179,7 +182,6 @@
     "Pasted image 20240910183140.png",
     "Pasted image 20240910181807.png",
     "Pasted image 20240910180834.png",
-    "Pasted image 20240910180310.png",
     "Scala/rock the scala/7. OO Basics contd..md",
     "Hive/2024-09-09.md",
     "Hive/Overview of Hadoop Ecosystem.md",
@@ -190,15 +192,11 @@
     "Hive/2024-09-07.md",
     "Hive/2024-09-06.md",
     "Scala/rock the scala/4. Type inference and recursion.md",
-    "Scala/rock the scala/3.functions.md",
     "Scala/rock the scala/1.Values vars and types.md",
     "Hive/2024-09-05.md",
     "Hive/2024-09-03.md",
     "Scala/Variables in scala.md",
     "Scala/rock the scala",
-    "Scala/Intro to Scala.md",
-    "Hive/2024-09-02.md",
-    "Scala/invoking functions and methods.md",
     "Scala",
     "Hive",
     "Gen AI",
