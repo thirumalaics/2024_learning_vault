@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Scala/rock the scala/14. Generics Contd.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "92951068deee1311",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Scala/rock the scala/13. Generics.md",
                 "mode": "source",
                 "source": false
@@ -81,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/13. Generics.md",
+                "file": "Scala/rock the scala/14. Generics Contd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/13. Generics.md",
+                "file": "Scala/rock the scala/14. Generics Contd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/13. Generics.md"
+                "file": "Scala/rock the scala/14. Generics Contd.md"
               }
             }
           }
@@ -160,8 +173,9 @@
   },
   "active": "3532535882af66a3",
   "lastOpenFiles": [
-    "Scala/rock the scala/12. Traits.md",
     "Scala/rock the scala/13. Generics.md",
+    "Scala/rock the scala/14. Generics Contd.md",
+    "Scala/rock the scala/12. Traits.md",
     "Scala/rock the scala/11. Inheritance Contd.md",
     "Scala/rock the scala/3.functions.md",
     "Pasted image 20240914164834.png",
@@ -196,7 +210,6 @@
     "Scala/rock the scala/4. Type inference and recursion.md",
     "Scala/rock the scala/1.Values vars and types.md",
     "Hive/2024-09-05.md",
-    "Hive/2024-09-03.md",
     "Scala/rock the scala",
     "Scala",
     "Hive",
