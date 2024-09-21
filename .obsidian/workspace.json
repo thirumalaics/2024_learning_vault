@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/14. Generics Contd.md",
+                "file": "Scala/Spark/1. Basics.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/14. Generics Contd.md",
+                "file": "Scala/Spark/1. Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/14. Generics Contd.md",
+                "file": "Scala/Spark/1. Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/14. Generics Contd.md"
+                "file": "Scala/Spark/1. Basics.md"
               }
             }
           }
@@ -161,8 +161,10 @@
   },
   "active": "92951068deee1311",
   "lastOpenFiles": [
-    "Scala/rock the scala/Variance.md",
     "Scala/rock the scala/14. Generics Contd.md",
+    "Scala/Spark/1. Basics.md",
+    "Scala/Spark",
+    "Scala/rock the scala/Variance.md",
     "Scala/rock the scala/13. Generics.md",
     "Scala/rock the scala/12. Traits.md",
     "Scala/rock the scala/11. Inheritance Contd.md",
@@ -204,7 +206,6 @@
     "Neetcode Algos",
     "Python",
     "Designing Data intensive applications/APR/Week2",
-    "Designing Data intensive applications/APR/Week1",
-    "Designing Data intensive applications/APR"
+    "Designing Data intensive applications/APR/Week1"
   ]
 }
