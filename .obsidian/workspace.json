@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/16. Type bounds.md",
+                "file": "Scala/Spark/3. Data Sources.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/16. Type bounds.md",
+                "file": "Scala/Spark/3. Data Sources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/16. Type bounds.md",
+                "file": "Scala/Spark/3. Data Sources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/16. Type bounds.md"
+                "file": "Scala/Spark/3. Data Sources.md"
               }
             }
           }
@@ -149,9 +149,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
+    "Scala/rock the scala/16. Type bounds.md",
+    "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
     "Scala/rock the scala/14. Generics Contd.md",
-    "Scala/rock the scala/16. Type bounds.md",
     "Scala/rock the scala/15. Generics Contd.md",
     "Hive/Programming Hive/2024-09-11.md",
     "Scala/Spark/1. Basics.md",
@@ -180,7 +181,6 @@
     "Pasted image 20240910184112.png",
     "Pasted image 20240910183140.png",
     "Pasted image 20240910181807.png",
-    "Pasted image 20240910180834.png",
     "Scala/rock the scala/7. OO Basics contd..md",
     "Hive/2024-09-09.md",
     "Hive/Overview of Hadoop Ecosystem.md",
