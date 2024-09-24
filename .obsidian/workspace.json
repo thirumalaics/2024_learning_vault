@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/3. Data Sources.md",
+                "file": "Scala/rock the scala/17. Anonymous Classes.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/3. Data Sources.md",
+                "file": "Scala/rock the scala/17. Anonymous Classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/3. Data Sources.md",
+                "file": "Scala/rock the scala/17. Anonymous Classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/3. Data Sources.md"
+                "file": "Scala/rock the scala/17. Anonymous Classes.md"
               }
             }
           }
@@ -150,6 +149,7 @@
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
     "Scala/rock the scala/16. Type bounds.md",
+    "Scala/rock the scala/17. Anonymous Classes.md",
     "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
     "Scala/rock the scala/14. Generics Contd.md",
@@ -186,7 +186,6 @@
     "Hive/Overview of Hadoop Ecosystem.md",
     "Scala/rock the scala/2.Expressions.md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
-    "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Scala/rock the scala",
     "Scala",
     "Hive",
