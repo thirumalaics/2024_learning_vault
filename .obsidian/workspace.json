@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/17. Anonymous Classes.md",
+                "file": "Scala/Spark/4..md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/17. Anonymous Classes.md",
+                "file": "Scala/Spark/4..md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/17. Anonymous Classes.md",
+                "file": "Scala/Spark/4..md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/17. Anonymous Classes.md"
+                "file": "Scala/Spark/4..md"
               }
             }
           }
@@ -148,8 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/16. Type bounds.md",
     "Scala/rock the scala/17. Anonymous Classes.md",
+    "Scala/Spark/4..md",
+    "Scala/rock the scala/16. Type bounds.md",
     "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
     "Scala/rock the scala/14. Generics Contd.md",
@@ -185,7 +187,6 @@
     "Hive/2024-09-09.md",
     "Hive/Overview of Hadoop Ecosystem.md",
     "Scala/rock the scala/2.Expressions.md",
-    "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Scala/rock the scala",
     "Scala",
     "Hive",
