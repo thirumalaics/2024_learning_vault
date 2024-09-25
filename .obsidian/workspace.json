@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/4..md",
+                "file": "Scala/Spark/4. Columns, Expression.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/4..md",
+                "file": "Scala/Spark/4. Columns, Expression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/4..md",
+                "file": "Scala/Spark/4. Columns, Expression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/4..md"
+                "file": "Scala/Spark/4. Columns, Expression.md"
               }
             }
           }
@@ -150,7 +150,8 @@
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
     "Scala/rock the scala/17. Anonymous Classes.md",
-    "Scala/Spark/4..md",
+    "Scala/Spark/4. Columns, Expression.md",
+    "Scala/Spark/4. Columns, Expression.md",
     "Scala/rock the scala/16. Type bounds.md",
     "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
@@ -186,7 +187,6 @@
     "Scala/rock the scala/7. OO Basics contd..md",
     "Hive/2024-09-09.md",
     "Hive/Overview of Hadoop Ecosystem.md",
-    "Scala/rock the scala/2.Expressions.md",
     "Scala/rock the scala",
     "Scala",
     "Hive",
