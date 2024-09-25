@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "plan ",
+                "query": "bound types",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -149,10 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/17. Anonymous Classes.md",
-    "Scala/Spark/4. Columns, Expression.md",
-    "Scala/Spark/4. Columns, Expression.md",
     "Scala/rock the scala/16. Type bounds.md",
+    "Scala/Spark/4. Columns, Expression.md",
+    "Scala/rock the scala/17. Anonymous Classes.md",
     "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
     "Scala/rock the scala/14. Generics Contd.md",
