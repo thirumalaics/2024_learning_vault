@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/19. Exceptions.md",
+                "file": "Scala/rock the scala/21. What's a Function.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/19. Exceptions.md",
+                "file": "Scala/rock the scala/21. What's a Function.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/19. Exceptions.md",
+                "file": "Scala/rock the scala/21. What's a Function.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/19. Exceptions.md"
+                "file": "Scala/rock the scala/21. What's a Function.md"
               }
             }
           }
@@ -149,8 +149,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/Spark/5. Joins in Df.md",
+    "Scala/rock the scala/20. Packaging and Imports.md",
+    "Scala/rock the scala/21. What's a Function.md",
     "Scala/rock the scala/19. Exceptions.md",
+    "Scala/Spark/5. Joins in Df.md",
     "Scala/rock the scala/18. Case Classes and Enums.md",
     "Scala/Spark/4. Columns, Expression.md",
     "Scala/rock the scala/16. Type bounds.md",
@@ -182,11 +184,9 @@
     "Hive/2024-09-11.md",
     "Hive/Programming Hive",
     "Hive/2024-09-10.md",
-    "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
     "Pasted image 20240910184112.png",
     "Pasted image 20240910183140.png",
     "Pasted image 20240910181807.png",
-    "Scala/rock the scala/7. OO Basics contd..md",
     "Scala/rock the scala",
     "Scala",
     "Hive",
