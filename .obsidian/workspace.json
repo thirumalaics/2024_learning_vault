@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/21. What's a Function.md",
+                "file": "Scala/rock the scala/21. What's function.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/21. What's a Function.md",
+                "file": "Scala/rock the scala/21. What's function.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/21. What's a Function.md",
+                "file": "Scala/rock the scala/21. What's function.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/21. What's a Function.md"
+                "file": "Scala/rock the scala/21. What's function.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/20. Packaging and Imports.md",
     "Scala/rock the scala/21. What's a Function.md",
+    "Scala/rock the scala/21. What's function.md",
+    "Scala/rock the scala/20. Packaging and Imports.md",
     "Scala/rock the scala/19. Exceptions.md",
     "Scala/Spark/5. Joins in Df.md",
     "Scala/rock the scala/18. Case Classes and Enums.md",
@@ -183,7 +184,6 @@
     "Pasted image 20240911085843.png",
     "Hive/2024-09-11.md",
     "Hive/Programming Hive",
-    "Hive/2024-09-10.md",
     "Pasted image 20240910184112.png",
     "Pasted image 20240910183140.png",
     "Pasted image 20240910181807.png",
