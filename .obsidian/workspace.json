@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/6. Working with Common Spark Data Types.md",
+                "file": "Scala/rock the scala/22. HOFs and Curries.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/6. Working with Common Spark Data Types.md",
+                "file": "Scala/rock the scala/22. HOFs and Curries.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/6. Working with Common Spark Data Types.md",
+                "file": "Scala/rock the scala/22. HOFs and Curries.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/6. Working with Common Spark Data Types.md"
+                "file": "Scala/rock the scala/22. HOFs and Curries.md"
               }
             }
           }
@@ -149,9 +149,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/Spark/6. Working with Common Spark Data Types.md",
-    "Scala/Spark/6. Working with Common Spark Data Types.md",
     "Scala/rock the scala/21. What's function.md",
+    "Scala/rock the scala/22. HOFs and Curries.md",
+    "Scala/Spark/6. Working with Common Spark Data Types.md",
+    "Scala/Spark/6. Working with Common Spark Data Types.md",
     "Scala/rock the scala/21. What's a Function.md",
     "Scala/rock the scala/20. Packaging and Imports.md",
     "Scala/rock the scala/19. Exceptions.md",
@@ -177,7 +178,6 @@
     "Scala/rock the scala/10. Inheritance.md",
     "Hive/Programming Hive/2024-09-13.md",
     "Hive/Programming Hive/2024-09-14.md",
-    "Scala/rock the scala/9. Scala Objects.md",
     "Pasted image 20240913091816.png",
     "Pasted image 20240913090209.png",
     "Pasted image 20240913083148.png",
