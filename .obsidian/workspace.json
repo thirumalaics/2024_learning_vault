@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/22. HOFs and Curries.md",
+                "file": "Scala/Spark/7. Working with complex spark data types.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/22. HOFs and Curries.md",
+                "file": "Scala/Spark/7. Working with complex spark data types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/22. HOFs and Curries.md",
+                "file": "Scala/Spark/7. Working with complex spark data types.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/22. HOFs and Curries.md"
+                "file": "Scala/Spark/7. Working with complex spark data types.md"
               }
             }
           }
@@ -148,8 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/21. What's function.md",
     "Scala/rock the scala/22. HOFs and Curries.md",
+    "Scala/Spark/7. Working with complex spark data types.md",
+    "Scala/rock the scala/21. What's function.md",
     "Scala/Spark/6. Working with Common Spark Data Types.md",
     "Scala/Spark/6. Working with Common Spark Data Types.md",
     "Scala/rock the scala/21. What's a Function.md",
@@ -176,7 +178,6 @@
     "Pasted image 20240914164834.png",
     "Scala/rock the scala/10. Inheritance.md",
     "Hive/Programming Hive/2024-09-13.md",
-    "Hive/Programming Hive/2024-09-14.md",
     "Pasted image 20240913091816.png",
     "Pasted image 20240913090209.png",
     "Pasted image 20240913083148.png",
