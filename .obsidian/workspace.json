@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/23. Collections.md",
+                "file": "Microeconomics/Intro to economics.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/23. Collections.md",
+                "file": "Microeconomics/Intro to economics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/23. Collections.md",
+                "file": "Microeconomics/Intro to economics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/23. Collections.md"
+                "file": "Microeconomics/Intro to economics.md"
               }
             }
           }
@@ -148,8 +149,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/Spark/7. Working with complex spark data types.md",
     "Scala/rock the scala/23. Collections.md",
+    "Microeconomics/Intro to economics.md",
+    "Microeconomics",
+    "Scala/Spark/7. Working with complex spark data types.md",
     "Scala/rock the scala/22. HOFs and Curries.md",
     "Scala/rock the scala/21. What's function.md",
     "Scala/Spark/6. Working with Common Spark Data Types.md",
@@ -176,7 +179,6 @@
     "Scala/rock the scala/11. Inheritance Contd.md",
     "Scala/rock the scala/3.functions.md",
     "Pasted image 20240914164834.png",
-    "Scala/rock the scala/10. Inheritance.md",
     "Pasted image 20240913091816.png",
     "Pasted image 20240913090209.png",
     "Pasted image 20240913083148.png",
@@ -192,7 +194,6 @@
     "Gen AI",
     "Neetcode Algos",
     "Python",
-    "Designing Data intensive applications/APR/Week2",
-    "Designing Data intensive applications/APR/Week1"
+    "Designing Data intensive applications/APR/Week2"
   ]
 }
