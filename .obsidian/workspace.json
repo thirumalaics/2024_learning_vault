@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/Datasets.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/Datasets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/Datasets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomics/Intro to economics.md"
+                "file": "Scala/Spark/Datasets.md"
               }
             }
           }
@@ -149,8 +149,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/23. Collections.md",
+    "Scala/Spark/Managing nulls in data.md",
+    "Scala/Spark/Datasets.md",
     "Microeconomics/Intro to economics.md",
+    "Scala/rock the scala/23. Collections.md",
     "Microeconomics",
     "Scala/Spark/7. Working with complex spark data types.md",
     "Scala/rock the scala/22. HOFs and Curries.md",
@@ -176,8 +178,6 @@
     "Scala/Spark",
     "Scala/rock the scala/13. Generics.md",
     "Scala/rock the scala/12. Traits.md",
-    "Scala/rock the scala/11. Inheritance Contd.md",
-    "Scala/rock the scala/3.functions.md",
     "Pasted image 20240914164834.png",
     "Pasted image 20240913091816.png",
     "Pasted image 20240913090209.png",
