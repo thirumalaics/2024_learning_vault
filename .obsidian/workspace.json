@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/8. Datasets.md",
+                "file": "Scala/rock the scala/25. Collections contd.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/8. Datasets.md",
+                "file": "Scala/rock the scala/25. Collections contd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/8. Datasets.md",
+                "file": "Scala/rock the scala/25. Collections contd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/8. Datasets.md"
+                "file": "Scala/rock the scala/25. Collections contd.md"
               }
             }
           }
@@ -149,9 +148,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
+    "Scala/Spark/8. Datasets.md",
+    "Scala/rock the scala/25. Collections contd.md",
     "Microeconomics/Intro to economics.md",
     "Scala/rock the scala/24. Collections Contd.md",
-    "Scala/Spark/8. Datasets.md",
     "Scala/Spark/Managing nulls in data.md",
     "Scala/rock the scala/23. Collections.md",
     "Microeconomics",
@@ -177,7 +177,6 @@
     "Scala/Spark/2. Dataframes.md",
     "Scala/rock the scala/Variance.md",
     "Scala/Spark",
-    "Scala/rock the scala/13. Generics.md",
     "Pasted image 20240914164834.png",
     "Pasted image 20240913091816.png",
     "Pasted image 20240913090209.png",
