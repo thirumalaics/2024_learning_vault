@@ -37,3 +37,13 @@
 	- consumption goods: goods that are used and not used to produce any other thing
 	- a factory might have to decide how much of capital and consumption goods to generate
 		- there must be a trade off
+## Economic model
+- taking complex systems, making simplified assumptions in order make sense results in a model
+	- and using this model in place of the original
+- depending on the model, there are going to be simplifying assumptions that take complex systems into simple equations, lines or charts
+
+## Normative and Positive statements
+- normative = thinks how the world should be, opinions
+	- paying people who are not working, even though they could work is wrong and unfair
+- positive = not necessary to be true but can be tested
+	- programs like welfare reduce the incentive for people to work
