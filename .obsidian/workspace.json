@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/8. Datasets.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/8. Datasets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/8. Datasets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomics/Intro to economics.md"
+                "file": "Scala/Spark/8. Datasets.md"
               }
             }
           }
@@ -148,10 +149,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/24. Collections Contd.md",
-    "Scala/Spark/Datasets.md",
-    "Scala/Spark/Managing nulls in data.md",
     "Microeconomics/Intro to economics.md",
+    "Scala/rock the scala/24. Collections Contd.md",
+    "Scala/Spark/8. Datasets.md",
+    "Scala/Spark/Managing nulls in data.md",
     "Scala/rock the scala/23. Collections.md",
     "Microeconomics",
     "Scala/Spark/7. Working with complex spark data types.md",
