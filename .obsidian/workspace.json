@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/26. Vectors & Map Contd.md",
+                "file": "Scala/Spark/10. SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/26. Vectors & Map Contd.md",
+                "file": "Scala/Spark/10. SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/26. Vectors & Map Contd.md",
+                "file": "Scala/Spark/10. SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/26. Vectors & Map Contd.md"
+                "file": "Scala/Spark/10. SQL.md"
               }
             }
           }
@@ -148,8 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/Spark/9. DS contd.md",
     "Scala/rock the scala/26. Vectors & Map Contd.md",
+    "Scala/Spark/10. SQL.md",
+    "Scala/Spark/9. DS contd.md",
     "Scala/Spark/8. Datasets.md",
     "Pasted image 20241004183457.png",
     "Microeconomics/Intro to economics.md",
@@ -176,7 +178,6 @@
     "Scala/rock the scala/14. Generics Contd.md",
     "Scala/rock the scala/15. Generics Contd.md",
     "Hive/Programming Hive/2024-09-11.md",
-    "Scala/Spark/1. Basics.md",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
     "Pasted image 20240913091816.png",
