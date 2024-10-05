@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/9. DS contd.md",
+                "file": "Scala/rock the scala/26. Vectors & Map Contd.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/9. DS contd.md",
+                "file": "Scala/rock the scala/26. Vectors & Map Contd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/9. DS contd.md",
+                "file": "Scala/rock the scala/26. Vectors & Map Contd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/9. DS contd.md"
+                "file": "Scala/rock the scala/26. Vectors & Map Contd.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/Spark/8. Datasets.md",
     "Scala/Spark/9. DS contd.md",
+    "Scala/rock the scala/26. Vectors & Map Contd.md",
+    "Scala/Spark/8. Datasets.md",
     "Pasted image 20241004183457.png",
     "Microeconomics/Intro to economics.md",
     "Scala/rock the scala/25. Collections contd.md",
