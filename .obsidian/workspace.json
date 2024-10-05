@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/9. DS contd.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/9. DS contd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomics/Intro to economics.md",
+                "file": "Scala/Spark/9. DS contd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomics/Intro to economics.md"
+                "file": "Scala/Spark/9. DS contd.md"
               }
             }
           }
@@ -149,9 +148,11 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/25. Collections contd.md",
     "Scala/Spark/8. Datasets.md",
+    "Scala/Spark/9. DS contd.md",
+    "Pasted image 20241004183457.png",
     "Microeconomics/Intro to economics.md",
+    "Scala/rock the scala/25. Collections contd.md",
     "Scala/rock the scala/24. Collections Contd.md",
     "Scala/Spark/Managing nulls in data.md",
     "Scala/rock the scala/23. Collections.md",
@@ -175,8 +176,6 @@
     "Scala/rock the scala/15. Generics Contd.md",
     "Hive/Programming Hive/2024-09-11.md",
     "Scala/Spark/1. Basics.md",
-    "Scala/Spark/2. Dataframes.md",
-    "Scala/rock the scala/Variance.md",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
     "Pasted image 20240913091816.png",
@@ -187,7 +186,6 @@
     "Hive/Programming Hive",
     "Pasted image 20240910184112.png",
     "Pasted image 20240910183140.png",
-    "Pasted image 20240910181807.png",
     "Scala/rock the scala",
     "Scala",
     "Hive",
