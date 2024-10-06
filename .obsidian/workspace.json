@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/10. SQL.md",
+                "file": "Scala/rock the scala/27. Tuples and maps.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/10. SQL.md",
+                "file": "Scala/rock the scala/27. Tuples and maps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/10. SQL.md",
+                "file": "Scala/rock the scala/27. Tuples and maps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/10. SQL.md"
+                "file": "Scala/rock the scala/27. Tuples and maps.md"
               }
             }
           }
@@ -149,7 +148,8 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/26. Vectors & Map Contd.md",
+    "Scala/rock the scala/26. Vectors Contd.md",
+    "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/Spark/10. SQL.md",
     "Scala/Spark/9. DS contd.md",
     "Scala/Spark/8. Datasets.md",
@@ -177,7 +177,6 @@
     "Pasted image 20240923100057.png",
     "Scala/rock the scala/14. Generics Contd.md",
     "Scala/rock the scala/15. Generics Contd.md",
-    "Hive/Programming Hive/2024-09-11.md",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
     "Pasted image 20240913091816.png",
