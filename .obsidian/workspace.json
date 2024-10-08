@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/10. SQL.md",
+                "file": "Scala/rock the scala/28. Options.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/10. SQL.md",
+                "file": "Scala/rock the scala/28. Options.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/10. SQL.md",
+                "file": "Scala/rock the scala/28. Options.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/10. SQL.md"
+                "file": "Scala/rock the scala/28. Options.md"
               }
             }
           }
@@ -149,11 +149,12 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
+    "Scala/Spark/10. SQL.md",
+    "Scala/rock the scala/28. Options.md",
     "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/24. Collections Contd.md",
     "Scala/rock the scala/23. Collections.md",
     "Scala/rock the scala/26. Vectors Contd.md",
-    "Scala/Spark/10. SQL.md",
     "Scala/Spark/9. DS contd.md",
     "Scala/Spark/8. Datasets.md",
     "Pasted image 20241004183457.png",
@@ -177,7 +178,6 @@
     "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
     "Scala/rock the scala/14. Generics Contd.md",
-    "Scala/rock the scala/15. Generics Contd.md",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
     "Pasted image 20240913091816.png",
