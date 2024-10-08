@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/27. Tuples and maps.md",
+                "file": "Scala/Spark/10. SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/27. Tuples and maps.md",
+                "file": "Scala/Spark/10. SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/27. Tuples and maps.md",
+                "file": "Scala/Spark/10. SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/27. Tuples and maps.md"
+                "file": "Scala/Spark/10. SQL.md"
               }
             }
           }
@@ -149,9 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
+    "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/24. Collections Contd.md",
     "Scala/rock the scala/23. Collections.md",
-    "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/26. Vectors Contd.md",
     "Scala/Spark/10. SQL.md",
     "Scala/Spark/9. DS contd.md",
