@@ -41,9 +41,21 @@
 - taking complex systems, making simplified assumptions in order make sense results in a model
 	- and using this model in place of the original
 - depending on the model, there are going to be simplifying assumptions that take complex systems into simple equations, lines or charts
+- model is an abstraction that helps us to understand a process or a thing by focusing on key aspects
+	- economists rely on models because it is impossible to capture the full complexity of human interaction, let alone try to do it in a straightforward and easy to read way
 
 ## Normative and Positive statements
 - normative = thinks how the world should be, opinions
 	- paying people who are not working, even though they could work is wrong and unfair
 - positive = not necessary to be true but can be tested
 	- programs like welfare reduce the incentive for people to work
+- occam's razor
+	- logical principle that states we must make no more assumptions than the minimum amount needed to perform analysis
+- ceteris paribus
+	- all else equal
+	- used to emphasize the idea that the only changes we should be thinking about are the ones that are explicitly described
+- economic analysis tend to focus mostly on positive analysis, that is, the description of phenomena, facts and concepts
+	- this does not mean normative thinking does not exist in economics
+	- normative thinking is present in policy making along with positive
+- not all costs are monetary
+	- opportunity costs are usually expressed in terms of how much of another good, service or activity must be given up in order to pursue or produce another activity or good

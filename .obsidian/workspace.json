@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/28. Options.md",
+                "file": "Microeconomics/Economic systems.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/28. Options.md",
+                "file": "Microeconomics/Economic systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/28. Options.md",
+                "file": "Microeconomics/Economic systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/28. Options.md"
+                "file": "Microeconomics/Economic systems.md"
               }
             }
           }
@@ -146,10 +147,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2aabead516d3d8bb",
+  "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/Spark/10. SQL.md",
+    "Microeconomics/Intro to economics.md",
+    "Microeconomics/Economic systems.md",
     "Scala/rock the scala/28. Options.md",
+    "Scala/Spark/10. SQL.md",
     "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/24. Collections Contd.md",
     "Scala/rock the scala/23. Collections.md",
@@ -157,7 +160,6 @@
     "Scala/Spark/9. DS contd.md",
     "Scala/Spark/8. Datasets.md",
     "Pasted image 20241004183457.png",
-    "Microeconomics/Intro to economics.md",
     "Scala/rock the scala/25. Collections contd.md",
     "Scala/Spark/Managing nulls in data.md",
     "Microeconomics",
@@ -176,7 +178,6 @@
     "Scala/rock the scala/17. Anonymous Classes.md",
     "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
-    "Scala/rock the scala/14. Generics Contd.md",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
     "Pasted image 20240913091816.png",
