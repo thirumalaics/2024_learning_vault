@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -147,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8e987b35cf6d757",
+  "active": "2aabead516d3d8bb",
   "lastOpenFiles": [
     "Scala/Spark/10. SQL.md",
     "Scala/rock the scala/28. Options.md",
