@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microeconomics/Economic systems.md",
+                "file": "Scala/Spark/RDD.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomics/Economic systems.md",
+                "file": "Scala/Spark/RDD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomics/Economic systems.md",
+                "file": "Scala/Spark/RDD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomics/Economic systems.md"
+                "file": "Scala/Spark/RDD.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Microeconomics/Intro to economics.md",
     "Microeconomics/Economic systems.md",
+    "Scala/Spark/RDD.md",
+    "Microeconomics/Intro to economics.md",
     "Scala/rock the scala/28. Options.md",
     "Scala/Spark/10. SQL.md",
     "Scala/rock the scala/27. Tuples and maps.md",
@@ -176,7 +177,6 @@
     "Scala/Spark/4. Columns, Expression.md",
     "Scala/rock the scala/16. Type bounds.md",
     "Scala/rock the scala/17. Anonymous Classes.md",
-    "Scala/Spark/3. Data Sources.md",
     "Pasted image 20240923100057.png",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
