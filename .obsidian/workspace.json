@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/29. Options Contd and Handling failure.md",
+                "file": "Scala/Spark/11. Spark UI.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,12 +48,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "comprehension",
+                "query": "UI",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/29. Options Contd and Handling failure.md",
+                "file": "Scala/Spark/11. Spark UI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/29. Options Contd and Handling failure.md",
+                "file": "Scala/Spark/11. Spark UI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/29. Options Contd and Handling failure.md"
+                "file": "Scala/Spark/11. Spark UI.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/28. Options.md",
     "Scala/rock the scala/29. Options Contd and Handling failure.md",
+    "Scala/Spark/11. Spark UI.md",
+    "Scala/rock the scala/28. Options.md",
     "Scala/Spark/RDD.md",
     "Microeconomics/Economic systems.md",
     "Microeconomics/Intro to economics.md",
@@ -175,7 +176,6 @@
     "Scala/Spark/5. Joins in Df.md",
     "Scala/rock the scala/18. Case Classes and Enums.md",
     "Scala/Spark/4. Columns, Expression.md",
-    "Scala/rock the scala/16. Type bounds.md",
     "Pasted image 20240923100057.png",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
