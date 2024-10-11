@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/31. Pattern matching contd.md",
+                "file": "Scala/Spark/RDD.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/31. Pattern matching contd.md",
+                "file": "Scala/Spark/RDD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/31. Pattern matching contd.md",
+                "file": "Scala/Spark/RDD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/31. Pattern matching contd.md"
+                "file": "Scala/Spark/RDD.md"
               }
             }
           }
@@ -149,15 +148,16 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/30. Pattern matching.md",
-    "Scala/rock the scala/31. Pattern matching contd.md",
-    "Scala/rock the scala/29. Options Contd and Handling failure.md",
+    "Scala/Spark/Untitled.md",
+    "Scala/Spark/10. SQL.md",
     "Scala/Spark/11. Spark UI.md",
+    "Scala/rock the scala/31. Pattern matching contd.md",
+    "Scala/rock the scala/30. Pattern matching.md",
+    "Scala/rock the scala/29. Options Contd and Handling failure.md",
     "Scala/rock the scala/28. Options.md",
     "Scala/Spark/RDD.md",
     "Microeconomics/Economic systems.md",
     "Microeconomics/Intro to economics.md",
-    "Scala/Spark/10. SQL.md",
     "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/24. Collections Contd.md",
     "Scala/rock the scala/23. Collections.md",
@@ -176,7 +176,6 @@
     "Scala/rock the scala/21. What's a Function.md",
     "Scala/rock the scala/20. Packaging and Imports.md",
     "Scala/rock the scala/19. Exceptions.md",
-    "Scala/Spark/5. Joins in Df.md",
     "Pasted image 20240923100057.png",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
