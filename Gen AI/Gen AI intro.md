@@ -8,3 +8,23 @@
 	- supervised model - humans do the teaching by pre-labeling
 	- next generation of text-based models rely on self-supervised learning
 	- the results generated depend on the quality of the model and the match between the model and the use case, or input
+- ai
+	- classification
+		- make decision about x
+			- x is a multidimensional vector
+	- generative
+		- understand the distribution of data
+		- sample from a distribution to generate a new example from the data distribution
+			- learning data distribution is the central problem done using deep neural nw
+		- structure of data is captured in its dimension
+		- strong models that learn the structure of data, generate new data
+		- the generation is controlled by conditions
+- Generative Artificial Intelligence describes algorithms that can be used to create new, realistic content that reflects characteristics of the training data. It can produce a variety of content including audio, code, images, text, simulations, and videos. It has tremendous potential to help us become more productive.
+
+- well established architectures used to develop Gen AI
+	- embeddings to represent high-dimensional, complex data
+	- variational autoencoders use an encoder-decoder arch to generate new data, typically for audio and video generation
+	- generative adversarial networks use generator and discriminator to generate new data, often in video generation
+	- diffusion models add and remove noises to generate quality images with high levels of detail
+	- transformers for large language models such as GPT, LLama and lambda
+	- neural radiance fields for generating 3D content from 2D images
