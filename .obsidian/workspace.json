@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/11. Spark UI.md",
+                "file": "Scala/rock the scala/4. Type inference and recursion.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/11. Spark UI.md",
+                "file": "Scala/rock the scala/4. Type inference and recursion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/11. Spark UI.md",
+                "file": "Scala/rock the scala/4. Type inference and recursion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/11. Spark UI.md"
+                "file": "Scala/rock the scala/4. Type inference and recursion.md"
               }
             }
           }
@@ -148,12 +148,15 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
+    "Scala/rock the scala/3.functions.md",
+    "Scala/rock the scala/2.Expressions.md",
+    "Scala/rock the scala/1.Values vars and types.md",
+    "Scala/Spark/11. Spark UI.md",
     "Gen AI/Gen AI intro.md",
     "Scala/rock the scala/32. Patterns everywhere.md",
     "Scala/Spark/RDD.md",
     "Scala/Spark/Untitled.md",
     "Scala/Spark/10. SQL.md",
-    "Scala/Spark/11. Spark UI.md",
     "Scala/rock the scala/31. Pattern matching contd.md",
     "Scala/rock the scala/30. Pattern matching.md",
     "Scala/rock the scala/29. Options Contd and Handling failure.md",
@@ -173,9 +176,6 @@
     "Scala/Spark/7. Working with complex spark data types.md",
     "Scala/rock the scala/22. HOFs and Curries.md",
     "Scala/rock the scala/21. What's function.md",
-    "Scala/Spark/6. Working with Common Spark Data Types.md",
-    "Scala/Spark/6. Working with Common Spark Data Types.md",
-    "Scala/rock the scala/21. What's a Function.md",
     "Pasted image 20240923100057.png",
     "Scala/Spark",
     "Pasted image 20240914164834.png",
