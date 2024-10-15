@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microeconomics/Economic systems.md",
+                "file": "Scala/rock the scala/4.1 Recursion.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "417f9067ce5cf2bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomics/Economic systems.md",
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomics/Economic systems.md",
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomics/Economic systems.md"
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md"
               }
             }
           }
@@ -147,14 +160,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8e987b35cf6d757",
+  "active": "417f9067ce5cf2bf",
   "lastOpenFiles": [
+    "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
+    "Scala/rock the scala/4. Type inference and recursion.md",
+    "Scala/rock the scala/4.1 Recursion.md",
+    "Scala/rock the scala/3.functions.md",
+    "Microeconomics/Economic systems.md",
     "Microeconomics/Intro to economics.md",
     "Scala/Spark/spark submission.md",
     "Scala/Spark/2. Dataframes.md",
     "Scala/rock the scala/20. Packaging and Imports.md",
-    "Scala/rock the scala/4. Type inference and recursion.md",
-    "Scala/rock the scala/3.functions.md",
     "Scala/rock the scala/2.Expressions.md",
     "Scala/rock the scala/1.Values vars and types.md",
     "Scala/Spark/11. Spark UI.md",
@@ -167,15 +183,12 @@
     "Scala/rock the scala/30. Pattern matching.md",
     "Scala/rock the scala/29. Options Contd and Handling failure.md",
     "Scala/rock the scala/28. Options.md",
-    "Microeconomics/Economic systems.md",
     "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/24. Collections Contd.md",
     "Scala/rock the scala/23. Collections.md",
     "Scala/rock the scala/26. Vectors Contd.md",
     "Scala/Spark/9. DS contd.md",
-    "Scala/Spark/8. Datasets.md",
     "Pasted image 20241004183457.png",
-    "Scala/rock the scala/25. Collections contd.md",
     "Microeconomics",
     "Pasted image 20240923100057.png",
     "Scala/Spark",
