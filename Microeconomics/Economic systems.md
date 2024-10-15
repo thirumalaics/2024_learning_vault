@@ -18,3 +18,29 @@
 		- transferrable rights
 			- property rights must be transferrable
 	- markets in many sectors or countries may not be functioning as well as they could because some of the above mentioned dimension of pr is not functioning well
+- what is a market?
+	- place where buyers and sellers meet to engage in mutually beneficial, voluntary exchange of goods, services or productive resources
+- what is a household?
+	- owners of resources - supplied to firms in the ***resource market*** 
+	- and the buyers of goods and services- demanded from firms in the product market
+- what is a firm?
+	- business entities that demand land, labor and capital from households in the resource market
+	- produce goods and services, which they supply to households in the product market
+- what is a resource market?
+	- market where households supply land, labor, capital, entrepreneurship/technology to firms in exchange for money
+- what is product market
+	- where firms supply goods and services to households in exchange for money
+- what is an economic system?
+	- system of allocating the means of production and goods and services produced in an economy
+- what are wages?
+	- the payment, firms make to households in exchange for their labor
+- what are rents?
+	- they payment firms make to households in exchange for land
+- what is interest?
+	- the payment firms make to households in exchange for capital
+- what is profit?
+	- payment to entrepreneurs who start or own business
+- market economy?
+	- in the purest form, a market economy answers the three economic questions by allocating resources and goods through markets, where prices are generated
+- command economy?
+	- in the purest form, a command economy answers the three economic questions by making allocation decisions centrally by the government
