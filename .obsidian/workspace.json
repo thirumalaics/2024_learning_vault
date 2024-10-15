@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/Spark/spark submission.md",
+                "file": "Microeconomics/Economic systems.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/Spark/spark submission.md",
+                "file": "Microeconomics/Economic systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/Spark/spark submission.md",
+                "file": "Microeconomics/Economic systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/Spark/spark submission.md"
+                "file": "Microeconomics/Economic systems.md"
               }
             }
           }
@@ -148,8 +149,9 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/Spark/2. Dataframes.md",
+    "Microeconomics/Intro to economics.md",
     "Scala/Spark/spark submission.md",
+    "Scala/Spark/2. Dataframes.md",
     "Scala/rock the scala/20. Packaging and Imports.md",
     "Scala/rock the scala/4. Type inference and recursion.md",
     "Scala/rock the scala/3.functions.md",
@@ -166,7 +168,6 @@
     "Scala/rock the scala/29. Options Contd and Handling failure.md",
     "Scala/rock the scala/28. Options.md",
     "Microeconomics/Economic systems.md",
-    "Microeconomics/Intro to economics.md",
     "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/24. Collections Contd.md",
     "Scala/rock the scala/23. Collections.md",
