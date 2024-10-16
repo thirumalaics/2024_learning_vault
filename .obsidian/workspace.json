@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/4.1 Recursion.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "417f9067ce5cf2bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Scala/rock the scala/sbt.md",
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/sbt.md",
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/sbt.md",
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/sbt.md"
+                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md"
               }
             }
           }
@@ -159,13 +147,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "417f9067ce5cf2bf",
+  "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+    "Scala/rock the scala/4.1 Recursion.md",
     "Scala/rock the scala/sbt.md",
+    "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Scala/rock the scala/4. Type inference and recursion.md",
-    "Scala/rock the scala/4.1 Recursion.md",
     "Scala/rock the scala/3.functions.md",
     "Microeconomics/Economic systems.md",
     "Microeconomics/Intro to economics.md",
