@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+                "file": "Scala/rock the scala/sbt.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+                "file": "Scala/rock the scala/sbt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
+                "file": "Scala/rock the scala/sbt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md"
+                "file": "Scala/rock the scala/sbt.md"
               }
             }
           }
@@ -149,9 +149,13 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
+    "Pasted image 20241016191134.png",
+    "Pasted image 20241016190841 1.png",
+    "Pasted image 20241016190841.png",
+    "Pasted image 20241016190545.png",
+    "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Scala/rock the scala/4.1 Recursion.md",
     "Scala/rock the scala/sbt.md",
-    "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Scala/rock the scala/4. Type inference and recursion.md",
     "Scala/rock the scala/3.functions.md",
@@ -174,7 +178,6 @@
     "Scala/rock the scala/28. Options.md",
     "Scala/rock the scala/27. Tuples and maps.md",
     "Scala/rock the scala/24. Collections Contd.md",
-    "Scala/rock the scala/23. Collections.md",
     "Pasted image 20241004183457.png",
     "Microeconomics",
     "Pasted image 20240923100057.png",
@@ -184,10 +187,7 @@
     "Pasted image 20240913090209.png",
     "Pasted image 20240913083148.png",
     "Pasted image 20240911093557.png",
-    "Pasted image 20240911085843.png",
     "Hive/Programming Hive",
-    "Pasted image 20240910184112.png",
-    "Pasted image 20240910183140.png",
     "Scala/rock the scala",
     "Scala",
     "Hive",
