@@ -2,7 +2,23 @@
 - crucial for proper functioning of an economy under a market based system
 - who owns what and what they can do with that property
 - price signal
+- ability to own and use resources(also anything made from those resources)
 
+## Economic System
+- system of allocating scarce resources by answering 3 questions:
+	- what will be produced?
+	- how will it be produced?
+	- how will the output society produces be distributed
+- how these questions get answered depends upon the type of economy the system is part of:
+	- decisions about allocation of resources and allocation of production and consumption are decided by
+		- the government in command economy
+- in market economies, there is private owner ship of resources - established through property rights
+	- factors of production and consumption are all coordinated through markets
+	- in a market system, resources are allocated to their most productive use through prices that are determined in markets
+		- these prices act as a signal for buyers and sellers
+- most economies are mixed economies
+- in either system, a rational agent would allocate resources and production using marginal analysis
+- in command economies, this is more difficult to do because without markets, prices fail at being an effective signal
 ## Markets and property rights
 - a market forms when multiple parties exchange things of value
 - there are different markets
@@ -44,3 +60,10 @@
 	- in the purest form, a market economy answers the three economic questions by allocating resources and goods through markets, where prices are generated
 - command economy?
 	- in the purest form, a command economy answers the three economic questions by making allocation decisions centrally by the government
+- circular flow model
+	- illustrates how a market economy works
+	- households and firms engage in mutually beneficial exchanges of resources and produces in the market
+	- households are the owners of factors of production and sell labor in exchange for wage, land in exchange for rent, capital in exchange for interest
+	- money flows in one direction - counter clockwise - and goods, services and resources flow in the opposite direction - clock wise
+	- in a market economy, one of of the main functions that money serves is to facilitate the exchange of goods in the product market, exchange of resources in the resource market
+	- ![[Pasted image 20241016203023.png]]
