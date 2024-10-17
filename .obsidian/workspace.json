@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/7. OO Basics contd..md",
+                "file": "Microeconomics/Production possibilities frontier.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7. OO Basics contd."
+              "title": "Production possibilities frontier"
             }
           },
           {
@@ -78,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sbt",
+                "query": "positive",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -103,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -190,8 +191,10 @@
   },
   "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
-    "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+    "Pasted image 20241017172818.png",
     "Scala/rock the scala/7. OO Basics contd..md",
+    "Microeconomics/Production possibilities frontier.md",
+    "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Microeconomics/Economic systems.md",
     "Pasted image 20241016203131.png",
@@ -220,8 +223,6 @@
     "Scala/rock the scala/31. Pattern matching contd.md",
     "Scala/rock the scala/30. Pattern matching.md",
     "Scala/rock the scala/29. Options Contd and Handling failure.md",
-    "Scala/rock the scala/28. Options.md",
-    "Scala/rock the scala/27. Tuples and maps.md",
     "Pasted image 20241004183457.png",
     "Microeconomics",
     "Pasted image 20240923100057.png",
