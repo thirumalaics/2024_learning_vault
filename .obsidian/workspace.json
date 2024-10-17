@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+                "file": "Scala/rock the scala/7. OO Basics contd..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8. Syntactic Sugar - Method notations"
+              "title": "7. OO Basics contd."
             }
           },
           {
@@ -47,8 +47,7 @@
               "title": "6. StringOps Contd & Intro to OOPs"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -121,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+                "file": "Scala/rock the scala/7. OO Basics contd..md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 8. Syntactic Sugar - Method notations"
+              "title": "Backlinks for 7. OO Basics contd."
             }
           },
           {
@@ -140,12 +138,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
+                "file": "Scala/rock the scala/7. OO Basics contd..md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 8. Syntactic Sugar - Method notations"
+              "title": "Outgoing links from 7. OO Basics contd."
             }
           },
           {
@@ -167,10 +165,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scala/rock the scala/8. Syntactic Sugar - Method notations.md"
+                "file": "Scala/rock the scala/7. OO Basics contd..md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 8. Syntactic Sugar - Method notations"
+              "title": "Outline of 7. OO Basics contd."
             }
           }
         ]
@@ -190,8 +188,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a8918a7ce9fd8db7",
+  "active": "d8e987b35cf6d757",
   "lastOpenFiles": [
+    "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
     "Scala/rock the scala/7. OO Basics contd..md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Microeconomics/Economic systems.md",
@@ -223,7 +222,6 @@
     "Scala/rock the scala/29. Options Contd and Handling failure.md",
     "Scala/rock the scala/28. Options.md",
     "Scala/rock the scala/27. Tuples and maps.md",
-    "Scala/rock the scala/24. Collections Contd.md",
     "Pasted image 20241004183457.png",
     "Microeconomics",
     "Pasted image 20240923100057.png",
