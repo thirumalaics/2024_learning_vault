@@ -74,6 +74,38 @@ lazy val root = (project in file("."))
 - build.sbt can also be interspersed with val, lazy val, def
 	- top level objects and classes are not allowed in build.sbt
 	- those should go in the project directory as scala source files
+- what is SettingKey[T] type?
+	- a key for value evaluated only once
+	- the value is evaluated when loading the subproject, and kept around
+- what is TaskKey[T] type?
+	- key for a value, which is evaluated each time it is referred to(just like a scala function), potentially with side effects
+	- the value is called a task
+- what is a task?
+	- action such as compile or package
+	- they may return Unit or they may return a value related to a task
+	- for example `package`  is TaskKey[File] and its value is the jar file it creates
+	- whenever we start a task execution, sbt will re-run any tasks involved exactly once
+		- task can contain other tasks
+		- if multiple tasks depend on the same sub task, it is executed only one
+	- for a task, sbt keeps around some executable code for a task such as compile and this code will rerun every time
+	- whether to rerun each time is a property of the key and not the value
+- what is InputKey[T] type?
+	- for a task that has command line arguments as inputs
+- what are built-in keys?
+	- fields in an object called Keys
+	- build.sbt implicitly has an `import sbt.Keys._`
+	- so sbt.Keys.name can be referred to as name
+- what are custom keys?
+	- custom keys are keys of our own which can be defined with their respective creation ***methods***
+		- `taskKey`, `inputKey`, `settingKey`
+	- all the above three are methods
+	- each method above expects the type of the value associated with the key and a description for the key itself:
+		- `lazy val hello = taskKey[Unit]("An example task")`
+		- definition of a key for a new task called hello
+	- the name of the key is taken from the val the key is assigned to
+	- here we have used the fact that the .sbt file can contain vals and defs in addition to settings
+	- all such definitions are evaluated before settings regardless of where they are defined in the file
+	- typically lazy vals are used instead of vals to avoid initialization order problems
 https://stackoverflow.com/questions/49890806/explanation-of-sbt-build-file
 https://stackoverflow.com/questions/11411242/can-someone-explain-the-right-way-to-use-sbt
 https://www.scala-sbt.org/release/docs/sbt-by-example.html
