@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/implicit.md",
+                "file": "Microeconomics/Production possibilities frontier.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "implicit"
+              "title": "Production possibilities frontier"
             }
           }
         ]
@@ -165,8 +165,9 @@
   },
   "active": "3af2866269ce4874",
   "lastOpenFiles": [
-    "Scala/rock the scala/sbt.md",
+    "Pasted image 20241018122939.png",
     "Scala/rock the scala/implicit.md",
+    "Scala/rock the scala/sbt.md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
     "Scala/rock the scala/lazy val.md",
     "Microeconomics/Production possibilities frontier.md",
@@ -197,7 +198,6 @@
     "Scala/Spark/Untitled.md",
     "Scala/Spark/10. SQL.md",
     "Scala/rock the scala/31. Pattern matching contd.md",
-    "Scala/rock the scala/30. Pattern matching.md",
     "Pasted image 20241004183457.png",
     "Microeconomics",
     "Pasted image 20240923100057.png",

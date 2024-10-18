@@ -11,3 +11,12 @@
 - points outside(towards the right of) the curve is impossible
 	- as the curve represents what is observed
 - points inside the curve are possible but not optimal
+
+## Opportunity Cost
+- opportunity cost is also called as marginal cost
+	- cost in terms of quantity of an alternate commodity that we give up in order to produce one more unit of a commodity
+	- some times marginal cost can sometimes be in terms of money
+		- money that costs in produce one more unit of a commodity in question
+- in the rabbit vs berry case, the opportunity cost increases as I go for one extra rabbit
+	- it may not a general phenomenon that opportunity cost raises for every extra unit
+![[Pasted image 20241018122939.png]]
