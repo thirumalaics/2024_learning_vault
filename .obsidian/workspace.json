@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scala/rock the scala/10. Inheritance.md",
+                "file": "Scala/rock the scala/11. Inheritance Contd.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10. Inheritance"
+              "title": "11. Inheritance Contd"
             }
           },
           {
@@ -179,6 +179,7 @@
   },
   "active": "79ee8b8cbaaedc85",
   "lastOpenFiles": [
+    "Scala/rock the scala/10. Inheritance.md",
     "Scala/rock the scala/9. Scala Objects.md",
     "Scala/rock the scala/20. Packaging and Imports.md",
     "Scala/rock the scala/8. Syntactic Sugar - Method notations.md",
@@ -215,7 +216,6 @@
     "Scala/rock the scala/1.Values vars and types.md",
     "Scala/Spark/11. Spark UI.md",
     "Gen AI/Gen AI intro.md",
-    "Scala/rock the scala/32. Patterns everywhere.md",
     "Pasted image 20241004183457.png",
     "Microeconomics",
     "Scala/Spark",
