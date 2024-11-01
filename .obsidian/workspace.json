@@ -91,8 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -179,6 +178,7 @@
   },
   "active": "79ee8b8cbaaedc85",
   "lastOpenFiles": [
+    "Pasted image 20241027114511.png",
     "Scala/rock the scala/11. Inheritance Contd.md",
     "Scala/rock the scala/10. Inheritance.md",
     "Scala/rock the scala/9. Scala Objects.md",
@@ -215,7 +215,6 @@
     "Scala/Spark/2. Dataframes.md",
     "Scala/rock the scala/2.Expressions.md",
     "Scala/rock the scala/1.Values vars and types.md",
-    "Scala/Spark/11. Spark UI.md",
     "Pasted image 20241004183457.png",
     "Microeconomics",
     "Scala/Spark",
