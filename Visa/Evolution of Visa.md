@@ -1,0 +1,54 @@
+- BankAmericard was precursor to visa
+- LoB within BoA
+## four party model
+- heart of the payments ecosystem
+- four key players provide the foundation that enables all of us to transact
+- Issuer, Acquirer, Merchant, Card holder
+- issuer: card issuer
+	- issuer makes the potential card holder go through card issuance process
+		- can be credit or debit
+	 - application evaluation happens
+	 - application decision
+	 - sets and collects card fees/interest rates
+	 - provides customer service
+	 - responsible for the credit risk of txns
+		 - the issuer will have to absorb txns, which the user declares is wrong or not made by him/her,as a loss 
+			 - this is called write-off
+	 - custodian of the cardholder information
+- cardholder
+	- we use the card for payments
+	- responsible for paying the issuer
+	- can be a consumer, commercial, small business
+- merchant
+	- based solely on the belief that the card payments get them the money owed by the cardholder, they give out goods and services
+	- there is a process to get the cash represented by the card payment
+		- this takes place bw acquirer and merchant
+	- has contractual relationship with the acquirer that enables them to accept cards for payments
+	- does not have direct relationship with card nws like visa but they have to follow rules when accepting cards
+		- it is the acquirer's role to ensure that the merchant knows those rules and processes each and every sale properly
+- acquirer: 
+	- a financial institution
+	- signs up merchants to accept cards for payments
+	- review business model of the merchant
+	- provide the terminal to accept card payments
+	- provide training to the merchant as well as customer services
+	- pay the merchant for the purchases made
+	- manages any issues that may be brought up by the issuer in the dispute process
+		- dispute process is managed by visa and allows issuers to raise concerns about the txns usually brought to attention by the card holders
+		- acquirer receives those concerns and works with the merchants to resolve them
+- visaNet sits bw issuer and acquirer
+	- it is not one of the parties in the model
+	- has a contractual relationship with the issuer and acquirer
+		- not with the cardholder or merchant
+	- payment nw brings these four parties together
+	- what does the payment nw do?
+		- facilitates authorization, clearance and settlement
+			- auth: request to put the charge on the cardholder's account
+			- clearing: process of sending the data that the issuer needs to prepare the cardholder's statement
+			- settlement: process of payment from issuer to acquirer
+		- sets global standards for txns to be able to be processed anywhere in the world
+		- develops products and accelerates acceptance of card products
+		- provides risk management tools
+
+## Open loop systems
+- relationships
