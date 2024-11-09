@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Untitled.md",
+                "file": "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Different data roles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Different data roles"
             }
           },
           {
@@ -179,8 +179,9 @@
   },
   "active": "79ee8b8cbaaedc85",
   "lastOpenFiles": [
+    "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Types of analytics.md",
+    "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Different data roles.md",
     "Visa/Evolution of Visa.md",
-    "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Untitled.md",
     "PowerBI/Get Started with Data Analytics/Discover Data Analytics",
     "PowerBI/Get Started with Data Analytics",
     "PowerBI",
@@ -220,7 +221,6 @@
     "Scala/rock the scala/3.functions.md",
     "Microeconomics/Intro to economics.md",
     "Scala/Spark/spark submission.md",
-    "Scala/Spark/2. Dataframes.md",
     "Microeconomics",
     "Scala/Spark",
     "Hive/Programming Hive",

@@ -1,0 +1,38 @@
+- business analyst
+	- closer to the business and is a specialist in interpreting data that comes from the visualization
+	- often the roles of data analyst and business analyst could be the responsibility of a single person
+		- they differ in what they do with the data
+- data analyst
+	- helps businesses to maximize the value of their data assets through visualization and reporting tools
+	- responsible for profiling, cleaning and transforming data
+	- design, build scalable and effective semantic models
+	- enabling and implementing the advanced analytics capabilities into reports for analysis
+	- work with pertinent stakeholders to identify appropriate and necessary data and reporting requirements
+	- manages power BI assets: reports, dashboards, workspaces, and the underlying semantic models
+	- works with DEs to locate appropriate data sources that meet stakeholder requirements
+	- profiling: examining, reviewing and creating useful summaries of data
+- data engineer
+	- manage and secure flow of structured and unstructured data from multiple sources
+- data scientist
+	- perform advanced analytics to extract value from data
+	- their work can vary from descriptive analytics to predictive analytics
+	- descriptive analytics evaluate data through a process known as Exploratory data analytics
+	- predictive analytics are used in ml to apply modeling techniques that can detect anomalies or patterns
+- database administrator
+	- responsible for the overall availability and consistent performance and optimizations of the db solutions
+	- manages overall security of the data
+	- responsible for the hw as well
+
+## Tasks of a data analyst
+- prepare
+	- one of two most common tasks
+	- avoiding deficient or incorrect data is the goal
+	- data prep: process of profiling, cleaning and transforming our data to get it ready to model and visualize
+		- what is given in the microsoft documentation looks more like a de's task
+		- ensuring integrity, correcting wrong or inaccurate data, identifying missing data, converting data from one structure to another, converting types or even making the data more readable
+	- data prep also involves understanding how we are going to get and connect to the data and the performance implications of the decisions
+	- privacy and security assurances are also important
+- analyze
+- model
+- manage
+- visualize
