@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Visa/Evolution of Visa.md",
+                "file": "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Evolution of Visa"
+              "title": "Untitled"
             }
           },
           {
@@ -179,8 +179,12 @@
   },
   "active": "79ee8b8cbaaedc85",
   "lastOpenFiles": [
-    "Scala/rock the scala/12. Traits.md",
     "Visa/Evolution of Visa.md",
+    "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Untitled.md",
+    "PowerBI/Get Started with Data Analytics/Discover Data Analytics",
+    "PowerBI/Get Started with Data Analytics",
+    "PowerBI",
+    "Scala/rock the scala/12. Traits.md",
     "Visa",
     "Pasted image 20241027114511.png",
     "Scala/rock the scala/11. Inheritance Contd.md",
@@ -217,13 +221,9 @@
     "Microeconomics/Intro to economics.md",
     "Scala/Spark/spark submission.md",
     "Scala/Spark/2. Dataframes.md",
-    "Scala/rock the scala/2.Expressions.md",
     "Microeconomics",
     "Scala/Spark",
     "Hive/Programming Hive",
-    "Scala/rock the scala",
-    "Scala",
-    "Hive",
-    "Gen AI"
+    "Scala/rock the scala"
   ]
 }
