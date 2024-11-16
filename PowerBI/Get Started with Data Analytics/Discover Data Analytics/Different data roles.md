@@ -32,7 +32,12 @@
 		- ensuring integrity, correcting wrong or inaccurate data, identifying missing data, converting data from one structure to another, converting types or even making the data more readable
 	- data prep also involves understanding how we are going to get and connect to the data and the performance implications of the decisions
 	- privacy and security assurances are also important
-- analyze
 - model
-- manage
+	- data modeling: process of determining how tables are related to each other
+		- not only above but also defining how data is structured, stored
+	- data model has direct impact on the performance of our report and overall data analysis
 - visualize
+- analyze
+	- understanding and interpreting the information that is displayed on the report
+- manage
+	- overseeing sharing and distribution of items while ensuring their security
