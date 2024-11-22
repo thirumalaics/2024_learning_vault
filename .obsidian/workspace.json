@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "aed1bf5fe04313d4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.6"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.6"
+            }
+          },
+          {
             "id": "f896ed8e19576ea4",
             "type": "leaf",
             "state": {
@@ -35,7 +47,8 @@
               "title": "20. Packaging and Imports"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,8 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -177,7 +189,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "79ee8b8cbaaedc85",
+  "active": "aed1bf5fe04313d4",
   "lastOpenFiles": [
     "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Different data roles.md",
     "PowerBI/Get Started with Data Analytics/Get Started building with Power BI/Intro.md",
