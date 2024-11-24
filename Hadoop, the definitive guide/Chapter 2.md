@@ -1,0 +1,57 @@
+- Hadoop provides a framework for realiable, scalable storage and analysis
+## Map Reduce
+- programming model for data processing
+- MapReduce programs are inherently parallel
+- let's say I do not know what is hadoop and I use awk to do my data processing of a huge dataset, there are a lot of limitations that we can think of right of the bat
+	- the implementation will be easier for data that fits within a single machine and messy for data that spans multiple machines
+	- i will have to take care of running the job parallely for different parts of the data to utilize multiple cores in my machine
+		- this step assumes I do not want to process my dataset in a single thread
+		- by doing this parallelization within one machine I achieve the maximum speed for that machine that is allowed awk processing
+	- if I am taking care of parallelizing, I will also have to make sure that each thread processes an equal chunk of data
+		- the source data files not be of even size, so I will have segregate data into equal chunks
+			- if I do not, then some threads will finish early and I will have to make sure some more work is assigned to them
+			- instead of doing this additional assignment multiplied by the amount of core, I will benefit from segregating the data into equal chunks beforehand
+			- and also I will not be punished by the uneven file sizes, when all files except one is processed, one thread will go on executing while others sit idle
+	- taking this parallel approach with equal chunks of data, especially when aggregating or joining I will have to make sure to consolidate the data
+		- why? because there is no guarantee that all data corresponding to a key may be present in one chunk
+	- I will always be limited by the capacity of the machine that I am working on
+	- when start running using multiple machines, I will have to figure out how to coordinate across machines, who runs the overall job, how to deal with failed processes?
+
+- to take advantage of the hadoop fw, we need to express our logic as MapReduce Job
+
+## Map and Reduce
+- MapReduce works by breaking the processing into two phases: Map and reduce
+- each phase has key value pairs as input and output
+	- the types of the key and value can be set by the programmer
+- two functions are specified: map function and reduce function
+- map function is a good place to filter and prepare our data
+	- this data will then be worked upon by the reduce function
+- it is not necessary that the key that I received in map needs to be passed on to the reduce
+	- the key can be changed
+	- as long as there is a key value pair, it should be fine
+- the key value pairs sent out from the map function is processed by the map reduce fw before the reduce function can consume it
+	- what processing happens bw the map function execution and reduce function execution?
+		- the kvps that are sent are sorted and grouped by key
+		- let's say that the following data is sent from the map function
+		- ![[Pasted image 20241123195651.png]]
+		- the mr fw does the processing and sends out the following data to the reduce phase:
+		- ![[Pasted image 20241123195737.png]]
+	- all the reduce function has to do now is iterate through the list nad pick up the maximum reading
+	- ![[Pasted image 20241123200048.png]]
+- the map function is an abstract method under the Mapper class(generic type)
+- when we want to define a map function, we extend the mapper class with a class of our own
+	- while extending, we pass in 4 type parameters to the Mapper Class
+		- these are input key value pair data types and output key value pair data types
+		- MR provides it's own types that are optimized for network serialization
+		- looks like these types do not come with handy methods like substring, once inside the map function we can convert them to their java equivalent for easy programming
+	- we are expected to override the abstract map method in our class implementation
+	- the map method takes 3 arguments, first two are input key, value and the third is context of type Context
+	- this context is used to write the output of the map function
+- reduce function is an abstract method under Reducer class
+	- similar to the map method, 4 type parameters need to passed when extending the class
+		- input kvp types and output kvp types
+			- the input kvp types should match the output kvp types given during the mapper extension
+	- the reduce function takes three arguments
+		- key, iterable of values that are collections of values that correspond to the key, context
+		- here as well the context is used to write but I am not sure to where
+- there is one more piece of code that we need to write and it takes care of running the mapReduce job
