@@ -55,3 +55,47 @@
 		- key, iterable of values that are collections of values that correspond to the key, context
 		- here as well the context is used to write but I am not sure to where
 - there is one more piece of code that we need to write and it takes care of running the mapReduce job
+	- we instantiate a Job class
+	- this object is used to set job name, input, output paths, set mapper and reducer classes, set output key and value types
+		- the reducer's output key and value types must be specified
+		- the mapper's output key and value types will default to whatever is set for reducer's key value pair
+			- we do not need to set if our mapper's key value pair types match reducer's key value types
+			- if not, specify explicitly with exclusive methods
+		- all these settings are done by methods provisioned with the Job object
+		- the input types are controlled by the input format and the default is text
+		- Job object also comes with wait for completion method which is used to submit the job and wait for it's completion
+	- Job object forms the spec of the job and gives control over how the job is run
+	- while setting the input path, we can call the respective setter method to set many input paths
+	- we also set Jar by Class using setJarByClass method
+		- this method takes one argument: class
+		- hadoop will use this class to locate the relevant JAR file by looking for the jar file containing this class
+	- but there can be only one output path
+		- and the directory specified here must not exist, this is because hadoop by default does not write if the directory already exists -> error
+```
+export HADOOP_CLASSPATH=hadoop-examples.jar // since we have used relative path, the following command needs to be run from the same dir as this jar
+hadoop ClassName input_path output_path
+```
+- when the hadoop command is invoked with the class name as first argument, it starts a JVM to run the class
+	- hadoop commands add the hadoop libs and dependencies to the class path and picks up hadoop configuration too
+- to add application classes to the class path, we exported HADOOP_CLASSPATH
+- output of the job is helpful for debugging
+	- every job is given an ID and every task is given an id
+	- statistics of the job is also shown, including number of mapper and reducer tasks
+		- including number of records flowing through the job
+	- the output dir contains one output file per reducer
+- in real world, data is usually stored in a distributed filesystem(typically HDfs)
+	- this allows hadoop to move processing to each machine hosting a part of the data
+- MR Job is a unit of work we want to be performed
+- a job consists of input data, MR program and configuration
+- the job is divided into tasks of two types: map and reduce tasks
+- tasks are scheduled on the cluster using YARN
+	- if a task fails, it will be automatically rescheduled to run on a different node
+- data given as input to a MR job is divided into splits by hadoop
+	- these are fixed size data pieces
+- one map task for each input split, each of which runs the map function
+- by this split mechanism, we avoid falling prey to straggler tasks(provided that the splits are small enough and even, so the slow task is due to data characteristic) and failed tasks(one failed task does not derail the entire job)
+- smaller splits also allows hadoop to schedule effectively across different machines
+- but we should not take it too far
+	- if the size of the split is too small, the overhead of managing the splits and map task creation begins to dominate the total job execution time
+- for most jobs, good split size tends to be the size of HDfS block: 128 MB
+	- this can be changed for the cluster, or specified when each file is created
