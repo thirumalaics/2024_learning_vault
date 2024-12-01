@@ -120,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -208,6 +207,11 @@
   },
   "active": "560ddb8b7afe0de1",
   "lastOpenFiles": [
+    "Pasted image 20241128205725.png",
+    "Pasted image 20241128204911.png",
+    "Pasted image 20241128204127.png",
+    "Pasted image 20241128203014.png",
+    "Pasted image 20241128201753.png",
     "Pasted image 20241123200048.png",
     "Pasted image 20241123195737.png",
     "Pasted image 20241123195651.png",
@@ -243,12 +247,7 @@
     "Pasted image 20241018122939.png",
     "Scala/rock the scala/sbt.md",
     "Scala/rock the scala/6. StringOps Contd & Intro to OOPs.md",
-    "Pasted image 20241017172818.png",
     "Microeconomics/Economic systems.md",
-    "Pasted image 20241016203131.png",
-    "Pasted image 20241016203023.png",
-    "Pasted image 20241016191134.png",
-    "Pasted image 20241016190841 1.png",
     "Scala/rock the scala/4.1 Recursion.md",
     "Scala/rock the scala/5. Call by Name & Value, Argument types and String Ops.md",
     "Scala/rock the scala/4. Type inference and recursion.md",

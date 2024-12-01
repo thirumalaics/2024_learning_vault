@@ -99,3 +99,52 @@ hadoop ClassName input_path output_path
 	- if the size of the split is too small, the overhead of managing the splits and map task creation begins to dominate the total job execution time
 - for most jobs, good split size tends to be the size of HDfS block: 128 MB
 	- this can be changed for the cluster, or specified when each file is created
+- hadoop tries to run the map task where the input data resides in HDfS
+	- because to process this data there is no need of cluster bw
+	- this is called the data locality optimization
+	- sometimes all nodes hosting the HDfS block replicas for a map task may be running other map tasks
+		- in this case the job scheduler will look for a free map slot on a node in the same rack
+		- even if this is not possible, a node from a different rack is used, this results in inter-rack nw transfer
+
+![[Pasted image 20241128201753.png]]
+- why the optimal size of input split is the same as the block size?
+	- when both are equal each split corresponds to exactly one block
+	- overlapping blocks: where a split includes data spanning across two or more physical storage blocks
+		- when split size > block size
+			- it might be that blocks needed per split might not be located in the same node
+		- also includes when split size < block size
+			- ![[Pasted image 20241128203014.png]]
+			- this adds complexity as well because MR should understand block 2 is shared bw splits
+- map task writes the output to local disk, not HDfS
+	- why because this output is only useful until reduce task completes and it is deleted upon completion
+		- so it is overkill to store the data in HDfS with replication and so on
+- reduce task does not have the advantage of data locality
+	- the input to a single reduce task is normally the output from all mappers
+	- the sorted map outputs have to be transferred across the nw to the node where the reduce task is running
+	- output of a reduce function is normally stored in HDfs for reliability
+	- first replica is always stored on the local node, with other replicas being stored on off-rack nodes for reliability
+	- writing reduce output consumes bandwidth
+![[Pasted image 20241128204127.png]]
+- the number of reduce tasks can be specified independently
+- when there are multiple reducer tasks, map task partitions their output
+	- each creating one partition for each reduce task
+	- there can be many different keys in a partition
+	- but the records for any given key are all in a single partition
+- partitioning can be controlled by providing a partitioning function, but normally the default partitioner works very well
+- data flow between map and reduce tasks is colloquially known as the shuffle
+![[Pasted image 20241128204911.png]]
+- there are scenarios where 0 reducer tasks are used
+	- only map, and mapper takes care of writing to HDfS
+#### Combiner functions
+- this function is specified to optimize the shuffle
+	- as many MR jobs are limitted by the bw available on the cluster
+	- so it is important to reduce data transferred
+- hadoop allows the user to specify a combiner function to be run on the map output
+- there is no guarantee on how many times this function will be called on a record, how many ever times it is called, the output should be same
+- the combiner function can also be tasked with performing duties of a reducer function on the output of map tasks before transferring them
+- ![[Pasted image 20241128205725.png]]
+- obviously not all functions possess this property
+	- ex: mean
+- combiner function is not a replacement for reducer function
+	- as reducers will still be needed to process records with the same key from different maps
+- combiner function is defined using the Reducer class only but the only difference is we need to set the combiner class on the job using setCombinerClass
