@@ -1,0 +1,36 @@
+- distributed file system: filesystems that manage the storage across nw of machines are called distributed filesystems
+- distributed file systems handle complexities that arise when we store data across machines
+	- these complexities are mainly related to the nw
+	- one complexity is to make the fs tolerate node failure without suffering data loss
+- Hadoop comes with a Dfs called HDfS
+- hadoop also has a general purpose filesystem abstraction -> more on this later
+- HDfS is designed for storing very large files with streaming data access patterns, running on clusters of commodity hw
+	- dissecting the above:
+		- streaming data access
+			- HDfs built around the idea that most efficient data processing pattern is write once read many times
+			- analyses involve the entire dataset, typically, hence the focus here is to optimize throughput of reading the entire data rather than latency in reading the first record
+		- commodity hardware
+			- does not require expensive, highly reliable hardware
+			- commodity hw: commonly available hw that can be obtained from multiple vendors
+			- chance of failure across the cluster is very high
+			- HDfs is designed to carry on working without noticeable interruption to the user
+- applications for which HDfS is not a good choice:
+	- low-latency data access
+		- HDfS optimized for delivering a high throughput of data, and this may be at the expense of latency
+		- why can we not serve data with high throughput and low latency?
+			- it is challenging to achieve this because of trade-offs in system design, architecture, physical limitations
+			- HDfS replicates data, serving data from multiple replicas adds coordination overhead and delays
+			- HDfS has large block size, which is useful to minimize metadata and maximize throughput for sequential reads/writes but even to read small piece of data entire block need to be transferred
+				- bad for random reads
+			- high throughput relies on streaming large chunks of data over the nw bw distributed nodes
+				- nw comms introduces delays especially when a request involves retrieving data from multiple nodes
+			- designing a system that delivers both high throughput and low latency require:
+				- increased hw costs
+					- SSDs, more mem, low latency nws
+				- complex architecture
+					- sophisticated indexing and caching mech
+	- lots of small files
+		- namenode holds md in mem
+		- more files, then more md, then more load on namenode
+		- each file, dir and block takes about 150 bytes in mem
+
