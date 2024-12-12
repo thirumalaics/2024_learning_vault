@@ -33,4 +33,57 @@
 		- namenode holds md in mem
 		- more files, then more md, then more load on namenode
 		- each file, dir and block takes about 150 bytes in mem
+	- multiple writers, arbitrary file modifications
+		- files in HDfs may be written to by a single wrtier
+		- writes are always made at the end of the file, in append-only fashion
+		- no support for multiple writers or for modifications at arbitrary offsets in the file
 
+## HDfS concepts
+- a ***disk*** has a block size, which is the minimum amount of data that can read or written
+	- in the order of bytes
+- file system builds on the disk block size, by having it's own block size: file system block size
+	- this block size is a integral multiple of disk block size
+	- in the order of kbs
+- for fs users, this is not very useful, but there are tools such as df and fsck which work on the filesystem block level
+	- these are used to perform file system maintenance
+- HDfS has it's concept of block
+	- 128 MB by default
+	- files in HDfS are broken into block-sized chunks, which are stored as independent units
+	- a file in HDfS that is smaller than the block size does not occupy full block's work of underlying storage
+		- the opposite is true for a file system for a single disk, files with size less than the file system block size occupy the full space
+		- the unused space cannot be used for any other storage
+- Why use filesystem blocks?
+	- simplify how the data is stored and managed
+	- blocks are used to allocate space for files and directories
+		- fs has to manage fs blocks instead of each and every byte
+		- fs md keeps track of blocks rather than individual bytes
+	- minimizes the number of seek operations or access operations(SSD) needed to read or write a file
+		- rather than seeking each byte of a file
+	- blocks allow a file system to support large files without requiring continuous storage on the disk
+	- blocks allow fs to maintain a bitmap or a list of free blocks to track unused space
+	- if part of a file becomes corrupted, only the affected blocks are lost, not the entire file. makes recovery easier
+- why is the block size in HDfS larger than normal file system?
+	- for big data, especially when we have data split in to large files, if the block size were to be in KBs:
+		- per file there will have to be many seek operations
+		- time spent seeking is time not spent transferring(by making use of the disk transfer rate)
+		- by making the block size large, we avoid spending more time in seek and spend more time transferring the data
+- benefits of block abstraction for a dfs:
+	- a file can be larger than any single disk in the nw
+		- a file can be split and stored across the nw
+	- making the unit of abstraction a block rather than a file simplifies the storage subsystem
+		- does not have to deal variable sizes
+		- minimizes fragmentation(I believe 128Mb block size saves from external fragmentation):
+			- external fragmentation: when a piece of data is not stored in a contiguous space in disk
+				- blocks are scattered across disk
+				- inefficient as the file system has to piece together data which is an overhead
+			- internal fragmentation:
+				- piece of data does not fully utilize the block size provided
+- md of a file is stored stored with each an every block
+	- md is centralized or in other words managed by a diff entity called name node server
+		- data distributed, md centralized
+		- separating md helps in modular approach
+			- where as in normal file system it is integrated as the data is not huge and designed for a single machine
+	- even in normal file system md is stored separately using ds like inodes
+		- md tightly integrated in to file system itself unlike hadoop
+		- md stored on same disk but separately
+		- a file system driver is responsible for managing both data and metadata

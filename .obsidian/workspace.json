@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scala/rock the scala/7. OO Basics contd..md",
+                "file": "Hadoop, the definitive guide/Chapter 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 7. OO Basics contd."
+              "title": "Backlinks for Chapter 3"
             }
           },
           {
@@ -156,12 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scala/rock the scala/7. OO Basics contd..md",
+                "file": "Hadoop, the definitive guide/Chapter 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 7. OO Basics contd."
+              "title": "Outgoing links from Chapter 3"
             }
           },
           {
