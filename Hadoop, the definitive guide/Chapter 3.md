@@ -78,6 +78,12 @@
 				- inefficient as the file system has to piece together data which is an overhead
 			- internal fragmentation:
 				- piece of data does not fully utilize the block size provided
+	- fits well with replication for providing fault tolerance and availability
+		- blocks that make up the file are replicated by replication factor across physically separate machines
+		- if a block becomes unavailable, a copy can be read from another location
+		- a block that is unavailable due to corruption or machine failure can be replicated from its alternate locations to bring back the replication factor to normal
+		- `hdfs fsck / -files -blocks`
+			- lists the blocks that make up each file in the filesystem
 - md of a file is stored stored with each an every block
 	- md is centralized or in other words managed by a diff entity called name node server
 		- data distributed, md centralized
@@ -87,3 +93,36 @@
 		- md tightly integrated in to file system itself unlike hadoop
 		- md stored on same disk but separately
 		- a file system driver is responsible for managing both data and metadata
+
+## Namenodes and Datanodes
+- HDfS cluster has two types of nodes operating in a master-worker pattern
+- name node - master, data nodes - workers
+- the name node manages the filesystem namespace
+	- maintains the filesystem tree and md for all the files and directories
+		- this information stored persistently on the disk in the form of 2 files: the namespace image and the edit log
+	- name node also knows the location in data nodes of all blocks that constitute to all files in HDfS
+		- not stored persistently
+		- this information is reconstructed from datanodes every time the system starts
+- a client is created whenever we want to interact with the HDfS
+	- in most cases it is immediately destroyed after use, especially when we are issuing commands using CLI
+		- we can also explicitly create and destroy, in which case we have the control of its lifecycle
+	- this client is instantiated on the machine where the code runs
+		- a dev machine if we are trying to access a remote HDfS cluster
+		- a node in the hadoop cluster, ex: edge node
+		- usually the client talks to the namenode first as it needs metadata figured out
+		- the client presents a filesystem interface similar to a POSIX(Portable System Interface), so the user code does not need to know about the namenode and datanode
+- data nodes are the workhorses of the filesystem
+	- they store and retrieve blocks when they are asked to(by clients or namenodes)
+	- they report back to name node periodically with lists of blocks that they are storing
+- without the namenode, the filesystem cannot be used
+	- because only name node knows what  blocks to piece together across data nodes that constitute a file
+- to ensure resilience of name nodes, hadoop provides two mech
+	- back up the files that make up the persistent state of the filesystem metadata
+	- hadoop can be configured to write its persistent state to multiple filesystems
+		- synchronous and atomic
+		- usual config is to write to local disk and a NfS mount
+
+- What is POSIX? 
+	- set of standardized operating system interfaces that determine how sw interacts with an operating system's core services
+		- ex: file operations, process management, inter process communication
+	- these standards ensure compatibility and portability of applications across OSs
