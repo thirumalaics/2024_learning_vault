@@ -111,18 +111,48 @@
 		- a node in the hadoop cluster, ex: edge node
 		- usually the client talks to the namenode first as it needs metadata figured out
 		- the client presents a filesystem interface similar to a POSIX(Portable System Interface), so the user code does not need to know about the namenode and datanode
+- What is POSIX? 
+	- set of standardized operating system interfaces that determine how sw interacts with an operating system's core services
+		- ex: file operations, process management, inter process communication
+	- these standards ensure compatibility and portability of applications across OSs
 - data nodes are the workhorses of the filesystem
 	- they store and retrieve blocks when they are asked to(by clients or namenodes)
 	- they report back to name node periodically with lists of blocks that they are storing
 - without the namenode, the filesystem cannot be used
 	- because only name node knows what  blocks to piece together across data nodes that constitute a file
+- what is a namespace image?
+	- it is a file that contains persistent checkpoint of the entire HDfS namespace
+	- stores the state of a HDfS at a specific point in time
+	- stored in the namenode usually, but in high-availability settings, it is stored in another machine(secondary or backup namenode)
+- what is edit log?
+	- records incremental changes made to the namespace since the last checkpoint
+- the namespace image and edit log are periodically merged
 - to ensure resilience of name nodes, hadoop provides two mech
 	- back up the files that make up the persistent state of the filesystem metadata
-	- hadoop can be configured to write its persistent state to multiple filesystems
-		- synchronous and atomic
-		- usual config is to write to local disk and a NfS mount
+		- hadoop can be configured to write its persistent state to multiple filesystems
+			- synchronous and atomic
+			- usual config is to write to local disk and a NfS mount
+	- it is also possible to run a secondary name node, which despite the name, does not act as a name node
+		- main role is to periodically merge the namespace image and edit log to prevent the edit log from becoming too large
+		- runs on a separate machine as it requires plenty of CPU and as much memory as the namenode to perform the merge
+## Block Caching
+- normally a data node reads blocks from disk
+	- but for frequently accessed files ***the blocks*** may be explicitly cached in the data node's off-heap block cache mem
+	- by default, a block is cached in only one data node's memory, configurable on a per-file basis
+	- users or applications instruct the name node on which files to cache(and for how long) by adding a cache directive to a cache pool
+		- cache pools are an administrative grouping for managing cache permissions and resource usage
 
-- What is POSIX? 
-	- set of standardized operating system interfaces that determine how sw interacts with an operating system's core services
-		- ex: file operations, process management, inter process communication
-	- these standards ensure compatibility and portability of applications across OSs
+## HDfS federation
+- for large clusters with many files, scaling might become difficult with a single namenode
+- HDfS federation was introduced in Hadoop 2.x
+	- allows a cluster to scale by adding namenodes
+	- each of which manages a portion of the filesystem namespace
+		- ex: one namenode manages files rooted under /user
+- under federation, each nodenode manages
+	- a namespace volume, which is made up of the metadata for the namespace
+		- independent of each other, name nodes dont comms with each other
+		- failure of one does not affect others
+	- block pool containing all the blocks for the files in the namespace
+		- block pool storage not partitioned
+		- so datanodes register with each namenode in the clusterr and store blocks from multiple block pools
+	- 
