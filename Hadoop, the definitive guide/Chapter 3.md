@@ -153,6 +153,36 @@
 		- independent of each other, name nodes dont comms with each other
 		- failure of one does not affect others
 	- block pool containing all the blocks for the files in the namespace
+		- block pool is a logical grouping of data blocks, managed independently by the cluster
+		- blocks from one pool are managed independently of blocks from other pools, even though they may be stored on the same set of Data Nodes
 		- block pool storage not partitioned
-		- so datanodes register with each namenode in the clusterr and store blocks from multiple block pools
-	- 
+		- so data-nodes register with each namenode in the cluster and store blocks from multiple block pools
+
+## HDfS high availability
+- the combination of replicating namenode md on multiple fs and using secondary namenode to create checkpoints protects against data loss
+	- but does not provide high availability of the filesystem
+- namenode is collectively the single point of failure
+	- whole hadoop system would be out of service until a new name-node could be brought online
+	- a new primary namenode is started with one of fs metadata replicas
+		- configure datanodes and clients to use this as the new namenode
+	- new namenode cannot serve requests until
+		- it has loaded its namespace image into memory
+		- replayed its edit log
+		- received enough block reports from the data nodes to leave safe mode
+- until Hadoop 2, this restarting of name node or instantiating a new name node took so much time
+	- this affected maintenance more
+- Hadoop 2 introduced HDfS high availability implementation
+	- this allows active-standby configuration: pair of namenodes
+	- in the event of the failure of active, standby takes its place without significant interruption withing few tens of seconds
+- this new implementation required architecture changes
+	- the namenodes must use highly available shared storage to share the edit log
+		- when a standby comes up, it uses the edit log to synchronize state with the active namenode
+	- data nodes must send block reports to both namenodes, as the file-block mapping is stored in memory
+	- clients must be configured to handle namenode failure, using a mech that is transparent to the users
+		- clients mean, applications or tools that interacts with the HDfS
+	- the secondary namenode's role is subsumed by the standby, which takes periodic checkpoints of the active namenode's namespace
+- there are two options for the highly available shared storage: an NfS filer, or a quorum journal manager(QJM)(recommended)
+	- QJM is a dedicated HDfS implementation
+		- designed for providing highly available edit log
+	- QJM runs as a group of journal nodes, and each edit must be written to a majority of journal nodes
+	- typically there are 3 journal nodes, so the system can tolerate the loss of one of them
