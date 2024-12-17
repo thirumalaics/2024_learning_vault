@@ -186,3 +186,8 @@
 		- designed for providing highly available edit log
 	- QJM runs as a group of journal nodes, and each edit must be written to a majority of journal nodes
 	- typically there are 3 journal nodes, so the system can tolerate the loss of one of them
+- if the active namenode fails, the standby can take it's place within 10s of seconds
+	- as the latest state is in memory: both the latest edit log entries and an up-to-date block mapping
+	- but the actual failover time observed will be longer in practice(around a minute or so)
+		- because the system needs to be conservative in deciding that the active namenode has failed
+		- 
