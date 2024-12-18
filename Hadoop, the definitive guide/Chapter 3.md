@@ -190,4 +190,51 @@
 	- as the latest state is in memory: both the latest edit log entries and an up-to-date block mapping
 	- but the actual failover time observed will be longer in practice(around a minute or so)
 		- because the system needs to be conservative in deciding that the active namenode has failed
-		- 
+- if standby is also down, from an operational point of view it is an improvement
+	- because the process is a standard operational procedure built into hadoop
+	- in both non-HA and HA with failed standby there is manual work involved in restarting the node. 
+		- but in case of HA, the procedure is part of a well-defined, pre-configured fw
+			- the process is structured and built into the hadoop's HA architecture
+			- md recovery is not needed as active and standby would have shared the same md
+			- no complex recovery procedure
+		- in case of non-HA, recovery involves restarting NN, potentially running many commands
+			- downtime is generally higher
+			- manual checks required, validations or recovery steps
+			- we will have to take care rebuilding the state
+
+#### failover and fencing
+- transition from an active to standby namenode is managed by a new entity in the system called failover controller
+	- there are various failover controllers
+	- but the default implementation uses Zookeeper
+	- uses simple heartbeating mechanism
+	- this controller is a process whose job is to monitor its namenode for failure and trigger a failover
+	- looks like the controller runs on the same machine
+	- one controller for one namenode
+- failover may also be initiated manually by an administrator
+	- called graceful failover
+- in case of ungraceful failover, it is impossible to ensure that the failed namenode has stopped running
+	- ex: slow nw, or a nw partition can trigger a failover transition
+		- the namenode will continue to think it is the active one
+- HA implementation goes to great lengths to preven previously inactive namenode from doing any damage
+	- method called fencing
+- there are fencing mechanisms
+	- depending upon the shared edit log, the complexity increases
+		- QJM only allows one namenode to write to the edit log at one time
+			- it is still possible for the previously active namenode to serve stale read requests to clients
+				- stale read-requests: provide file system metadata or data that might be outdated
+			- so setting up an SSH fencing command that will kill namenode's process is a good idea
+				- mechanism to isolate a problematic node from the rest of the cluster
+				- involves using SSH to access the node and perform actions like rebooting, shutting down or disabling services
+		- stronger fencing mechs are required while using Nfs filre for the shared edit log
+			- since nfs filer accepts more than one writer to write at a time
+			- fencing mech:
+				- revoke access of namenode to the shared storage dir
+				- diable it's nw port via a remote management command
+				- STONITH: Shoot the other node in the head
+					- specialized power distribution unit to forcibly shutdown the host
+- client failover: client operations(like read/write) continue transparently even if the primary server fails
+	- client requests are redirected to standby
+	- can be handled in client side:
+		- HDfS clients(hdfs dfs) use the HDfS client lib to interact with HDfS
+		- handled by configuring host name to two namenode addresses in a hdfs-site.xml
+		- client library tries each namenode address until operation succeeds
