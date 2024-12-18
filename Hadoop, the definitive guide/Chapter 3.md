@@ -238,3 +238,41 @@
 		- HDfS clients(hdfs dfs) use the HDfS client lib to interact with HDfS
 		- handled by configuring host name to two namenode addresses in a hdfs-site.xml
 		- client library tries each namenode address until operation succeeds
+
+## The CLI
+- fs.defaultFS: sets the default filesystem for Hadoop
+	- by default HDfS
+	- specified as a URI. ex: hdfs://localhost/
+	- this is used to identify the host and port for the HDfS namemode
+		- used by clients and HDfS daemons
+	- in the above example, host is localhost and port is the default 8020
+- dfs.replication
+	- replication factor that decides how many datanodes does this block needs to be replicated in
+- hadoop fs -help
+- `hadoop fs -copyFromLocal input/docs/quangle.txt hdfs://localhost/user/thirs/quangle.txt`
+	- we could have omitted the scheme and host of the URI and picked up the default, hdfs://localhost as specified in core-site.xml
+	- what does scheme mean?
+		- scheme indicates how the resource should be accessed and identifies the protocol to be used such as http, https, ftp etc...
+		- scheme here is hdfs
+	- `hadoop fs -copyFromLocal input/docs/quangle.txt /user/thirs/quangle.txt`
+	- we also could have used a relative path and copied the file to our home dir
+		- `hadoop fs -copyFromLocal input/docs/quangle.txt /user/thirs/quangle.txt`
+- hadoop fs -copyToLocal quangle.txt quangle.copy.txt
+	- to check they are same: md5 input/docs/quangle.txt quangle.copy.txt
+- hadoop fs -mkdir books
+- hadoop fs -ls
+	- similar to ls -l
+	- first column: file permissions
+	- second is replication factor of the file
+		- 0 for directories and replication factor does not apply to dirs
+		- directories are treated as metadata and stored by the name node, not the datanodes
+	- 3rd and 4th: owner and the group
+	- 5th: size of the file in bytes, 0 for directories
+	- 6th and 7th are modified date and time
+	- 8 the is the name
+![[Pasted image 20241218122023.png]]
+- HDfs has a permissions model for files and directories that is much like the posix model
+- 3 types of permissions: r, w, x
+	- r: to read files or list contents of a dir
+	- w: to write a file or create or delete files and directories in a directory
+	- x: ignored, as we cannot execute files on HDfS, and for a directory this permission is required to access its children
