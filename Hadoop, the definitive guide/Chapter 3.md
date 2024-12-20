@@ -271,8 +271,24 @@
 	- 6th and 7th are modified date and time
 	- 8 the is the name
 ![[Pasted image 20241218122023.png]]
-- HDfs has a permissions model for files and directories that is much like the posix model
+- HDfS has a permissions model for files and directories that is much like the posix model
 - 3 types of permissions: r, w, x
 	- r: to read files or list contents of a dir
 	- w: to write a file or create or delete files and directories in a directory
 	- x: ignored, as we cannot execute files on HDfS, and for a directory this permission is required to access its children
+- by default hadoop runs with security disabled
+	- client's identity is not authenticated
+	- it is easy to impersonate, let's say there is a user x on hadoop. A client from a remote machine can have the same user name and login to hadoop and impersonate
+	- but it is better to have permissions enabled to avoid accidental modification or deletion
+- when permission checks are enabled, owner permissions are checked if the username matches the owner, group permissions are checked if the client is a member of the group, otherwise others permissions are checked 
+- each file and directory has an owner, a group and a mode
+- mode is made up of permissions for the users who is the owner, users who are members of the group, and the permissions for users who are neither the owner nor member of the group
+- there is a concept of superuser, which is the identity of the namenode process
+	- Permissions checks are not performed for the superuser
+
+## Hadoop filesystems
+- hadoop provides many interfaces to its filesystems
+	- hdfs is just one implementation
+- hadoop ships with many such implementations
+- hadoop is written in java, so most Hadoop filesystem interactions are mediated through the JAVA APi
+- Hadoop generally uses the URI scheme to pick the correct filesystem instance to communicate with
