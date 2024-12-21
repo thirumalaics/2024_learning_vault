@@ -317,3 +317,36 @@
 - Hadoop generally uses the URI scheme to pick the correct filesystem instance to communicate with
 
 ![[Pasted image 20241220131140.png]]
+- in the first case, the embedded web servers in the namenode and datanodes act as WebHDfS endpoints
+	- configurable, we can switch on or off this behavior
+	- file md operations handled by namenode, while read(and write) operations are sent first to the namenode
+		- which sends an HTTP redirrect to the client indicating the data node to stream file data from (or to)
+		- after receiving the redirect, the client directly interacts with the specified datanodes to read or write
+		- this design prevents namenode from becoming a bottleneck
+- second way involves interacting with one or more proxy serverrs
+	- these proxies are stateless, so they can behind a standard load balances
+	- all traffic to the cluster passes through the proxy
+	- client never accesses namenode or datanode
+		- allows for stricter firewall and bandwidth limiting policies
+			- how?
+				- by centralizing access, sys admins can enforce security and traffic rules at a single point(proxy servers), rather than having to manage across datanodes and namenodes
+				- attack surface is limited by banning connections to datanodes and namenodes
+					- clusters can have strict firewall rules allowing only connections to/from proxies
+				- rate limiting can be applied to the proxy layer
+	- common to have proxies for 
+		- transfer between hadoop clusters located in different data centers,
+		- when accesing a Hadoop cluster running in the cloud from an external nw
+- HTTPfs proxy exposes same HTTP (and HTTPS) inteface as webHDfS
+	- HTTPfS and WebHDfS both enable HTTP/HTTPs based access to HDfS, but they serve diff purposes and have distinct diff
+	- WebHDfS: Native built in rest api provided by HDfS to directly access HDfS over HTTP
+		- server runs on each namenode and datanode
+	- HTTPfS:
+		- proxy server for HDfS that provides an HTTP i/f to access HDfS
+		- but routes all requests through a central proxy
+		- main diff is this is a server run by a specific script
+- Hadoop also provides C lib that mirrors the one in Java
+	- it can be used to access any Hadoop filesystem
+	- works using the Java Native Interface to call a java filesystem client
+		- similar to py4j but for C
+- Hadoop can run with multiple filesystem implementations at the same time
+1412
