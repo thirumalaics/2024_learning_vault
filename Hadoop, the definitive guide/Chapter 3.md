@@ -287,8 +287,33 @@
 	- Permissions checks are not performed for the superuser
 
 ## Hadoop filesystems
+- what is a filesystem?
+	- a filesystem is a system that manages how data is stored, organized, retrieved and managed on a storage device
+	- it acts as an abstraction layer between the operating system and physical storage
+	- filesystems structure data in a hierarchy of files and directories to make it easier to locate and manage
+	- provides mechanism to locate and retrieve data stored on the storage medium
+	- ensure that the data is not corrupted and provide mechanisms to recover it in case of failures
+	- enforce permissions and security rules
+	- store metadata
+- why do we need a filesystem?
+	- without a fs, data would be stored as a raw sequence of bytes with no structure or labels, making it impossible to differentiate between files and data types
+	- allow efficient allocation of storage space and retrieval of files
+		- help avoid fragmentation and optimize disk usage
+	- provide and abstraction for users to work with
+	- data sharing via nwed filesystems
+	- security
+	- advanced filesystems target fault tolerance and backup
 - hadoop provides many interfaces to its filesystems
 	- hdfs is just one implementation
 - hadoop ships with many such implementations
+- hadoop can interact with different types of filesystems, not just HDfS
 - hadoop is written in java, so most Hadoop filesystem interactions are mediated through the JAVA APi
+	- by exposing its filesystem interface as a JAVA API, hadoop makes it harder for non-java apps to access HDfS
+	- the HTTP rest API exposed by the WebHDfS protocol makes it easier for other languages to interact with HDfS
+	- HTTP interface is slower than native java client, so should be avoided for very large data
+	- there are two ways to access HDfS over HTTP: 
+		- directly, where the HDfS daemons serve HTTP requests to clients
+		- via a proxy, which accesses HDfS on the client's behalf using the usual Distributedfilsystem API
 - Hadoop generally uses the URI scheme to pick the correct filesystem instance to communicate with
+
+![[Pasted image 20241220131140.png]]
