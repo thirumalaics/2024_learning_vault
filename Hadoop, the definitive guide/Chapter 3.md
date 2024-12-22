@@ -349,4 +349,23 @@
 	- works using the Java Native Interface to call a java filesystem client
 		- similar to py4j but for C
 - Hadoop can run with multiple filesystem implementations at the same time
-1412
+	- but hadoop does not support storing a single file across multiple filesystems
+	- hadoop can store different files in different filesystems simultaneously
+- HDfS can be mounted on a local client's filesystem using Hadoop NfSv3
+	- we can then use unix utilities to interact with the filesystem
+	- appending to a file works, but random modifications of a file do not
+	- another way to mount HDfS as a standard local filesystem is fuse(filesystem in userspace)
+Java interface for hadoop is ignored in the notes
+- buffer size:
+	- while reading data, chunks of data are read into memory(buffer) in blocks of size bufferSize
+	- the application reads from this buffer, which minimizes direct interactions with the filesystem, reducing latency and improving performance
+
+## Data flow
+- ![[Pasted image 20241222145429.png]]
+- DistributedFilesystem is a class which provides interfaces to interact with HDfS
+1. Client opens a file by calling open() on the DistributedFilesystem object
+2. DistributedFilesystem calls the namenode, using RPCs, to determine the locations of the first few blocks in the file
+	- for each block, the namenode returns the addresses of the datanodes that have a copy of that block
+	- datanodes are sorted according to their proximity to the client
+		- incase of a mapreduce task, the client reside within a datanode, so the client will read fro mthe local datanode if the datanode hosts a copy of the block
+1427
