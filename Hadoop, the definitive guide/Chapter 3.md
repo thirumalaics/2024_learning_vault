@@ -367,5 +367,44 @@ Java interface for hadoop is ignored in the notes
 2. DistributedFilesystem calls the namenode, using RPCs, to determine the locations of the first few blocks in the file
 	- for each block, the namenode returns the addresses of the datanodes that have a copy of that block
 	- datanodes are sorted according to their proximity to the client
-		- incase of a mapreduce task, the client reside within a datanode, so the client will read fro mthe local datanode if the datanode hosts a copy of the block
-1427
+		- incase of a mapreduce task, the client reside within a datanode, so the client will read from the local datanode if the datanode hosts a copy of the block
+3. The DistributedfileSystem returns an fSDataInputStream (an input stream that supports file seeks) to the client for it to read from
+	- fSDataInputStream in turn wraps a DfSInputStream, which manages the datanode and namenode IO
+		- what this means is fSDataInputStream internall uses or delegates to DfSInputStream to handle actual operations required to read data from HDfS
+		- DfSInputStream responsible to deal with HDfS components like NN and DN
+4. the client calls read on the stream, DfSInputStream
+	- DfSInputStream has stored the datanode addresses for the first few blocks in the file
+	- then connects to the first(closest) datanode for the first block in the file
+	- data is streamed from the datanode back to the client
+	- which calls read repeatedly on the stream
+5. Once end of block is reached, DfSInputStream will close the connection to the datanode, then find the best datanode for the next block
+6. It is important to remember the interface may not have details of all blocks at first itself
+	- this might need follow up calls to namenode as needed
+	- blocks are also read in order
+	- client calls close on the interface once it has finished reading
+- additional steps:
+	- if the interface is not able to retrieve block from a particular datanode, it tries with the next datanode which has the block
+		- the interface remembers the bad datanode, so as to avoid retrying in the future for some other block
+	- the interface also verifies checksums of the blocks transferred to it from the datanode
+		-  if a block is found to be corrupted, the interface redirects to another dn
+		- reports this to NN as well
+	- namenode is a guide to data rather than a servant of data
+		- hence it can spread out multiple client requests to the same data across the cluster
+		- nn does not become a bottleneck as it only takes care of guiding clients with block location requests
+			- stores in memory, hence efficient
+- what does it mean for two nodes in a local nw to be close?
+	- bandwidth bw two nodes as a measure of distance
+	- measuring bandwidth bw nodes is difficult in practice
+	- hadoop takes a simple approach in which the nw is represented as a tree and the distance bw two nodes is the sum of their distances to their closest common ancestor
+	- levels in the tree are not predefined, but it is common to have leves that correspond to data center, the rack and the node that a process is going on
+	- bw available for each of the following scenarios becomes progressively less:
+		- process on the same node
+		- different nodes on the same rack
+		- nodes on different racks in the same data center
+		- nodes in different data centers
+![[Pasted image 20241224202018.png]]
+
+![[Pasted image 20241224202333.png]]
+- hadoop assumes by default, that the nw is flat - a single level hierarchy
+	- all nodes are on single rack in a single data center
+1954
