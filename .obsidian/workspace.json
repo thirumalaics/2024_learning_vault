@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -165,6 +164,8 @@
   },
   "active": "560ddb8b7afe0de1",
   "lastOpenFiles": [
+    "Pasted image 20250101100217.png",
+    "Pasted image 20250101100134.png",
     "Pasted image 20241224202522.png",
     "Pasted image 20241224202333.png",
     "Pasted image 20241224202018.png",
@@ -180,8 +181,6 @@
     "Pasted image 20241128205725.png",
     "Pasted image 20241128204911.png",
     "Pasted image 20241128204127.png",
-    "Pasted image 20241128203014.png",
-    "Pasted image 20241128201753.png",
     "Hadoop, the definitive guide",
     "PowerBI/Get Started with Data Analytics/Discover Data Analytics/Different data roles.md",
     "PowerBI/Get Started with Data Analytics/Get Started building with Power BI/Intro.md",

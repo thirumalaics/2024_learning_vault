@@ -416,6 +416,8 @@ Java interface for hadoop is ignored in the notes
 		- file truncation or overwrite operation
 		- rebalancing or other operations that command block recreation
 ### Anatomy of a file write
+
+![[Pasted image 20250101100217.png]]
 1. Client creates a file by calling create() on DistributedfileSystem
 2. DistributedfileSystem makes an RPC call to the namenode to create a new file in the filesystem's namespace with no blocks associated with it
 3. namenode performs various checks to make sure that the file does not already exist and that the client has necessary permissions
@@ -436,10 +438,46 @@ Java interface for hadoop is ignored in the notes
 	- the packet is removed from the ack queue only when it has been acked by all the datanodes in the pipeline
 	- packet and block are not the same
 	- multiple packets make up a single block
+8. client calls close on the stream after it finishes writing data
+	- this action flushes all the remaining packets to the datanode pipeline and waits for acknowledgements
+9. once all acks are received, client signals to namenode that the write is complete
+	- since namnode already knows which blocks constitute a file(because name node allocates blocsks before datastreamer can start writing)
+	- so client only needs to wait for blocks to be minimally replicated b4 returning successfully
 - if any datanode fails while data is being written to it, the following actions are taken:
 	- the pipeline is closed
 	- any packets in the ack queue are added to the front of the data queue so that datanodes that are downstream from the failed node will not miss any packets
 	- if the current block had been written to one or more datanodes before failure, the successful blocks are given new block ID
 		- this is communicated to namenode
-		- so that partial block on the failed datanode will be deleted if the failed data node recovers
-1750
+		- so that partial block on the failed datanode will be deleted if the failed data node recovers as it will be an orphan block
+	- the failed datanode is removed from the pipeline, and a new pipeline is constructed from the two good datanodes
+	- namenode notices that the block is under-replicated, and it arranges for a further replica to be created on another node
+	- in the unlikely failure of multiple datanodes in the pipeline, the write will succeed as long as dfs.namenode.replication.min replicas are written
+		- defaults to one
+		- the blocks will be asynchronously replicated across the cluster until its target replication factor is reached
+- replica placement
+	- there is a tradeoff between reliability and write and read bw
+		- ex:placing all replicas in one node incurs the least write bandwidth penalty
+		- but this offers no real redundance and it is highly unrealiable in case of node failure
+		- read bandwidth is high for off-rack reads
+			- off-rack reads: data is located in a different rack than the processing node
+		- placing replicas in diff datacenters maximizes redundancy but at the cost of bw
+	- even within the same datacenter there are different placement strats
+	- default strat:
+		- first replica is on the same node where the client runs
+			- for cases where the client runs outside the cluster, a node is chosen at random
+			- NN tries not to pick nodes that are too full or too busy
+		- second replica placed on a different rack from the first(off-rack), chosen at random
+		- third replica stored in the same rack as second but on a diff node chosen at random
+		- further replicas are placed on random nodes in the cluster, while trying to avoid placing too many copies on the same rack
+	- once the locations are chosen, a pipeline is built, taking nw topology into account
+![[Pasted image 20250101100134.png]]
+
+## Coherency model
+- coherency model for a filesystem describes the data visibility of reads and writes for a file
+- HDfS trades off some POSIX requirements for performance, so some operations may behave differently
+	- ex: after creating a file, the file is visible in the namespace but any content written to the file is not guaranteed to be visible
+		- even if the stream is flushed
+		- so file appears to have a length of zero
+- always, current block that is being written is not visible to other readers
+- once more than a block's worth of data has been written, the first block will be visible to new readers
+0937
