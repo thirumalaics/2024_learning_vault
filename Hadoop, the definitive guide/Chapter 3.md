@@ -407,4 +407,39 @@ Java interface for hadoop is ignored in the notes
 ![[Pasted image 20241224202333.png]]
 - hadoop assumes by default, that the nw is flat - a single level hierarchy
 	- all nodes are on single rack in a single data center
-1954
+- what is a block ID?
+	- unique identifier assigned by the Namenode to blocks
+	- all replications of a block share the same block id
+	- namenode maintains a block id to list of datanode mapping
+	- blockid changes if the block is modified or recreated
+		- pipeline reconfiguration after a datanode failure
+		- file truncation or overwrite operation
+		- rebalancing or other operations that command block recreation
+### Anatomy of a file write
+1. Client creates a file by calling create() on DistributedfileSystem
+2. DistributedfileSystem makes an RPC call to the namenode to create a new file in the filesystem's namespace with no blocks associated with it
+3. namenode performs various checks to make sure that the file does not already exist and that the client has necessary permissions
+4. if the checks pass, namenode makes a record of the new file, otherwise, file creation fails and the client is thrown an IOException
+5. Distributedfilesystem returns an fSDataOutputStream for the client to start writing data to
+	- fSDataOutputStream wraps a DfSOutputStream
+	- handles communication with namenode and datanodes
+6. As the client writes the data, DfsOutputStream splits it into packets and writes it into an internal queue called data queue
+	- Data queue is consumed by the DataStreamer, which is responsible for asking the namenode to allocate new blocks 
+	- namenode picks a list of suitable datanodes to store the replicas
+7. the list of datanodes returned forms a pipeline
+	- if the replication factor is 3, then the list of nodes contain 3 nodes
+	- DataStreamer streams the data to the first node in the pipeline
+	- first node stores each packet and forwards it to the second datanode in the pipeline
+	- second datanode stores each packet and forwards it to the last datanode
+	- DfsOutputStream also maintains an internal queue of packets that are waiting to be acknowledged by datanodes, called the ack queues
+		- this is not the same as ack queue
+	- the packet is removed from the ack queue only when it has been acked by all the datanodes in the pipeline
+	- packet and block are not the same
+	- multiple packets make up a single block
+- if any datanode fails while data is being written to it, the following actions are taken:
+	- the pipeline is closed
+	- any packets in the ack queue are added to the front of the data queue so that datanodes that are downstream from the failed node will not miss any packets
+	- if the current block had been written to one or more datanodes before failure, the successful blocks are given new block ID
+		- this is communicated to namenode
+		- so that partial block on the failed datanode will be deleted if the failed data node recovers
+1750
