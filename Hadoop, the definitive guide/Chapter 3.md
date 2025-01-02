@@ -475,9 +475,61 @@ Java interface for hadoop is ignored in the notes
 ## Coherency model
 - coherency model for a filesystem describes the data visibility of reads and writes for a file
 - HDfS trades off some POSIX requirements for performance, so some operations may behave differently
-	- ex: after creating a file, the file is visible in the namespace but any content written to the file is not guaranteed to be visible
+	- ex: after creating a file, the file is visible in the namespace but any content written to the file is not ***guaranteed*** to be visible
 		- even if the stream is flushed
 		- so file appears to have a length of zero
 - always, current block that is being written is not visible to other readers
 - once more than a block's worth of data has been written, the first block will be visible to new readers
-0937
+- HDfS provides a way to force all buffers to be flushed to the datanodes via hflush() method on fSDataOutputStream
+	- after successful return from hflush, HDfS guarantees that the data written up to the point in the files has reached all the datanodes in the write pipeline and is visible to all new readers
+- hflush does not guarantee that the datnodes have written the data to disk
+	- only that it's in the datanode's memory
+	- data could be lost in the event of a power outage
+	- closing a file in HDfS performs an implicit hflush too
+- hsync can be used instead for stronger guarantee
+	- similar to fsync system call in POSIX that commits buffered data for a file descriptor
+- hflush and hsync differ in the guarantees that they provide and use cases
+	- hflush
+		- flushes data written to the output stream so that it is available to readers
+		- no guarantee on disk write of the data in DN
+		- for quick reader visibility
+			- ex: logs that can tolerate data loss if failure occurs
+	- hsync
+		- ensures that the data is flushed and synchronized to the disks of all datanodes in the pipeline
+		- similar guarantee like hflush, but one extra guarantee of persisting to disk on all datanodes
+		- for apps that require durability and fault tolerance
+![[Pasted image 20250102185004.png]]
+
+- what does this mean for our applications?
+	- with no calls to either of these methods, we could loose up to a block of data in the event of client or system failure
+	- so it is better to call the method  at suitable points
+	- hsync has higher overhead than hflush
+	- there is a tradeoff between data robustness and throughput
+
+### Parallel Copying with distcp
+- so far, HDfS access patterns seen involve only single-threaded access
+- it is possible to act on a collection of files, but for efficient parallel processing of these files, we will have to write our own program
+- distcp is one such command that allows us to parallely copy data to and from Hadoop filesystems in parallel
+`hadoop distcp file1 file2`
+- if dir2 does not exist, it will be created, the contents of the dir1 are copied there
+`hadoop distcp dir1 dir2`
+- multiple source paths can be specified
+- if dir2 already exists, then dir1 will be copied under dir2
+	- we can supply -overwrite option to overwrite contents of dir2 with dir1's contents
+- -update option available to update only the files that have changed
+- implemented using a mapreduce job
+- work of copying is done by the maps that run in parallel, with no reducers involved
+- each file copied by a single map, with each map given approximately the same amount of data by bucketing files into roughly equal allocations
+- by default 20 maps are used, can be changed by providing -m argument
+- -delete flag causes distcp to delete any files or dirs from the dest that are not in the source
+- -p option to preserve attributes like permissions, block size and replication
+- if two clusters are running incompatible versions of HDfS, then we can use webhdfs protocol to distcp between them:
+	- `hadoop distcp webhdfs://namenode1:50070/foo webhdfs://namenode2:50070/foo`
+- another variant is to use HTTPfS proxy as the distcp source or destination
+	- again using the webhdfs protocol
+	- has advantage of bw and firewall control
+- when copying data to HDfS, it is important to consider cluster balance
+	- file blocks must be evenly spread across the cluster
+- when using distcp we must ensure it does not disrupt this
+- when using single map, it does not only slow the entire process
+1837
