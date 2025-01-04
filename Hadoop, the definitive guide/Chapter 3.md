@@ -531,5 +531,12 @@ Java interface for hadoop is ignored in the notes
 - when copying data to HDfS, it is important to consider cluster balance
 	- file blocks must be evenly spread across the cluster
 - when using distcp we must ensure it does not disrupt this
-- when using single map, it does not only slow the entire process
-1837
+- when using single map, it does not only slow the entire process due to single thread
+	- first replica of each block would reside on the node running the map(until disk filled up)
+	- the second and third replicas would be spread across the cluster
+- by having more maps than nodes in the cluster, this problem is avoided
+	- for that reason, it's best to start with 20 maps per node, which is the default
+- but it is not always possible to prevent a cluster from becoming unbalanced
+	- we might have to decrease the number of maps so that some of the nodes can be used by other jobs
+	- in this case balancer tool can help us to distribute blocks
+1537
