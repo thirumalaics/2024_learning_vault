@@ -85,5 +85,43 @@
 - writing a YARN app from scratch is not necessary in many cases as it is possible to use an existing app that fits the bill
 - there are couple of projects that simplify the process of building a YARN app
 	- apache slider allows us to run existing distributed apps on YARN
-	- users can run their own instances of an application on a cluster, independently of other users, which means that different users can run different versions of the same app
-1434
+		- ex: HBase, Accumulo and other big data systems
+	- with slider, users can run their own instances of an application on a cluster, independent of other users
+		- ex: one might run HBase 1.2 and other might run HBase V 2.0
+	- slider provides tools to change the number of nodes allocated to an application dynamically
+	- allows users to suspend and later resume a running app
+		- useful in cases where resources need to be allocated temporarily for other priorities
+	- YARN at times does not simplify running complex distributed apps
+	- apache slider acts as a middle layer bw YARN and distributed applications
+		- enables flexible and independent application management, resource scaling and efficient utilization of hadoop cluster
+- Apache twill is similar to slider
+	- simple programming model for developing distributed applications on YARN
+	- provides the following capabilities, among others:
+		- real-time logging(logs streamed from app to client)
+		- command messages (sent from client to runnables)
+- in cases where none of the options are sufficient, then the distributed shell application that is part of YARN serves as an example of how to write a YARN application
+	- it demonstrates how to use  YARN client APIs to handle comms between client or AM and the YARN daemons
+
+## YARN compared to MR1
+- Hadoop 1 did not have YARN
+	- distributed implementation of MR in the original version of Hadoop is sometimes referred to as MR1
+- MR2 uses YARN from Hadoop 2
+- old and new MR APIs are not the same thing as MR1 and MR2 implementations
+	- the APIs are user-facing client-side features and determine how we write MR programs
+	- whereas implementations are just different ways of running MR programs
+	- all four combinations are supported: both old and new MR APIs run on both MR1 and MR2
+- in MR1, there are two types of daemons
+	- jobtracker and one or more tasktrackers
+		- jobtracker schedules tasks to run on tasktrackers
+			- splits the mr job submitted by client into smaller map and reduce tasks
+			- keeps track of overall progress of each job
+			- if a task fails, the jobtracker can reschedule it on a different tasktracker
+			- always running daemon process on the master node of the cluster
+			- even when there are no jobs running, the jobtracker is responsible for monitoring the health and status of the TaskTracker nodes in the cluster
+			- stores job history for completed jobs
+				- but also possible to run a job history server as a separate daemon to take the load off the jobtracker
+		- tasktrackers run tasks and send progress reports to the jobtracker
+- in YARN, the responsibility of scheduling and task progress monitoring  is taken care by separate entities: the resource manager and an application master(one for each MR job) 
+- in YARN, the responsibility of app history tracking is taken care by timeline server
+- YARN equivalent of tasktracker is a node manager
+1107
