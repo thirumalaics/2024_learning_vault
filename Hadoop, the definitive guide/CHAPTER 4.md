@@ -156,5 +156,47 @@
 		- YARN opens up Hadoop to other types of distributed application beyond MR
 		- allows us to run different versions of MR on the same YARN cluster, which makes the process of upgrading MR more manageable
 			- some parts of MR - job history server and the shuffle handler, as well as YARN itself, still need to be upgraded across the cluster
+### Scheduling in YARN
+- job of the YARN scheduler is to allocate resources to applications according to some defined policy
+	- there is no one "best policy"
+	- that is why YARN provides a choice of schedulers and configurable policies
+##### Scheduler options
+- three schedulers are available in YARN: the fifo, capacity, and fair schedulers
+- fifo
+	- as the name suggests
+	- requests for the first application in the queue are allocated first
+	- simple to understand and not needing any configuration
+	- not suitable for shared clusters
+		- as large applications will use all the resources in a cluster
+	- ![[Pasted image 20250107210041.png]]
+- capacity
+	- better for shared cluster
+	- allows long running jobs to complete in a timely manner 
+		- while allowing users who are running concurrent smaller ad hoc queries to get results back in a reasonable time
+	- a separate dedicated queue allows the small job to start as soon as it is submitted
+		- how is a job identified as small
+		- this at the cost of overall cluster utilization since the queue capacity is reserved for jobs in that queue
+		- large job finishes later than when using the fifo scheduler
+	- ![[Pasted image 20250107210057.png]]
+- fair
+	- there is no need to reserve a set amount of capacity
+	- it will dynamically balance resources between all running jobs
+	- just after the first(large) job starts, it is the only job running, so it gets all the resources in the cluster
+		- when the second job starts, it is allocated half of the cluster resources so that each job is using its fair share of resources
+	- there is a lag between the time the second job starts and when it receives its fair share
+		- it has to wait for resources to free up as containers used by the first job complete
+	- after the small job completes and no longer requires resources, the large job goes back to using the full cluster capacity again
+	- overall effect is both high cluster utilization and timely small job completion
+	- better for shared cluster
+	- allows long running jobs to complete in a timely manner 
+		- while allowing users who are running concurrent smaller ad hoc queries to get results back in a reasonable time
+	- ![[Pasted image 20250107210132.png]]
 
-10:07
+###### Capacity Scheduler Configuration
+- allows sharing of Hadoop cluster along organizational lines
+- each org is allocated a certain capacity of the overall cluster
+- each org is set up with a dedicated queue that is configured to use a given fraction of the cluster capacity
+- queues may be further divided in hierarchical fashion
+	- allowing each org to share its cluster allowance between different groups of users within the org
+- within a queue, apps are scheduled using fifo
+2031
