@@ -124,4 +124,37 @@
 - in YARN, the responsibility of scheduling and task progress monitoring  is taken care by separate entities: the resource manager and an application master(one for each MR job) 
 - in YARN, the responsibility of app history tracking is taken care by timeline server
 - YARN equivalent of tasktracker is a node manager
-1107
+- the following is a mapping of components between MR1 and YARN
+![[Pasted image 20250106220811.png]]
+- benefits to using YARN include the following:
+	- scalability
+		- MR1 hits bottlenecks in the region of 4000 nodes and 40000 tasks
+			- because jobtracker has to manager both jobs and tasks
+		- YARN overcomes these limitations by the virtue of its split resource manager/application master architecture
+			- can scale up to 10000 nodes and 100000 tasks
+		- in contrast to the job tracker, each instance of an application has a dedicated application master, which runs for the duration of the application
+			- remember in MR1, jobtracker takes care of splitting the job submitted by user into map and reduce tasks
+	- availability
+		- high availability is usually achieved by replicating state of a service daemon, so that another daemon can pick up the left over work when current one fails
+		- the state in jobtracker's memory is large, complex and constantly changing within seconds
+			- each task status is updated every few seconds
+			- these factors make it very difficult to retrofit HA into the jobtracker service
+		- in YARN, the responsibilities of jobtrackers are divided between RM and AM
+			- now to be highly available, divide an conquer
+			- provide HA for each of the above daemons separately
+			- Hadoop 2 supports HA both for the resource manager and for the application master for MR jobs
+	- Utilitzation
+		- in MR1, each tasktracker is configured with a static allocation of fixed-size slots
+			- which are divided into map slots and reduce slots at configuration time
+			- a map slot can only run a map task
+		- in YARN, a node manager manages a pool of resources, rather than a fixed number of designated slots
+			- there will never be a situation where MR will have to wait because only map slots are available on the cluster
+			- if resources to run the task are available, then the application will be eligible for them
+			- resources are more finegrained, so application can request in a granular way
+				- in mr1, slots are indivisible
+	- multitenancy
+		- YARN opens up Hadoop to other types of distributed application beyond MR
+		- allows us to run different versions of MR on the same YARN cluster, which makes the process of upgrading MR more manageable
+			- some parts of MR - job history server and the shuffle handler, as well as YARN itself, still need to be upgraded across the cluster
+
+10:07
