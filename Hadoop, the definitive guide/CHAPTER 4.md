@@ -199,4 +199,46 @@
 - queues may be further divided in hierarchical fashion
 	- allowing each org to share its cluster allowance between different groups of users within the org
 - within a queue, apps are scheduled using fifo
-2031
+- in capacity scheduler, a single job does not use more resources than its queue's capacity
+- if there is more than one job in the queue, and there are idle resources available, then the CS may allocate the spare resources to the jobs in the queue
+	- even if that causes the queue's capacity to be exceeded
+	- the spare resources can be from other queue as well
+	- this behavior is known as ***queue elasticity***
+- in normal operation, CS does not preempt containers by forcibly killing them
+	- a queue may be under capacity when it does not utilize all the resources allocated to it because of lack of demand
+	- if the demand suddenly increases, it cannot immediately utilize resources which may have been lent to other queues 
+		- and the scheduler does not forcibly reclaim them from other queues
+	- the queue will only return to using the full amount of resources gradually
+		- this happens as running containers in other queues complete and release resources
+	- it is possible to mitigate this by configuring queues with a maximum capacity so that they dont eat into other queue's capacities too much
+	- queues that are fully utilized and have increased demand **can allocate resources from other queues** to meet the new demand **only if resources become available** in those other queues
+- it is possible to mitigate this by configuring queues with maximum capacity so that they dont eat into other queue's capacities too much
+	- reasonable number found by trial and error
+- capacity scheduler config file: capacity-scheduler.xml
+	- a particular queue is configured by setting configuration properties of the form yarn.scheduler.capacity.queue_path.sub_property
+	- queue_path: hierarchical dotted path of the the queue
+		- root.dev.eng
+	- this hierarchical name is only used and recognized in the config file
+
+![[Pasted image 20250108100334.png]]
+- dev's max capacity is 75 meaning, it's actual capacity 60 + 15 from prod in cases of high demand and free resources in prod
+	- prod always has 25% exclusively for itself
+- since prod does not have a max capacity it can end up using the full cluster
+- capacity's unit is %
+- we can also configure
+	- max resources a single user or application can be allocated
+	- max apps that can be running at any time
+	- ACLs on queues
+###### Queue placement
+- the way to specify which queue an application is placed in is specific to the app
+- in MR: mapreduce.job.queuename
+	- if queue does not exist, we get error at submission time
+- if no queue specified, app placed in a queue called default
+
+#### fair scheduler config
+- attempts to allocate resources so that all running apps get the same share of resources
+- fair sharing actually works between queues, too
+- in the context of fair scheduler, the terms pool and queue are used interchangeably 
+0943
+1003
+1014
