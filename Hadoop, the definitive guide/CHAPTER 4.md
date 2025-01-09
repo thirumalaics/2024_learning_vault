@@ -239,6 +239,63 @@
 - attempts to allocate resources so that all running apps get the same share of resources
 - fair sharing actually works between queues, too
 - in the context of fair scheduler, the terms pool and queue are used interchangeably 
-0943
-1003
-1014
+- imaging 2 users A and B
+	- A starts an application and since there are is no demand from B, all resources are allocated to A's app
+	- then B starts a job while A's job is still running, and after a while each job is using half of the resources in the cluster
+	- now if B starts a second job, it will share it's resources with B's other job
+		- B's apps end up using 1/4 of the resources in the cluster while A's job continues to use 1/2 the resources in the cluster
+	- resources are shared fairly between users
+![[Pasted image 20250109083633.png]]
+
+##### Enabling the fair scheduler
+- the scheduler is determined by the setting of `yarn.resourcemanager.scheduler.class`
+- the capacity scheduler is used by default
+	- fair scheduler default in some Hadoop Distributions
+- the config must be set in yarn-site.xml
+- the value to be set must be a fully qualified classname of the scheduler
+
+###### Queue configuration
+- configured using an allocation file named fair-scheduler.xml
+	- loaded from classpath
+- the name of the file is also configurable
+	- yarn.scheduler.fair.allocation.file
+- in the absence of an allocation file, the fair scheduler operates as follows
+	- each user gets a dedicated queue named after them
+	- a queue for a user is created once the user submits the first application
+- per queue configuration is specified in the config file
+	- we can have hierarchical queues
+![[Pasted image 20250109084511.png]]
+- queue hierarchy is defined using nested queue elements
+- all queues are children of the root queue
+	- even if not actually nested in a root queue element
+- weights are numbers that are used in the fair share calculation
+	- in above case, the cluster allocation is considered fair when it is divided into a 40:60 proportion between prod and dev
+	- since eng and science do not have weights specified, they are divided evenly
+- weights are not the same as percentages, even though in the above example the weights add up to 100
+	- weights can be thought of as ratios
+	- even 2 and 3 could be given in the above example
+- default queue and dynamically created queues are not specified in the allocation file but still have weight 1
+- queues have different scheduling policies
+- the default policy for queues can be set in the top-level defaultQueueSchedulingPolicy element
+	- if omitted, fair scheduling is used
+- fair scheduler supports fifo and Dominant Resource fairness policies on queues
+- the policy for particular queue can be overriden using the scheduling policy element for the queue
+	- prod above uses fifo
+	- fair sharing is still used to divide resources between prod and dev queues, as well as between(and within) the eng and science queues
+- queues can be configured with minimum and maximum resources, and a maximum number of apps
+- min resources is not a hard limit, but rather is used by the scheduler to prioritize resource allocations
+- if the two queues are below their fair share, then the one that is furthest below its minimum is allocated resources first
+- the min resource setting is also used for preemption
+
+##### Queue placement
+- fs uses rules-based system to determine which queue an application is placed in
+- queuePlacementPolicy element contains a list of rules, each of which is tried in turn until a match occurs
+- in the above example
+	- specified rule places an app in the queue it is specified with
+		- if none specified or if the specified queue does not exist, the rule does not match
+	- primaryGroup
+		- tries to place an app in a queue with the name of the user's primary Unix group
+		- if there is no such queue, rather than creating it, the next rule is tried
+	- the default rule is a catch all and always places the application in the dev.eng queue
+0831
+0856
