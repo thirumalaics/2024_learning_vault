@@ -297,5 +297,51 @@
 		- tries to place an app in a queue with the name of the user's primary Unix group
 		- if there is no such queue, rather than creating it, the next rule is tried
 	- the default rule is a catch all and always places the application in the dev.eng queue
-0831
-0856
+- the queuePlacementPolicy can be ignored entirely, if done so the following is the default:
+	- specified -> user
+	- if the user queue does not exist, it is created
+- another simple queue placement policy is one where all apps are placed in the same queue = default
+	- in this case resources are shared fairly between applications rather than users
+	- this behavior must be configured, there are two ways: 
+		- xml config file
+		- yarn.scheduler.fair.user-as-default-queue = false
+			- apps will be placed in the default queue rather than a per-user queue
+			- one more config need to be set:
+				- yarn.scheduler.fair.allow-undeclared-pools should be set to false so that users can't create queues on the fly
+
+##### Preemption
+- when a job is submitted to an empty queue on a busy cluster, the job cannot start immideately
+	- until resources free up from jobs that are already running on the cluster
+- to make the time taken for a job to start more predictable, the fair scheduler supports preemption
+- preemption allows the scheduler to kill containers for queues that are running with more than their fair share of resources
+	- so that the resources can be allocated to the queue that is under its fair share
+- preemption reduces cluster efficiency, since the terminated containers need to be re-executed
+- preemption is enabled globally by setting yarn.scheduler.fair.preemption to true
+- there are two relevant preemption timeout settings: one for minimum share and one for fair share
+- both of these time out settings are not set by default, so we have to set at least one to allow preemption
+- if a queue waits for as long as its minimum share preemption timeout without receiving its minimum guaranteed share, then the scheduler may preempt other containers
+- defaultMinSharePreemptionTimeout = default for all queues and specified in the top-level element in the allocation file
+	- on a per-queue basis by setting the minSharePreemptionTimeout element for a queue
+- if a queue remains below half of its fair share for as long as the fair share preemption timeout, then the scheduler may preempt other containers
+	- the default timeout is set for all queues via: defaultfairSharePreemptionTimeout top-level element in the allocation file
+	- on per-queue basis by setting fairSharePreemptionTimeout on a queue
+	- the threshold may also be changed from its default of 0.5 by setting defaultfairSharePreemptionThreshold and fairSharePreemptionThreshold(per-queue)
+
+#### Delay Scheduling
+- all the YARN schedulers try to honor locality requests
+- on a busy cluster, if an app requests a particular node, there is a good chance that other containers are running on it at the time of the request
+- obvious course of action is to loosen the locality requirement and allocate a container on the same rack
+	- but waiting even for few seconds increases the chance of meeting the locality requirement dramatically, which in turn increases the efficiency of the cluster
+	- this feature is called delay scheduling and it is supported by both the Capacity and fair scheduler
+- every node manager in YARN cluster periodically sends a heartbeat request to the resource manager - by default, one per second
+- heartbeats carry information about the node manager's running containers and resources available for new containers
+- each heartbeat is potential scheduling opportunity for an app to run a container
+- when using delay scheduling, the scheduler does not simply use the first scheduling opportunity it receives 
+	- waits for up to a given maximum number of scheduling opportunities to occur before loosening the locality constraint and taking the next scheduling opportunity
+- for the capacity scheduler, delay scheduling is configured by setting yarn.scheduler.capacity.node-locality-delay
+	- value must be a positive integer representing the number of scheduling opportunities that is prepared to miss before loosening the locality constraint
+- fair scheduler also users the number of scheduling opportunities to determine the delay
+	- it is expressed as a proportion of cluster size
+	- yarn.scheduler.failr.locality.threshold.node to 0.5 means that the scheduler should wait until half the nodes in the cluster have presented scheduling opportunities before accepting another node in the same rack
+	- the threshold can be set using: yarn.scheulder.fair.locality.threshold.rack
+1214
