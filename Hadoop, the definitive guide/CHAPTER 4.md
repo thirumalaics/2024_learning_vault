@@ -342,6 +342,58 @@
 	- value must be a positive integer representing the number of scheduling opportunities that is prepared to miss before loosening the locality constraint
 - fair scheduler also users the number of scheduling opportunities to determine the delay
 	- it is expressed as a proportion of cluster size
-	- yarn.scheduler.failr.locality.threshold.node to 0.5 means that the scheduler should wait until half the nodes in the cluster have presented scheduling opportunities before accepting another node in the same rack
-	- the threshold can be set using: yarn.scheulder.fair.locality.threshold.rack
-1214
+	- node locality threshold: specifies the proportion of nodes in the cluster that must present scheduling opportunities before the scheduler considers allocating the task to a different node in the same rack
+		- within the time the threshold is reached, if there is node that meets the locality constraints, it is allocated to the job
+		- yarn.scheduler.failr.locality.threshold.node to 0.5 means that the scheduler should wait until half the nodes in the cluster have presented scheduling opportunities before accepting another node in the same rack
+	- yarn.scheduler.fair.locality.threshold.rack
+		- specifies the proportion of racks in the cluster that must present scheduling opportunities before the scheduler considers allocating the task to a rack other than the one initially requested
+		- ex: if set to 0.5, half of the racks in the cluster have had scheduling opportunities before considering scheduling on a rack other than the requested one
+
+#### Dominant Resource fairness
+- how to decide fairness of resource allocation?
+- when there is only a single resource type being scheduled, such as memory, then the concept of capacity or fairness is easy to determine
+- if two users are running apps, we can measure the amount of mem that each is using to compare the two apps
+- but there are multiple resource types in play, things get more complicated
+	- how to compare in the case where one user's app requires more CPU than mem, while the other requires more mem than CPU
+- how the schedulers in YARN address the problem of determining fairness:
+	- they look at each user's dominant resource and use it as a measure of cluster usage
+	- this approach is called Dominant resource fairness or DRf
+	- ex: Cluster: 100 CPUs and 10TB of memory
+		- App A requests containers of: 2 CPUs, 300 GB
+		- App B requests containers of: 6 CPUs, 100 GB
+		- A's request in terms of percentage of resources (2%, 3%)
+		- B's request in terms of percentage of resources (6%, 1%)
+		- since B's container requests consumes twice as much of its dominant resource(6%) compared to A's dominant resource consumption(3%), app B will be allocated half as many ***containers*** as App A to ensure fairness
+	- under DRf, the scheduler will ensure that both apps receive an equal share of their dominant resources
+		- App A will get more containers because its dominant resource usage (3% per container) is smaller than the app b's dominant resource usage (6% per container)
+		- App B will be allocated fewer containers to avoid disproportionate resource consumption
+- DRf is not used by default, so during resource calculations, only memory is considered and CPU is ignored
+- capacity scheduler can be configured to use DRf by setting yarn.scheduler.capacity.resource-calculator to org.apache.hadoop.yarn.util.resource.DominantResourceCalculator in capacity-scheulder.xml
+- for fair scheduler, drf can be enabled by setting the top-level element defaultQueueSchedulingPolicy in the allocation file to drf
+
+- without the DRf being enabled, how does fair scheduler determine fairness?
+	- fairness based on absolute resource shares like CPU cores and memory rather than considering the dominant resource
+		- assumes that all resources are equally important
+	- with the same example as above, scheduler allocates and equal fraction of each resource (50% CPU and 50 % mem to each app if 2 apps are running)
+		- regardless of whether one app consumes more of one resource type
+		- this can lead to underutilization of one resource if an app does not full use its allocation of other resource
+- Let’s revisit the earlier example with Application A and B:
+
+- Application A’s container: **(2 CPUs, 300 GB)**.
+- Application B’s container: **(6 CPUs, 100 GB)**.
+
+#### Scenario:
+
+- **Resource division (CPU)**: 50 CPUs for A and 50 CPUs for B.
+    
+    - Application A can run **50 CPUs ÷ 2 = 25 containers**.
+    - Application B can run **50 CPUs ÷ 6 ≈ 8 containers**.
+- **Resource division (Memory)**: 5 TB for A and 5 TB for B.
+    
+    - Application A can run **5,000 GB ÷ 300 GB ≈ 16 containers**.
+    - Application B can run **5,000 GB ÷ 100 GB = 50 containers**.
+- final containers for A = 16
+- final containers for B = 8
+- when the resources are divided equally, final num of containers allocated to each app depends on the most restrictive resource for that application
+	- this often leads to underutilization of the less restrictive resource, hence DRf preferred
+1354
