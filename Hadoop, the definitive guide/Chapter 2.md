@@ -1,4 +1,4 @@
-- Hadoop provides a framework for realiable, scalable storage and analysis
+- Hadoop provides a framework for reliable, scalable storage and analysis
 ## Map Reduce
 - programming model for data processing
 - MapReduce programs are inherently parallel
