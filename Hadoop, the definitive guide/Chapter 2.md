@@ -36,7 +36,7 @@
 		- ![[Pasted image 20241123195651.png]]
 		- the mr fw does the processing and sends out the following data to the reduce phase:
 		- ![[Pasted image 20241123195737.png]]
-	- all the reduce function has to do now is iterate through the list nad pick up the maximum reading
+	- all the reduce function has to do now is iterate through the list and pick up the maximum reading
 	- ![[Pasted image 20241123200048.png]]
 - the map function is an abstract method under the Mapper class(generic type)
 - when we want to define a map function, we extend the mapper class with a class of our own
@@ -47,6 +47,7 @@
 	- we are expected to override the abstract map method in our class implementation
 	- the map method takes 3 arguments, first two are input key, value and the third is context of type Context
 	- this context is used to write the output of the map function
+![[Pasted image 20250114163752.png]]
 - reduce function is an abstract method under Reducer class
 	- similar to the map method, 4 type parameters need to passed when extending the class
 		- input kvp types and output kvp types
@@ -54,6 +55,10 @@
 	- the reduce function takes three arguments
 		- key, iterable of values that are collections of values that correspond to the key, context
 		- here as well the context is used to write but I am not sure to where
+			- the context is used to facilitate comms bw the Reducer and Hadoop fw
+			- used to write kvp, configure jobs, and report progress or status during execution
+			- looks like this can write to files
+![[Pasted image 20250114164945.png]]
 - there is one more piece of code that we need to write and it takes care of running the mapReduce job
 	- we instantiate a Job class
 	- this object is used to set job name, input, output paths, set mapper and reducer classes, set output key and value types
