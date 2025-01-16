@@ -84,8 +84,8 @@
 			- setJarByClass method specifies the JAR file to the Hadoop fw so that it can distribute it to the cluster nodes
 				- useful when running code in a cluster, especially from an external env(ex: running jobs from a remote sys), the jar file path may not always be static or predictable
 		- why cant hadoop use the cl jar path for distribution?
-			- when we submit mr job, the client machine(where the job submission command is run) takes care of submitting the job to the resourcemanager
-			- 
+			- cl path points to local file system and worker nodes on the cluster typically dont have access to the client's lfs
+			- even while submitting the jar, client ensures to copy it into tmp location
 	- but there can be only one output path
 		- and the directory specified here must not exist, this is because hadoop by default does not write if the directory already exists -> error
 ![[Pasted image 20250115094822.png]]
