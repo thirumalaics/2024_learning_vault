@@ -70,12 +70,25 @@
 		- the input types are controlled by the input format and the default is text
 		- Job object also comes with wait for completion method which is used to submit the job and wait for it's completion
 	- Job object forms the spec of the job and gives control over how the job is run
+	- when the job is run on a Hadoop Cluster, we will package the code into a JAR file
+		- which hadoop will distribute around the cluster
 	- while setting the input path, we can call the respective setter method to set many input paths
 	- we also set Jar by Class using setJarByClass method
 		- this method takes one argument: class
 		- hadoop will use this class to locate the relevant JAR file by looking for the jar file containing this class
+		- when I submit a job from a client machine, is the jar sent to the cluster?
+			- client machine uploads the jar file to a tmp location in hdfs or the cluster's shared filesystem which ensures the jar is accessible to all the worker nodes
+			- `/user/<username>/.staging/<job_id>/job.jar`
+		- why do i need to specify the jar using this method, can't mr just use the jar path given during command line call?
+			- in command line, we provide path to jar file for local node submitting the job
+			- setJarByClass method specifies the JAR file to the Hadoop fw so that it can distribute it to the cluster nodes
+				- useful when running code in a cluster, especially from an external env(ex: running jobs from a remote sys), the jar file path may not always be static or predictable
+		- why cant hadoop use the cl jar path for distribution?
+			- when we submit mr job, the client machine(where the job submission command is run) takes care of submitting the job to the resourcemanager
+			- 
 	- but there can be only one output path
 		- and the directory specified here must not exist, this is because hadoop by default does not write if the directory already exists -> error
+![[Pasted image 20250115094822.png]]
 ```
 export HADOOP_CLASSPATH=hadoop-examples.jar // since we have used relative path, the following command needs to be run from the same dir as this jar
 hadoop ClassName input_path output_path
