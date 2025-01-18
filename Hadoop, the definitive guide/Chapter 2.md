@@ -166,3 +166,55 @@ hadoop ClassName input_path output_path
 - combiner function is not a replacement for reducer function
 	- as reducers will still be needed to process records with the same key from different maps
 - combiner function is defined using the Reducer class only but the only difference is we need to set the combiner class on the job using setCombinerClass
+
+In distributed data processing frameworks like Hadoop MapReduce or Spark, values for a key are put into a list before the `reduce` phase through a **shuffle and sort process**. Here's a step-by-step explanation of how this happens:
+
+### 1. **Map Phase**
+
+- The input data is processed by the **mapper function**, which outputs key-value pairs in the form of `(key, value)`.
+- For example, in a word count program:
+    
+    ```
+    Input: ["hello world", "hello again"]
+    Mapper Output: [("hello", 1), ("world", 1), ("hello", 1), ("again", 1)]
+    ```
+    
+
+### 2. **Partitioning**
+
+- After the mapper outputs, each key-value pair is assigned to a specific **partition** based on the key. This ensures that all data for the same key will be sent to the same reducer.
+- A **partitioner function** (like a hash function) is used to determine which partition a key belongs to.
+
+### 3. **Shuffle Phase**
+
+- The shuffle process **moves key-value pairs across the network** so that all pairs with the same key end up on the same reducer.
+- During this phase, the framework groups the values for each key.
+
+### 4. **Sorting**
+
+- The framework sorts the keys in a defined order (usually lexicographically) before passing them to the reducer.
+- Within each key, the corresponding values are **grouped into a list**. The result at this stage is something like:
+    
+    ```
+    [("hello", [1, 1]), ("world", [1]), ("again", [1])]
+    ```
+    
+
+### 5. **Reduce Phase**
+
+- Each reducer receives a key and its associated list of values. The reducer then applies the reduce function to aggregate, transform, or process the values for the key.
+- Example (word count reduce):
+    
+    ```
+    Reducer Input: ("hello", [1, 1])
+    Reducer Output: ("hello", 2)
+    ```
+    
+
+### Key Notes:
+
+- This grouping into a list happens **automatically** as part of the framework's internal mechanism.
+- In Spark, this is done by the **groupByKey** or similar transformations before actions like reduceByKey.
+- The shuffle and sort process is one of the most resource-intensive parts of distributed data processing, as it involves network communication, disk I/O, and sorting.
+
+Would you like a deeper dive into any of these phases, or how it works specifically in Spark or Hadoop?
