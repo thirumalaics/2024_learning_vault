@@ -216,5 +216,3 @@ In distributed data processing frameworks like Hadoop MapReduce or Spark, values
 - This grouping into a list happens **automatically** as part of the framework's internal mechanism.
 - In Spark, this is done by the **groupByKey** or similar transformations before actions like reduceByKey.
 - The shuffle and sort process is one of the most resource-intensive parts of distributed data processing, as it involves network communication, disk I/O, and sorting.
-
-Would you like a deeper dive into any of these phases, or how it works specifically in Spark or Hadoop?
