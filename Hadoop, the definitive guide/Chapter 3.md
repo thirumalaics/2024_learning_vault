@@ -49,7 +49,7 @@
 - HDfS has it's concept of block
 	- 128 MB by default
 	- files in HDfS are broken into block-sized chunks, which are stored as independent units
-	- a file in HDfS that is smaller than the block size does not occupy full block's work of underlying storage
+	- a file in HDfS that is smaller than the block size does not occupy full block's worth of underlying storage
 		- the opposite is true for a file system for a single disk, files with size less than the file system block size occupy the full space
 		- the unused space cannot be used for any other storage
 - Why use filesystem blocks?

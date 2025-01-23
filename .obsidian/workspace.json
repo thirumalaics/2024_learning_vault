@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f136e4447995fd86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hadoop, the definitive guide/disk.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "disk"
-            }
-          },
-          {
             "id": "c63fdae0d900d6f8",
             "type": "leaf",
             "state": {
@@ -34,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Chapter 3"
             }
+          },
+          {
+            "id": "ec832f808b26887f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hadoop, the definitive guide/t.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "t"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -176,9 +177,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f136e4447995fd86",
+  "active": "ec832f808b26887f",
   "lastOpenFiles": [
+    "t.md",
+    "Hadoop, the definitive guide/t.md",
     "Hadoop, the definitive guide/Chapter 3.md",
+    "Hadoop, the definitive guide/CHAPTER 4.md",
     "Hadoop, the definitive guide/disk.md",
     "Db Data Engineer Associate/2024-07-24.md",
     "Db Data Engineer Associate/2024-07-23.md",
@@ -195,7 +199,6 @@
     "Db Data Engineer Associate/2024-07-13.md",
     "Db Data Engineer Associate/2024-07-05.md",
     "Db Data Engineer Associate/2024-07-04.md",
-    "Hadoop, the definitive guide/CHAPTER 4.md",
     "Db Data Engineer Associate/2024-07-02.md",
     "Pasted image 20250109084511.png",
     "Pasted image 20250109083633.png",
@@ -212,8 +215,6 @@
     "Db Data Engineer Associate/2024-06-24.md",
     "Db Data Engineer Associate/2024-06-23.md",
     "Db Data Engineer Associate/2024-06-21.md",
-    "Db Data Engineer Associate/2024-06-20.md",
-    "Db Data Engineer Associate/2024-06-17.md",
     "Hadoop, the definitive guide",
     "PowerBI/Get Started with Data Analytics/Get Started building with Power BI",
     "PowerBI/Get Started with Data Analytics/Discover Data Analytics",
