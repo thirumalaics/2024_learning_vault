@@ -84,12 +84,12 @@
 		- a block that is unavailable due to corruption or machine failure can be replicated from its alternate locations to bring back the replication factor to normal
 		- `hdfs fsck / -files -blocks`
 			- lists the blocks that make up each file in the filesystem
-- md of a file is stored stored with each an every block
+- md of a file is not stored with each an every block
 	- md is centralized or in other words managed by a diff entity called name node server
 		- data distributed, md centralized
 		- separating md helps in modular approach
 			- where as in normal file system it is integrated as the data is not huge and designed for a single machine
-	- even in normal file system md is stored separately using ds like inodes
+	- even in normal file system md is stored separately using data structures like inodes
 		- md tightly integrated in to file system itself unlike hadoop
 		- md stored on same disk but separately
 		- a file system driver is responsible for managing both data and metadata
