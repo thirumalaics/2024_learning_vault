@@ -35,8 +35,7 @@
               "title": "t"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -177,10 +177,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ec832f808b26887f",
+  "active": "c63fdae0d900d6f8",
   "lastOpenFiles": [
-    "t.md",
     "Hadoop, the definitive guide/t.md",
+    "t.md",
     "Hadoop, the definitive guide/Chapter 3.md",
     "Hadoop, the definitive guide/CHAPTER 4.md",
     "Hadoop, the definitive guide/disk.md",
