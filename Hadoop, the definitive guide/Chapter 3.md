@@ -95,7 +95,7 @@
 		- a file system driver is responsible for managing both data and metadata
 
 ## Namenodes and Datanodes
-- HDfS cluster has two types of nodes operating in a master-worker pattern
+	- HDfS cluster has two types of nodes operating in a master-worker pattern
 - name node - master, data nodes - workers
 - the name node manages the filesystem namespace
 	- maintains the filesystem tree and md for all the files and directories
