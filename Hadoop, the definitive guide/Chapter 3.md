@@ -141,7 +141,34 @@
 	- by default, a block is cached in only one data node's memory, configurable on a per-file basis
 	- users or applications instruct the name node on which files to cache(and for how long) by adding a cache directive to a cache pool
 		- cache pools are an administrative grouping for managing cache permissions and resource usage
+		- what is a cache directive?
+			- command
+			- issued to the namenode to specify which files or dirs should be cached in mem for faster access
+			- also specifies for how long, which cache pool is this directive part of, replication
+		- what is cache pool?
+			- logical grouping of cached files that helps manage caching policies across multiple users or apps
+			- it enforces policies like access control and resource allocation
+			- cache pools help by :
+				- setting limits on how much memory can be used for caching
+				- providing access control (who can cache and uncache)
+				- organizing cached files under different projects or teams
+			- these are created by the admin
+			- allows teams to submit cache directives to their respective cache pool
+		- how does cache pool and cache directive work?
+			- instead of caching files randomly, users define cache pools and then add cache directives(requests to cache specific files) under them
+			- a cache pool has properties like:
+				- owner: who can manage the cache pool
+				- group & permissions: who can use the pool
+				- max cache size: prevents excessive memory usage
+				- time to live: how long files remain cached
+Imagine a company has two teams working on different projects:
 
+1. **Team A (Machine Learning)** needs fast access to training datasets.
+2. **Team B (Analytics)** needs quick access to logs for real-time queries.
+
+The admin can create two separate **cache pools**:
+
+- **ML_Cache_Pool** (for ML team’s datasets)
 ## HDfS federation
 - for large clusters with many files, scaling might become difficult with a single namenode
 - HDfS federation was introduced in Hadoop 2.x
