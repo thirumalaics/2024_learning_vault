@@ -49,8 +49,7 @@
               "title": "t"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,10 +191,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8ddd19a2dbf44c60",
+  "active": "c63fdae0d900d6f8",
   "lastOpenFiles": [
-    "Hadoop, the definitive guide/Chapter 3.md",
     "Untitled.md",
+    "Hadoop, the definitive guide/Chapter 3.md",
     "inance",
     "Hadoop, the definitive guide/t.md",
     "t.md",

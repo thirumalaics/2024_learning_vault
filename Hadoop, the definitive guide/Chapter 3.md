@@ -188,7 +188,7 @@ The admin can create two separate **cache pools**:
 ## HDfS high availability
 - the combination of replicating namenode md on multiple fs and using secondary namenode to create checkpoints protects against data loss
 	- but does not provide high availability of the filesystem
-- namenode is collectively the single point of failure
+- namenode is still the single point of failure
 	- whole hadoop system would be out of service until a new name-node could be brought online
 	- a new primary namenode is started with one of fs metadata replicas
 		- configure datanodes and clients to use this as the new namenode
