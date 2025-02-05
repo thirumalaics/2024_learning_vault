@@ -200,7 +200,7 @@ The admin can create two separate **cache pools**:
 	- this affected maintenance more
 - Hadoop 2 introduced HDfS high availability implementation
 	- this allows active-standby configuration: pair of namenodes
-	- in the event of the failure of active, standby takes its place without significant interruption withing few tens of seconds
+	- in the event of the failure of active, standby takes its place without significant interruption within few tens of seconds
 - this new implementation required architecture changes
 	- the namenodes must use highly available shared storage to share the edit log
 		- when a standby comes up, it uses the edit log to synchronize state with the active namenode
