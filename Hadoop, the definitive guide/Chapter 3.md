@@ -242,7 +242,7 @@ The admin can create two separate **cache pools**:
 - in case of ungraceful failover, it is impossible to ensure that the failed namenode has stopped running
 	- ex: slow nw, or a nw partition can trigger a failover transition
 		- the namenode will continue to think it is the active one
-- HA implementation goes to great lengths to preven previously inactive namenode from doing any damage
+- HA implementation goes to great lengths to prevent previously inactive namenode from doing any damage
 	- method called fencing
 - there are fencing mechanisms
 	- depending upon the shared edit log, the complexity increases
