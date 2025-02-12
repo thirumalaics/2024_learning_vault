@@ -267,12 +267,20 @@ The admin can create two separate **cache pools**:
 		- client library tries each namenode address until operation succeeds
 
 ## The CLI
+- two important configs are discussed below and these configs can be provided in many places:
+	- core-site.xml
+	- CLI argument
+		- `hadoop fs -Dfs.defaultFS=hdfs://namenode:9000 -ls /`
+	- java prog
+	- env var
+	- hadoop-config.properties
 - fs.defaultFS: sets the default filesystem for Hadoop
 	- by default HDfS
 	- specified as a URI. ex: hdfs://localhost/
 	- this is used to identify the host and port for the HDfS namemode
 		- used by clients and HDfS daemons
 	- in the above example, host is localhost and port is the default 8020
+	- if this property is not set, hadoop falls back to using file://
 - dfs.replication
 	- replication factor that decides how many datanodes does this block needs to be replicated in
 - hadoop fs -help
@@ -284,7 +292,7 @@ The admin can create two separate **cache pools**:
 	- `hadoop fs -copyFromLocal input/docs/quangle.txt /user/thirs/quangle.txt`
 	- we also could have used a relative path and copied the file to our home dir
 		- `hadoop fs -copyFromLocal input/docs/quangle.txt /user/thirs/quangle.txt`
-- hadoop fs -copyToLocal quangle.txt quangle.copy.txt
+- `hadoop fs -copyToLocal quangle.txt quangle.copy.txt`
 	- to check they are same: md5 input/docs/quangle.txt quangle.copy.txt
 - hadoop fs -mkdir books
 - hadoop fs -ls
