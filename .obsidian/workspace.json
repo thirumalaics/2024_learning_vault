@@ -47,8 +47,7 @@
               "title": "Release Notes 1.8.7"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,8 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -191,7 +189,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "09241427d1d065c3",
+  "active": "c63fdae0d900d6f8",
   "lastOpenFiles": [
     "Db Data Engineer Associate/2024-07-26.md",
     "Db Data Engineer Associate/2024-07-25.md",
