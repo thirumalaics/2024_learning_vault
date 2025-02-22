@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-07-24.md",
+                "file": "Db Data Engineer Associate/2024-07-27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-07-24"
+              "title": "2024-07-27"
             }
           },
           {
@@ -104,7 +104,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -192,8 +193,8 @@
   "active": "c63fdae0d900d6f8",
   "lastOpenFiles": [
     "Db Data Engineer Associate/2024-07-26.md",
-    "Db Data Engineer Associate/2024-07-25.md",
     "Db Data Engineer Associate/2024-07-24.md",
+    "Db Data Engineer Associate/2024-07-25.md",
     "Db Data Engineer Associate/2024-07-29.md",
     "Hadoop, the definitive guide/Chapter 3.md",
     "Untitled.md",
