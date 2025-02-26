@@ -337,7 +337,7 @@ The admin can create two separate **cache pools**:
 	- provide and abstraction for users to work with
 	- data sharing via nwed filesystems
 	- security
-	- advanced filesystems target fault tolerance and backup
+		- advanced filesystems target fault tolerance and backup
 - hadoop provides many interfaces to its filesystems
 	- hdfs is just one implementation
 - hadoop ships with many such implementations
@@ -358,8 +358,8 @@ The admin can create two separate **cache pools**:
 		- which sends an HTTP redirrect to the client indicating the data node to stream file data from (or to)
 		- after receiving the redirect, the client directly interacts with the specified datanodes to read or write
 		- this design prevents namenode from becoming a bottleneck
-- second way involves interacting with one or more proxy serverrs
-	- these proxies are stateless, so they can behind a standard load balances
+- second way involves interacting with one or more proxy servers
+	- these proxies are stateless, so they can behind a standard load balancers
 	- all traffic to the cluster passes through the proxy
 	- client never accesses namenode or datanode
 		- allows for stricter firewall and bandwidth limiting policies
