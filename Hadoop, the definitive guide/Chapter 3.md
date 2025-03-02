@@ -405,7 +405,7 @@ Java interface for hadoop is ignored in the notes
 		- incase of a mapreduce task, the client reside within a datanode, so the client will read from the local datanode if the datanode hosts a copy of the block
 3. The DistributedfileSystem returns an fSDataInputStream (an input stream that supports file seeks) to the client for it to read from
 	- fSDataInputStream in turn wraps a DfSInputStream, which manages the datanode and namenode IO
-		- what this means is fSDataInputStream internall uses or delegates to DfSInputStream to handle actual operations required to read data from HDfS
+		- what this means is fSDataInputStream internally uses or delegates to DfSInputStream to handle actual operations required to read data from HDfS
 		- DfSInputStream responsible to deal with HDfS components like NN and DN
 4. the client calls read on the stream, DfSInputStream
 	- DfSInputStream has stored the datanode addresses for the first few blocks in the file
@@ -431,7 +431,7 @@ Java interface for hadoop is ignored in the notes
 	- bandwidth bw two nodes as a measure of distance
 	- measuring bandwidth bw nodes is difficult in practice
 	- hadoop takes a simple approach in which the nw is represented as a tree and the distance bw two nodes is the sum of their distances to their closest common ancestor
-	- levels in the tree are not predefined, but it is common to have leves that correspond to data center, the rack and the node that a process is going on
+	- levels in the tree are not predefined, but it is common to have levels that correspond to data center, the rack and the node that a process is going on
 	- bw available for each of the following scenarios becomes progressively less:
 		- process on the same node
 		- different nodes on the same rack
