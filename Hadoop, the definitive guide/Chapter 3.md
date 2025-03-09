@@ -469,7 +469,7 @@ Java interface for hadoop is ignored in the notes
 	- first node stores each packet and forwards it to the second datanode in the pipeline
 	- second datanode stores each packet and forwards it to the last datanode
 	- DfsOutputStream also maintains an internal queue of packets that are waiting to be acknowledged by datanodes, called the ack queues
-		- this is not the same as ack queue
+		- this is not the same as data queue
 	- the packet is removed from the ack queue only when it has been acked by all the datanodes in the pipeline
 	- packet and block are not the same
 	- multiple packets make up a single block

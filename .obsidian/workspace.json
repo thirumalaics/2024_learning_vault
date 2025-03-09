@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Chapter 3"
             }
+          },
+          {
+            "id": "8d64803e2641e1c0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -164,7 +177,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c63fdae0d900d6f8",
+  "active": "8d64803e2641e1c0",
   "lastOpenFiles": [
     "Hadoop, the definitive guide/CHAPTER 4.md",
     "Db Data Engineer Associate/2024-07-29.md",
