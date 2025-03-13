@@ -491,8 +491,8 @@ Java interface for hadoop is ignored in the notes
 		- the blocks will be asynchronously replicated across the cluster until its target replication factor is reached
 - replica placement
 	- there is a tradeoff between reliability and write and read bw
-		- ex:placing all replicas in one node incurs the least write bandwidth penalty
-		- but this offers no real redundance and it is highly unrealiable in case of node failure
+		- ex: placing all replicas in one node incurs the least write bandwidth penalty
+		- but this offers no real redundance and it is highly unreliable in case of node failure
 		- read bandwidth is high for off-rack reads
 			- off-rack reads: data is located in a different rack than the processing node
 		- placing replicas in diff datacenters maximizes redundancy but at the cost of bw
