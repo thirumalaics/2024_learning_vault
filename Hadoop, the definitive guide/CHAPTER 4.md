@@ -56,7 +56,7 @@
 	- these constraints help ensure that the containers are placed in locations that optimize performance, resource usage, or data access
 	- common type of locality constraints:
 		- node-local
-			- containers are request on specific nodes where the required data already resides
+			- containers are requested on specific nodes where the required data already resides
 		- rack-local
 			- if node-local placement is not possible, containers can be placed on any node within the same rack
 		- Any node
