@@ -1,0 +1,45 @@
+- what is API in the context of this course?
+	- some programming interface that serves user request
+- what are the common API paradigms?
+	- REST, GraphQL, gRPC
+- what is REST?
+	- not a protocol
+	- built on top of HTTP typically
+	- set of  loose restrictions that we apply on HTTP API
+	- there should be no state stored by the server itself, whereas it can persist state on to a persistent storage like a db
+	- uses json format to communicate data
+	- json very readable but performance can be better
+- what is pagination?
+	- looks like pagination information is sent as part of the URI/URL for a GET request as GET requests do not have a body
+	- limit and offset are passed as query parameters as part of the URL
+	- pagination eliminates the server to store state
+- why do we even need REST, why is there so much fuss about storing state?
+	- when the need for a server to store state is eliminated, horizontal scaling becomes possible
+	- there will be no need that a user has to communicate to one server and other users will not be blocked in the mean time
+- : in a url represents a url parameter to be followed
+- question mark in a url represents a query parameter will be followed by it
+- what are the problems with REST API?
+	- over-fetching
+		- when trying to fetch user details of comments, we might end up pull the entire details stored about that user which is not required to display a comment
+		- can be dealt with server side change, but it is not scalable
+	- endpoints can quickly scale
+- what is graphQL?
+	- not a protocol
+	- built on top of HTTP
+	- uses only POST requests
+	- body usually consists of what resource we are looking for
+	- graphQL addresses the over-fetching problem of REST by allowing to specify which fields do we want 
+		- client gets what it needs
+		- performance and nw costs saved
+	- allows us to bundle multiple consecutive requests as one
+		- to fetch comment, the main context is what video had that comment, so we need details about the video, poster, commenter etc..
+		- all  this usually requires consecutive requests
+		- but graph ql solves this problem by helping us bundle
+	- does GrahQL allow for only one endpoing
+	- with any graphql end point, we can do:
+		- query
+		- mutation: any time we update data
+	- POST requests are not idempotent
+		- so we cannot cache 
+	- 1829
+	- 
