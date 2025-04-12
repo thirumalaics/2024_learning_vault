@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design Neetcode/API Paradigms.md",
+                "file": "Hadoop, the definitive guide/CHAPTER 4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API Paradigms"
+              "title": "CHAPTER 4"
             }
           }
         ]
@@ -165,8 +165,8 @@
   },
   "active": "c63fdae0d900d6f8",
   "lastOpenFiles": [
-    "System Design Neetcode/NW.md",
     "System Design Neetcode/API Paradigms.md",
+    "System Design Neetcode/NW.md",
     "System Design Neetcode/Application Architecture.md",
     "Hadoop, the definitive guide/CHAPTER 4.md",
     "Db Data Engineer Associate/2024-08-04.md",
