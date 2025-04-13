@@ -40,6 +40,54 @@
 		- query
 		- mutation: any time we update data
 	- POST requests are not idempotent
-		- so we cannot cache 
-	- 1829
-	- 
+		- so we cannot cache graph ql requests as we would be able to with REST
+- in the video, he demonstrated from 18:29 how we can specifically ask for what we want
+- unlike REST API, GraphQL has schema
+	- schema for what? body of the request?
+	- I guess he means schema for each resource which defines what can be requested
+	- example: rocket is a resource and it's schema can look something like the following: 'id, name, version' and we have to stick to that
+	- grpc built on top of http 2
+	- cannot be used from within a browser
+		- if we want to make a request to a grpc end point using a browser: we need a proxy
+		- because grpc requires some fine grained control over http2 which the browsers do not provide
+- common use case is for server to server comms
+- faster and efficient
+	- as instead of sending information as a string(json) like in rest, grpc sends info in protocol buffers(schema objects)
+	- the data put in protocol buffers are serialized and sent
+	-  which is lightweight than if we had sent it as string
+- since grpc built on top of http2, we might not need other protocols for different use cases
+	- ex: we can perform streaming
+- http2 makes websockets obsolete
+- recent development, less standardized and difficult dev, requires good tooling
+- Grpc has error messages and not status codes, so handling might be new
+```
+## Example of protocol buffer schema
+syntax = "proto3"
+message SearchRequest { # message is a keyword used to define a schema
+	string query = 1; # after equal to, the order is defined
+	int32 page_number = 2;
+	int32 result_per_page = 3;
+}
+## so when the binary rep is deserialized, it will be an object
+## all this goes into a .proto file
+```
+
+```
+.proto file
+service Greeter {
+	# endpoint with name SayHello, which will be passed in a request which has a schema
+	rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+	string name = 1;
+}
+
+message HelloReply {
+	string message = 1;
+}
+```
+- every rpc has a action associated with it
+- it is as if we are calling functions within the same system
+- 
+- 53
