@@ -123,3 +123,7 @@ https://cloud.google.com/bigquery/docs/reservations-intro#assignments
 	- the query that we run writes the result to the temp table and spark reads the temp table
 https://medium.com/google-cloud/apache-spark-bigquery-connector-optimization-tips-example-jupyter-notebooks-f17fd8476309
 https://github.com/GoogleCloudDataproc/spark-bigquery-connector/issues/585
+
+
+- active, long-lived bytes
+- physical and logical bytes
