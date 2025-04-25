@@ -13,15 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GCP/BQ.md",
+                "file": "Hadoop, the definitive guide/CHAPTER 4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BQ"
+              "title": "CHAPTER 4"
+            }
+          },
+          {
+            "id": "4a8d021d8ac7aa45",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -164,8 +177,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c63fdae0d900d6f8",
+  "active": "4a8d021d8ac7aa45",
   "lastOpenFiles": [
+    "GCP/BQ.md",
     "System Design Neetcode/API Design.md",
     "System Design Neetcode/API Paradigms.md",
     "Hadoop, the definitive guide/CHAPTER 4.md",
@@ -192,7 +206,6 @@
     "Db Data Engineer Associate/2024-07-23.md",
     "Db Data Engineer Associate/2024-07-22.md",
     "inance",
-    "Hadoop, the definitive guide/disk.md",
     "Pasted image 20250115094822.png",
     "Pasted image 20250114164945.png",
     "Pasted image 20250114163752.png",
