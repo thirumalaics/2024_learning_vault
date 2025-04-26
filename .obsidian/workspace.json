@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "CHAPTER 4"
             }
-          },
-          {
-            "id": "4a8d021d8ac7aa45",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -177,7 +163,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4a8d021d8ac7aa45",
+  "active": "c63fdae0d900d6f8",
   "lastOpenFiles": [
     "GCP/BQ.md",
     "System Design Neetcode/API Design.md",
