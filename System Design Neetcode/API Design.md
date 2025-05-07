@@ -5,4 +5,36 @@
 - why api design is important: 
 	- because when creating a public api, it will be consumed by all
 	- so any update will cascade changes to clients
-305
+- what if we want to introduce a change that will break existing api calls?
+	- that is where versioning is used
+	- versioning of the API is used to introduce changes or new designs so that there remains a version that does not break the status quo
+	- the version of API that we hit is usually signified in the URL
+- does the server create certain fields for every request?
+	- it can be but it is implementation detail
+	- these fields can be created before persisting the details in database
+	- for example in the tweet creation use case, when the user sends out a request to create a tweet - the server creates fields like tweet id, createdAt etc..
+- since GET request does not have any body, where would I be able to provide pagination details?
+	- as a URL or query parameter
+	- `https://api.twitter.com/v1.0/users/:id/tweets?limit=10&offset=0`
+	- these query parameters are usually optional
+- what is URL parameter?
+- what is query parameter?
+- is it a good practice to design an endpoint that will create a resource with a GET request?
+	- no
+	- GET requests are supposed to be idempotent
+	- for the same input parameters, irrespective of how many times the end point is hit, it should have the same outcome
+	- but there is no hard restriction that stops us from doing that, just that it is bad practice
+- why is it that the get request is assumed/supposed to be idempotent?
+	- for caching
+	- by default GET requests are cached
+- is it possible for a single endpoint to handle different HTTP methods?
+	- yes
+	- depends on how the server is designed
+	- in the real world, same endpoint handles different methods differently
+	- server code distinguishes what to do based on the HTTP method and sometimes based on the parameters
+- what is pagination token?
+	- returned by the get request
+	- keeps track of how many elements we have seen so far
+	- we pass this as part of the consecutive get request to offset the first x elements which were shown as a result of the first GET request
+
+1221
