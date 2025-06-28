@@ -1,3 +1,20 @@
 - content delivery network
-- origin server and CDN server
-- 1005 
+	- way to cache static data closer to end users
+- origin server
+	- original source of web content
+	- where our website/application resides, hosting files like: 
+		- html, css, js, images, videos, app code etc
+	- when a user makes a request, if no caching is involved, that request is sent directly to the origin server, which generates and serves the content
+- CDN server
+	- geographically distributed nw of servers that caches and delivers content
+	- content must be static like images, videos, scripts to users from a location close to them
+	- faster load times due to proximity of server
+	- reduced load on the origin
+	- high availability and reliability
+	- when a user makes a request, CDN checks if it has a cached copy of the content
+		- if it does, it serves it directly - cache hit
+		- if not, it forwards the request to the origin server, caches the response, and serves it to the user
+- Push CDN
+- Pull CDN
+- 3: 40
+- why app code cannot be put into CDN?
