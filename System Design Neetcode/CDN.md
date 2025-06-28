@@ -1,0 +1,3 @@
+- content delivery network
+- origin server and CDN server
+- 1005 

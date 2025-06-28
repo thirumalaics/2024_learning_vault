@@ -30,6 +30,15 @@
 - eviction policies for data stored in cache
 	- fifo
 	- random
-	- lru/lfu
-
+	- lru
+		- for every access, the tweet is popped from it's old location and it is added to the end of the queue
+	- least frequently used
+		- key value pairs
+		- key is the tweet itself and the value is the number of times the tweet was read
+		- similar to the queue, only limited kvps can exist, the key with least value is evicted if the container fills up
+		- this factors in read count in the lifetime of key and updates the value only if the tweet is read recently
+		- tweets with most views will continue to be in the container even if it was not read recently until another popular tweet overtakes it
+		- 
 resume 1800
+
+0949
