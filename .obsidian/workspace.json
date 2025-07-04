@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design Neetcode/CDN.md",
+                "file": "Designing Data intensive applications/Unicode - attempt 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CDN"
+              "title": "Unicode - attempt 2"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "autoload",
+                "query": "unico",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -166,8 +166,10 @@
   },
   "active": "c63fdae0d900d6f8",
   "lastOpenFiles": [
-    "System Design Neetcode/CACHING.md",
+    "Designing Data intensive applications/Unicode and Character sets.md",
+    "Designing Data intensive applications/Unicode - attempt 2.md",
     "System Design Neetcode/CDN.md",
+    "System Design Neetcode/CACHING.md",
     "System Design Neetcode/API Design.md",
     "Hadoop, the definitive guide/CHAPTER 4.md",
     "GCP/BQ.md",
@@ -190,8 +192,6 @@
     "Db Data Engineer Associate/2024-07-26.md",
     "Db Data Engineer Associate/2024-07-24.md",
     "Db Data Engineer Associate/2024-07-25.md",
-    "Untitled.md",
-    "Hadoop, the definitive guide/t.md",
     "inance",
     "Pasted image 20250115094822.png",
     "Pasted image 20250114164945.png",
