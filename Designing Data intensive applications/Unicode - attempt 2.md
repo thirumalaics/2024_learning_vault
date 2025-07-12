@@ -18,7 +18,17 @@ why was character set needed in the first place?
 		- israel DOS used a code page called 862, while greek users used 737
 	- in asian languages, which had more than 1000 letters - 8 bits was not enough
 		- the solution was DBCS: double byte character set
+			- each character is either 1 or 2 bytes
+			- the first of a two byte character comes from a specific range called a lead byte range
+			- the second by has its own range 
 		- some letters were stored in one byte and others took two
-		- 
-- https://chatgpt.com/c/6867ef90-1988-8011-b098-e7e74eceaf83
-- https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+		- it was easy to move forward in a string, impossible backwards
+		- programmers were encouraged not to use s++, s-- 
+		- alternate way to navigate through a string was: AnsiNext and AnsiPrev
+- 
+- 
+f
+
+1031
+
+1047
