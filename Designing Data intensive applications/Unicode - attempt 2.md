@@ -19,16 +19,17 @@ why was character set needed in the first place?
 	- in asian languages, which had more than 1000 letters - 8 bits was not enough
 		- the solution was DBCS: double byte character set
 			- each character is either 1 or 2 bytes
-			- the first of a two byte character comes from a specific range called a lead byte range
-			- the second by has its own range 
+			- the first of a two byte character comes from a specific range called a lead byte range, utilizes all 8 bits
+			- the second by has its own range, starts with 7 bits and may utilize all 8 bits
+			- in case of single byte, only 7 bits are utilized
 		- some letters were stored in one byte and others took two
 		- it was easy to move forward in a string, impossible backwards
+			- moving forwards, if we land on a lead byte(utilizes 8 bits), we know we are at the start of a 2-byte character - read the next byte and move forward 2 bytes total
+			- while moving backwards, since the trail byte can fall within a lower range there is not an easy way to identify if it is part of a 2 byte string
 		- programmers were encouraged not to use s++, s-- 
 		- alternate way to navigate through a string was: AnsiNext and AnsiPrev
 - 
 - 
 f
 
-1031
-
-1047
+1256
