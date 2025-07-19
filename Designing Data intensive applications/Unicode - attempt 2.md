@@ -54,10 +54,29 @@ why was character set needed in the first place?
 		- 00 48 00 65 00 6C 00 6C 00 6F
 		- but it could also be: 
 			- 48 00 65 00 6C 00 6C 00 6F 00
+	- endianness(byte order):
+		- refers to how multi-byte values are stored in memory
+		- Big-endian: most significant ***byte*** first
+		- little-endian: least significant ***byte*** first
+		- different CPUs prefer different orders
 	- early implementors of unicode wanted to be able to store their unicode code points in high-endian or low endian mode, whichever their particular CPU was fast at
-	- people were forced to come up with the bizarre convention of storing a fe ff at the beginning of every unicode string
-		- unicode byte order marker
-		- if we are swapping the high and low bytes, it will look like: ff fe and the person reading will know to swap every other byte
-13 56
+	- if we read a big-endian file using little-endian reader, the bytes `fe ff` appear reversed as 
+	- BOM: Byte order Mark: special marker at the beginning of a file or data stream
+	- Let's say the content of my datastream represented in hex(big-endian) as: af fa ff 00. I am sending this content over to another system where little-endian is used. Without BOM, the content is recognized in little-endian to be: af fa ff 00 instead of fa af 00 ff. In order to avoid this misunderstanding, BOM is used at the start of the data stream like a header, so in my example this header is fe ff(this text is big endian), so it helps the recipient to read by data stream as it is intended to be in little endian: fa af 00 ff.
+	- the problem with byte order starts with UTf-16, where there are multiple bytes
+		- but some editors include a BOM to signal this file is UTf-8
+		- UTf BOM: ef bb bf
+	- the problem is made worse as not every unicode string in the wild has a byte order mark at the beginning
+	- this unicode 16 version had it's fair share of backlash from english programmers, who hade no use of the extra byte
+		- also all the existing documents were in ANSI(7bit/1 byte) and DBCS char sets, so someone had to convert all these
+		- for this reason alone most people decided to ignore Unicode for several years
+	- this brought about invention of UTf-8
+		- another system for storing our string of unicode code point in memory using 8 bit bytes
+		- every code point from 0-127 is stored in a single byte
+		- only code points 128 and above are stored using 2,3, or even upto 6
+		- neat side effect of representing english text exactly the same
+		- other language users had to jump through loops, as in, they will have to use several bytes to store a single code point
+
+1825
 
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
