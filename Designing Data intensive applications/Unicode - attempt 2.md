@@ -29,7 +29,35 @@ why was character set needed in the first place?
 		- programmers were encouraged not to use s++, s-- 
 		- alternate way to navigate through a string was: AnsiNext and AnsiPrev
 - 
-- 
-f
+- what was the need for ASCII? 
+	- Computers understand 0's and 1's. Different types of data need to be represented using these 0's and 1's so that we can store and process data. ASCII is one way/mapping to represent English characters in terms of 0s and 1s.
+	- ASCII provides consistency across systems
+	- networks, keyboards, printers all needed a shared format
+	- ascii also is compact for english and common symbols with 7 bits
+	- ascii also included control codes(like newline, tab) for formatting and device instructions
+- Ascii provided mapping for 7 bits and english characters. The remaining one bit of the byte was used to represent different characters in different computers based on region.
+- ASCII collapsed when the internet came into picture, connecting computers across the world. 
+- So when strings were transferred from one computer to another, the content was deciphered differently depending on the region.
+- what is unicode? 
+	- effort to create a single character set that included every reasonable writing system on the planet
+	- unicode is not a 16bit code where each char takes 16 bits and therefor 65536 characters
+	- until now, our assumption is that a letter maps to some bits which we can store on disk or in memory
+	- in unicode a letter maps to something called a code point which is still just a theoretical concept
+	- how that code point is represented in memory or on disk is another story
+- every letter in every alphabet is assigned a magic number by the unicode consortium
+	- U+0639 -> code point
+	- U+ means unicode and the numbers are hexadecimal
+	- there is no real limit on the number of letters that unicode can define and in fact they have gone beyond 65536
+	- Hello : U+0048 U+0065 U+006C U+006C U+006F.
+- to represent unicode code points in memory, we need to understand encoding
+	- initial ideas for unicode encoding was that, let's store those numbers in two bytes each, so Hello becomes: 
+		- 00 48 00 65 00 6C 00 6C 00 6F
+		- but it could also be: 
+			- 48 00 65 00 6C 00 6C 00 6F 00
+	- early implementors of unicode wanted to be able to store their unicode code points in high-endian or low endian mode, whichever their particular CPU was fast at
+	- people were forced to come up with the bizarre convention of storing a fe ff at the beginning of every unicode string
+		- unicode byte order marker
+		- if we are swapping the high and low bytes, it will look like: ff fe and the person reading will know to swap every other byte
+13 56
 
-1256
+https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
