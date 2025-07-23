@@ -97,14 +97,34 @@ why was character set needed in the first place?
 		- but with one catch that some of the letters might not show up if there is no equivalent for the unicode code point we are trying to represent in the encoding
 		- we get `?` or a box
 		- there are hundreds of traditional encodings which can only store some code points correctly and change all the other code points into `?`
+	- base64
+		- used to convert any binary data into a string of printable ascii characters
+		- it does this by taking groups of bits from the input and mapping them to a specific set of 64 characters(A-Z, a-z, 0-9, +,/,= used at the end if the input does not perfectly align)
+		- each of the characters mentioned above represent a unique 6-bit value(64chars)
+		- Man: 01001101 01100001 01101110 -> 010011(19) 010110(22) 000101(5) 101110(46)
+			- now look up respective chars: TWFu
+		- base64 works with groups of 24 bits which nicely divides into 4 base64 chars (4 chars * 6 bits/characters)
+		- if our input data is a multiple of 3 bytes, we don't need padding
+		- if we have 1 or 2 bytes left over at the end, padding is used
+		- Ma: 010011 010110 0001 -> 010011 010110 000100(00 added at the end to make it 6) -> TWE -> TWE=
+		- M: TQ==
 	- how can utf-7 can store any unicode code point correctly?
 		- inefficient and deprecated
 		- serious limitations
 		- designed for systems that only support 7 bit data
+		- was invented as a workaround - to allow full unicode text to be represented safely over 7-bit channels
 		- does it through a special encoding trick
-			- 
+		- divides characters into three main classes
+			- directly encodable characters
+				- safe ascii characters and are encoded as is
+			- optional direct characters
+				- ascii chars that could be encoded directly or encoded in base64
+				- may vary between strict and lenient UTf- 7 implementations
+			- unicode-only characters:
+				- any character outside 7-bit ascii set is not directly encodable and must be encoded using base64 in a shifted sequence
+	- https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
-1955
+2012
 
-
+https://gemini.google.com/app/616cc672b620a27c -> this is for base 64 
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
