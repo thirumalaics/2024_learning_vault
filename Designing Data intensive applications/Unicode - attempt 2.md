@@ -49,7 +49,7 @@ why was character set needed in the first place?
 	- U+ means unicode and the numbers are hexadecimal
 	- there is no real limit on the number of letters that unicode can define and in fact they have gone beyond 65536
 	- Hello : U+0048 U+0065 U+006C U+006C U+006F.
-- to represent unicode code points in memory, we need to understand encoding
+- to represent unicode code points in memory, we need to understand ***encoding***
 	- initial ideas for unicode encoding was that, let's store those numbers in two bytes each, so Hello becomes: 
 		- 00 48 00 65 00 6C 00 6C 00 6F
 		- but it could also be: 
@@ -76,7 +76,35 @@ why was character set needed in the first place?
 		- only code points 128 and above are stored using 2,3, or even upto 6
 		- neat side effect of representing english text exactly the same
 		- other language users had to jump through loops, as in, they will have to use several bytes to store a single code point
+	- UCS-2 stands for Universal character set coded in 2 octets, it is a character encoding standard
+		- encodes characters using exactly 2 bytes(16 bits) per character
+		- can only represent characters in Basic multilingual place(BMP):
+			- handful of languages
+		- it cannot represent characters outside the BMP: such as emoji or many rare chinese chars
+		- UTf-16 is a superset of UCS-2
+	- difference between utf-16 and ucs-2
+		- utf-16 uses 2 bytes for characters in the BMP
+		- it also supports characters outside the bmp by using surrogate pairs(4 bytes total)
+			- utf-16 is a variable length encoding
+			- still subject to endianness like UCS-2
+		- UCS-2 does not support surrogate pairs, so it's not compatible with newer unicode characters beyond U+ffff
+	- there are a bunch of other ways of encoding Unicode
+		- there is UTf-7, which is a lot like utf-8 but guarantees that the high bit will always be zero
+		- there is UCS-4, which stores each code point in 4 bytes
+			- every single code point can be stored in the same number 
+	- unicode code points can be encoded in any old-school encoding scheme, too
+		- we can encode in ASCII or OEM etc..
+		- but with one catch that some of the letters might not show up if there is no equivalent for the unicode code point we are trying to represent in the encoding
+		- we get `?` or a box
+		- there are hundreds of traditional encodings which can only store some code points correctly and change all the other code points into `?`
+	- how can utf-7 can store any unicode code point correctly?
+		- inefficient and deprecated
+		- serious limitations
+		- designed for systems that only support 7 bit data
+		- does it through a special encoding trick
+			- 
+https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
+1955
 
-1825
 
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
