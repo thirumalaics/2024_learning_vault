@@ -122,9 +122,23 @@ why was character set needed in the first place?
 				- may vary between strict and lenient UTf- 7 implementations
 			- unicode-only characters:
 				- any character outside 7-bit ascii set is not directly encodable and must be encoded using base64 in a shifted sequence
+		- example of unicode-only characters:
+			- ✓ has unicode U+2713, decimal: 10003, bin: 00100111 00010011
+			- base64: 001001 110001 001100 -> JxM=
+				- this JxM is decoded not assuming ascii, base64 has it's own mapping between numbers and text
+				- Content-Transfer-Encoding: base64
+				- Content-Type: text/plain; charset=utf-8
+					- these help the receiving app to interpret these bytes back into human readable characters
+				- how does the decoder in recipient side knows how many zeros were appended?
+					- any unicode code point is represented with minimum multiple of 8 bits needed, even if the unicode code point does not turn on all the 8 bits of a byte. 
+					- So when we 
+	- when transmitting data, we also provide Content-Transfer-Encoding: base64 header
 	- https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 2012
 
 https://gemini.google.com/app/616cc672b620a27c -> this is for base 64 
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+
+
+1540 -> 26
