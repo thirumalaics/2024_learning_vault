@@ -130,8 +130,11 @@ why was character set needed in the first place?
 				- Content-Type: text/plain; charset=utf-8
 					- these help the receiving app to interpret these bytes back into human readable characters
 				- how does the decoder in recipient side knows how many zeros were appended?
-					- any unicode code point is represented with minimum multiple of 8 bits needed, even if the unicode code point does not turn on all the 8 bits of a byte. 
-					- So when we 
+					- any unicode code point is enccoded with minimum multiple of 8 bits needed, even if the unicode code point does not turn on all the 8 bits of a byte. 
+					- So when we type out characters, irrespective of how much bytes the unicode code point takes, the sequences of bytes are processed in blocks of 3 bytes in order to represent in base64
+					- the zeros are padded when the code point takes 8 bits or 16 bits, which are not multiples of 3
+					- in case of 8 bit code point, 4 0s are padded to make it consume 12 bits of base64, remaining two characters are equal to sign
+					- the equal to sign is an indicator that the 4 base64 characters are not fully occupied by the actual data, these two equal to signs are discarded, what remains is a 12 bit binary sequence, which is split into 8 and 4, since there were equal to, the 4 bits is discarded as it was filled with 0s, remaining 8 bits are decoded
 	- when transmitting data, we also provide Content-Transfer-Encoding: base64 header
 	- https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
