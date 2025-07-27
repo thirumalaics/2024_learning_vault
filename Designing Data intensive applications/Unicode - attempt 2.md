@@ -108,6 +108,19 @@ why was character set needed in the first place?
 		- if we have 1 or 2 bytes left over at the end, padding is used
 		- Ma: 010011 010110 0001 -> 010011 010110 000100(00 added at the end to make it 6) -> TWE -> TWE=
 		- M: TQ==
+		- example of unicode-only characters:
+			- ✓ has unicode U+2713, decimal: 10003, bin: 00100111 00010011
+			- base64: 001001 110001 001100 -> JxM=
+				- this JxM is decoded not assuming ascii, base64 has it's own mapping between numbers and text
+				- Content-Transfer-Encoding: base64
+				- Content-Type: text/plain; charset=utf-8
+					- these help the receiving app to interpret these bytes back into human readable characters
+				- how does the decoder in recipient side knows how many zeros were appended?
+					- any unicode code point is enccoded with minimum multiple of 8 bits needed, even if the unicode code point does not turn on all the 8 bits of a byte. 
+					- So when we type out characters, irrespective of how much bytes the unicode code point takes, the sequences of bytes are processed in blocks of 3 bytes in order to represent in base64
+					- the zeros are padded when the code point takes 8 bits or 16 bits, which are not multiples of 3
+					- in case of 8 bit code point, 4 0s are padded to make it consume 12 bits of base64, remaining two characters are equal to sign
+					- the equal to sign is an indicator that the 4 base64 characters are not fully occupied by the actual data, these two equal to signs are discarded, what remains is a 12 bit binary sequence, which is split into 8 and 4, since there were equal to, the 4 bits is discarded as it was filled with 0s, remaining 8 bits are decoded
 	- how can utf-7 can store any unicode code point correctly?
 		- inefficient and deprecated
 		- serious limitations
@@ -122,24 +135,20 @@ why was character set needed in the first place?
 				- may vary between strict and lenient UTf- 7 implementations
 			- unicode-only characters:
 				- any character outside 7-bit ascii set is not directly encodable and must be encoded using base64 in a shifted sequence
-		- example of unicode-only characters:
-			- ✓ has unicode U+2713, decimal: 10003, bin: 00100111 00010011
-			- base64: 001001 110001 001100 -> JxM=
-				- this JxM is decoded not assuming ascii, base64 has it's own mapping between numbers and text
-				- Content-Transfer-Encoding: base64
-				- Content-Type: text/plain; charset=utf-8
-					- these help the receiving app to interpret these bytes back into human readable characters
-				- how does the decoder in recipient side knows how many zeros were appended?
-					- any unicode code point is enccoded with minimum multiple of 8 bits needed, even if the unicode code point does not turn on all the 8 bits of a byte. 
-					- So when we type out characters, irrespective of how much bytes the unicode code point takes, the sequences of bytes are processed in blocks of 3 bytes in order to represent in base64
-					- the zeros are padded when the code point takes 8 bits or 16 bits, which are not multiples of 3
-					- in case of 8 bit code point, 4 0s are padded to make it consume 12 bits of base64, remaining two characters are equal to sign
-					- the equal to sign is an indicator that the 4 base64 characters are not fully occupied by the actual data, these two equal to signs are discarded, what remains is a 12 bit binary sequence, which is split into 8 and 4, since there were equal to, the 4 bits is discarded as it was filled with 0s, remaining 8 bits are decoded
+		- when a non-ascii character like £ is encountered, utf-7 enters a modified or shift state, signaled by a + sign
+			- inside the shift state,the characters are first converted to their UTf-16BE representation and then base64 coded
+		- characters that are directly representable in 7 bit ascii are represented as they are
+		- utf-7 base64 encoding does not use = padding
+			- the end of base64 sequence is implicitly handled by the next direct char or the . escape
+		- if unicode only characters are encountered and they cannot be represented with 4 6-bit sequence, example:  £†, with binary: 00000000 10100011, 00100000 00100000
+		- 000000 001010 001100 100000 001000 0000000
 	- when transmitting data, we also provide Content-Transfer-Encoding: base64 header
+- is utf-7 a character set?
+- 
 	- https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
-2012
-
+1433
+1451
 https://gemini.google.com/app/616cc672b620a27c -> this is for base 64 
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
