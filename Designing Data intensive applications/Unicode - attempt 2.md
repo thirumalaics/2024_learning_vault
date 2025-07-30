@@ -141,7 +141,19 @@ why was character set needed in the first place?
 		- utf-7 base64 encoding does not use = padding
 			- the end of base64 sequence is implicitly handled by the next direct char or the . escape
 		- if unicode only characters are encountered and they cannot be represented with 4 6-bit sequence, example:  £†, with binary: 00000000 10100011, 00100000 00100000
-		- 000000 001010 001100 100000 001000 0000000
+			- 000000 001010 001100 100000 001000 0000000 (only first 2 zeros are part of the original bit sequence, we had to append 4 0s)
+			- base64 encoded sequence: AKMgIA -> +AKMgIA-
+		- let's say the entire text as: Hel£† => Hel+AKMgIA-
+		- the recipient does the following
+			- Hel -> ecognized as direct 7 bit ascii
+			- + signals the start of a Base64 encoded unicode sequence
+			- it reads characters from the AKMgIA and performs base63 decoding
+			- the original 32 bit binary stream is reconstructed of the two chars
+			- encounters -, signals the end of the base64 sequence
+				- the + and - are encoded as their standard 7 bit ascii values
+			- each of the 16 bits in the the bit sequence is interpreted 
+		- what if I wanted my data to be Hel+£†-
+			- https://gemini.google.com/app/616cc672b620a27c
 	- when transmitting data, we also provide Content-Transfer-Encoding: base64 header
 - is utf-7 a character set?
 - 
@@ -149,6 +161,7 @@ why was character set needed in the first place?
 https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 1433
 1451
+1540
 https://gemini.google.com/app/616cc672b620a27c -> this is for base 64 
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
