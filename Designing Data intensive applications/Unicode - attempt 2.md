@@ -166,7 +166,13 @@ why was character set needed in the first place?
 	- for an email message, we are expected to have a string in the header of the form: 
 		- Contet-Type: text/plain; charset="UTF-8"
 	- for web pages, the original idea was that the web server would return a similar content-type http header along with the web page itself - not in the HTML itself
-		- this is probl
+		- this causes problems for a server with lots of sites and hundreds of pages contributed by lots of people in different languages
+		- the webserver itself will not really know what encoding each file was written in, so it could not send the content-type header
+		- we could put the content-type of the html file right in the html itself using meta tag under head tag
+		- since almost every encoding in common use does the same thing with chars between 32 and 127, so we can always get far on the HTML page without starting to see ?
+			- also meta tag should be immediately below the head
+			- after browser sees this tag it is going to stop parsing the page and start over after re-interpreting the whole page using the encoding specified in the file
+	- in cases where this content type is not specified, some browsers try to guess based on the frequency in which various bytes appear in typical text in typical encodings of various languages
 - is utf-7 a character set?
 	- utf-7,8,16 are all encoding mechanisms
 	- whereas unicode is a character set
@@ -179,6 +185,5 @@ https://gemini.google.com/app/616cc672b620a27c -> this is for base 64
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
 
-2142 
-2205
-2221
+1637
+1654
