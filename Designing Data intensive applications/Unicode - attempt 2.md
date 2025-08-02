@@ -154,10 +154,23 @@ why was character set needed in the first place?
 			- each of the 16 bits in the the bit sequence is interpreted 
 		- what if I wanted my data to be Hel+£†-
 			- https://gemini.google.com/app/616cc672b620a27c
+			- the minus can appear directly in the non-shifted part unless it immediately follows a + and would be misinterpreted as a shift out
+			- very complex, and since it is deprecated I have not gone through this
 	- when transmitting data, we also provide Content-Transfer-Encoding: base64 header
+- what is a characterset?
+	- collection of characters and their associated code points
+- what is encoding mechanism?
+	- method of converting code points into a sequence of bytes, so they can be stored or transmitted
+	- it does not make sense to have a string without knowing what encoding it uses
+- since it is important to know what encoding is used, there are standard ways to provide the detail
+	- for an email message, we are expected to have a string in the header of the form: 
+		- Contet-Type: text/plain; charset="UTF-8"
+	- for web pages, the original idea was that the web server would return a similar content-type http header along with the web page itself - not in the HTML itself
+		- this is probl
 - is utf-7 a character set?
-- 
-	- https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
+	- utf-7,8,16 are all encoding mechanisms
+	- whereas unicode is a character set
+- https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 1433
 1451
@@ -166,4 +179,6 @@ https://gemini.google.com/app/616cc672b620a27c -> this is for base 64
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
 
-1540 -> 26
+2142 
+2205
+2221
