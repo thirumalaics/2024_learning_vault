@@ -1,15 +1,15 @@
 why was character set needed in the first place?
-- earlier, the only characters that mattered were unaccented english letters
+- earlier, the only characters that mattered were unaccented English letters
 - ascii was able to represent every character using a number between 32 and 127
-	- this could be conveniently in 7 bits
+	- this could be conveniently done in 7 bits
 	- most computers in those days were using 8-bit bytes, so not only could we store every possible ASCII char, but we had a whole bit to spare
-	- in some word processors, the high bit was turned on the high bit to indicate the last letter in a word
+	- in some word processors, the high bit was turned on to indicate the last letter in a word
 	- codes below 32 were called unprintable as they were used for control characters
-		- 7 made computer beep
+		- dec 7 made computer beep
 - the extra one high bit allowed many to come up with their own use for the possible 128 characters that it provided
-	- the IBM PC had something that came to be known as the OEM char set
+	- the IBM PC had something that came to be known as the ***OEM char set***
 		- it provided some accented characters for european languages and a bunch of line drawings
-	- outside USA, all kinds of OEM character sets were dreamed up, which all used the top 128 chars for their own purpose
+	- outside USA, all kinds of OEM character sets were dreamt up, which all used the top 128 chars for their own purpose
 		- For example on some PCs the character code 130 would display as é, but on computers sold in Israel it was the Hebrew letter Gimel (![ג](https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2003/10/gimel.png?resize=5%2C9&ssl=1)), so when Americans would send their résumés to Israel they would arrive as r![ג](https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2003/10/gimel.png?resize=5%2C9&ssl=1)sum![ג](https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2003/10/gimel.png?resize=5%2C9&ssl=1)s
 - eventually, this OEM free for all got codified in the ANSI std
 	- everyone agreed on what to do below 128, which was pretty much the same as ASCII
@@ -17,11 +17,11 @@ why was character set needed in the first place?
 	- these different systems were called code pages
 		- israel DOS used a code page called 862, while greek users used 737
 	- in asian languages, which had more than 1000 letters - 8 bits was not enough
-		- the solution was DBCS: double byte character set
+		- the solution was ***DBCS***: double byte character set
 			- each character is either 1 or 2 bytes
 			- the first of a two byte character comes from a specific range called a lead byte range, utilizes all 8 bits
-			- the second by has its own range, starts with 7 bits and may utilize all 8 bits
-			- in case of single byte, only 7 bits are utilized
+			- the second byte has its own range, starts with 7 bits and may utilize all 8 bits
+			- in cases where a character can be represented with single byte, only 7 bits are utilized
 		- some letters were stored in one byte and others took two
 		- it was easy to move forward in a string, impossible backwards
 			- moving forwards, if we land on a lead byte(utilizes 8 bits), we know we are at the start of a 2-byte character - read the next byte and move forward 2 bytes total
@@ -39,11 +39,11 @@ why was character set needed in the first place?
 - ASCII collapsed when the internet came into picture, connecting computers across the world. 
 - So when strings were transferred from one computer to another, the content was deciphered differently depending on the region.
 - what is unicode? 
-	- effort to create a single character set that included every reasonable writing system on the planet
-	- unicode is not a 16bit code where each char takes 16 bits and therefor 65536 characters
+	- effort to create a ***single character set that included every reasonable writing system on the planet***
+	- ***unicode is not*** a 16bit code where each char takes 16 bits and therefor 65536 characters
 	- until now, our assumption is that a letter maps to some bits which we can store on disk or in memory
 	- in unicode a letter maps to something called a code point which is still just a theoretical concept
-	- how that code point is represented in memory or on disk is another story
+	- how that code point is represented in memory or on disk is another story handled by ***encoding***
 - every letter in every alphabet is assigned a magic number by the unicode consortium
 	- U+0639 -> code point
 	- U+ means unicode and the numbers are hexadecimal
@@ -55,15 +55,15 @@ why was character set needed in the first place?
 		- but it could also be: 
 			- 48 00 65 00 6C 00 6C 00 6F 00
 	- endianness(byte order):
-		- refers to how multi-byte values are stored in memory
-		- Big-endian: most significant ***byte*** first
-		- little-endian: least significant ***byte*** first
+		- ***refers to how multi-byte values are stored in memory***
+		- Big-endian: most significant byte first
+		- little-endian: least significant byte first
 		- different CPUs prefer different orders
 	- early implementors of unicode wanted to be able to store their unicode code points in high-endian or low endian mode, whichever their particular CPU was fast at
-	- if we read a big-endian file using little-endian reader, the bytes `fe ff` appear reversed as 
-	- BOM: Byte order Mark: special marker at the beginning of a file or data stream
+	- if we read a big-endian file using little-endian reader, the bytes `fe ff` appear reversed as ff fe
+	- BOM: ***Byte order Mark***: special marker at the beginning of a file or data stream
 	- Let's say the content of my datastream represented in hex(big-endian) as: af fa ff 00. I am sending this content over to another system where little-endian is used. Without BOM, the content is recognized in little-endian to be: af fa ff 00 instead of fa af 00 ff. In order to avoid this misunderstanding, BOM is used at the start of the data stream like a header, so in my example this header is fe ff(this text is big endian), so it helps the recipient to read by data stream as it is intended to be in little endian: fa af 00 ff.
-	- the problem with byte order starts with UTf-16, where there are multiple bytes
+	- the problem with byte order starts with UTf-16, where there are multiple bytes to represent a single character
 		- but some editors include a BOM to signal this file is UTf-8
 		- UTf BOM: ef bb bf
 	- the problem is made worse as not every unicode string in the wild has a byte order mark at the beginning
@@ -76,7 +76,7 @@ why was character set needed in the first place?
 		- only code points 128 and above are stored using 2,3, or even upto 6
 		- neat side effect of representing english text exactly the same
 		- other language users had to jump through loops, as in, they will have to use several bytes to store a single code point
-	- UCS-2 stands for Universal character set coded in 2 octets, it is a character encoding standard
+	- UCS-2 stands for Universal character set coded in 2 bytes, it is a character encoding standard
 		- encodes characters using exactly 2 bytes(16 bits) per character
 		- can only represent characters in Basic multilingual place(BMP):
 			- handful of languages
@@ -91,7 +91,7 @@ why was character set needed in the first place?
 	- there are a bunch of other ways of encoding Unicode
 		- there is UTf-7, which is a lot like utf-8 but guarantees that the high bit will always be zero
 		- there is UCS-4, which stores each code point in 4 bytes
-			- every single code point can be stored in the same number 
+			- every single code point can be stored in the same number of bytes
 	- unicode code points can be encoded in any old-school encoding scheme, too
 		- we can encode in ASCII or OEM etc..
 		- but with one catch that some of the letters might not show up if there is no equivalent for the unicode code point we are trying to represent in the encoding
@@ -102,11 +102,12 @@ why was character set needed in the first place?
 		- it does this by taking groups of bits from the input and mapping them to a specific set of 64 characters(A-Z, a-z, 0-9, +,/,= used at the end if the input does not perfectly align)
 		- each of the characters mentioned above represent a unique 6-bit value(64chars)
 		- Man: 01001101 01100001 01101110 -> 010011(19) 010110(22) 000101(5) 101110(46)
-			- now look up respective chars: TWFu
+			- now look up respective chars in base64 encoding: TWFu
 		- base64 works with groups of 24 bits which nicely divides into 4 base64 chars (4 chars * 6 bits/characters)
 		- if our input data is a multiple of 3 bytes, we don't need padding
 		- if we have 1 or 2 bytes left over at the end, padding is used
 		- Ma: 010011 010110 0001 -> 010011 010110 000100(00 added at the end to make it 6) -> TWE -> TWE=
+			- = added to take the place of the 4th byte
 		- M: TQ==
 		- example of unicode-only characters:
 			- ✓ has unicode U+2713, decimal: 10003, bin: 00100111 00010011
@@ -116,7 +117,7 @@ why was character set needed in the first place?
 				- Content-Type: text/plain; charset=utf-8
 					- these help the receiving app to interpret these bytes back into human readable characters
 				- how does the decoder in recipient side knows how many zeros were appended?
-					- any unicode code point is enccoded with minimum multiple of 8 bits needed, even if the unicode code point does not turn on all the 8 bits of a byte. 
+					- any unicode code point is enccoded with minimum multiple of 8 bits, even if the unicode code point does not turn on all the 8 bits of a byte. 
 					- So when we type out characters, irrespective of how much bytes the unicode code point takes, the sequences of bytes are processed in blocks of 3 bytes in order to represent in base64
 					- the zeros are padded when the code point takes 8 bits or 16 bits, which are not multiples of 3
 					- in case of 8 bit code point, 4 0s are padded to make it consume 12 bits of base64, remaining two characters are equal to sign
@@ -178,12 +179,6 @@ why was character set needed in the first place?
 	- whereas unicode is a character set
 - https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
 https://chatgpt.com/c/687cfd0a-5d40-8011-8642-4cbf3d4d63da
-1433
-1451
-1540
+1157
 https://gemini.google.com/app/616cc672b620a27c -> this is for base 64 
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
-
-
-1637
-1654
