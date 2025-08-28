@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "fa2b5fc88f2588f8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.12"
+            }
+          },
+          {
             "id": "ca6dc5277383cb10",
             "type": "leaf",
             "state": {
@@ -33,7 +45,8 @@
               "title": "Release Notes 1.9.10"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -177,7 +190,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "43235c8e286a08e2",
+  "active": "fa2b5fc88f2588f8",
   "lastOpenFiles": [
     "Db Data Engineer Associate/2024-06-26.md",
     "Db Data Engineer Associate/2024-06-25.md",
