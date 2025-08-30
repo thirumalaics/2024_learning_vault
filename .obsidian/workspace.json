@@ -13,24 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Db Data Engineer Associate/2024-06-28.md",
+                "file": "Db Data Engineer Associate/2024-07-01.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-06-28"
-            }
-          },
-          {
-            "id": "fa2b5fc88f2588f8",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.12"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.12"
+              "title": "2024-07-01"
             }
           },
           {
@@ -45,8 +33,7 @@
               "title": "Release Notes 1.9.10"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -190,8 +177,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fa2b5fc88f2588f8",
+  "active": "43235c8e286a08e2",
   "lastOpenFiles": [
+    "Db Data Engineer Associate/2024-06-28.md",
     "Db Data Engineer Associate/2024-06-26.md",
     "Db Data Engineer Associate/2024-06-25.md",
     "Db Data Engineer Associate/2024-06-24.md",
@@ -217,7 +205,6 @@
     "current cut.md",
     "Db Data Engineer Associate/2024-08-01.md",
     "Db Data Engineer Associate/2024-07-31.md",
-    "Db Data Engineer Associate/2024-07-30.md",
     "inance",
     "Pasted image 20250115094822.png",
     "Pasted image 20250114164945.png",
