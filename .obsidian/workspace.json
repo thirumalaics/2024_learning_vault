@@ -11,10 +11,14 @@
             "id": "3b6f1b0718029ead",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Db Data Engineer Associate/2024-07-31.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2024-07-31"
             }
           }
         ]
@@ -164,8 +168,8 @@
   "active": "3b6f1b0718029ead",
   "lastOpenFiles": [
     "Db Data Engineer Associate/2024-07-30.md",
-    "Db Data Engineer Associate/2024-07-29.md",
     "Db Data Engineer Associate/2024-07-28.md",
+    "Db Data Engineer Associate/2024-07-29.md",
     "Db Data Engineer Associate/2024-07-27.md",
     "Db Data Engineer Associate/2024-07-26.md",
     "Db Data Engineer Associate/2024-07-25.md",
