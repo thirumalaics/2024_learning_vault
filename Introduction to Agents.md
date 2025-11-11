@@ -54,3 +54,38 @@ HOW TO MAKE AGENTS WORK RELIABLY IN PROD?
 		- running history of action observation pairs within the current session
 	- long term: users preferences, what it learnt from previous tasks across sessions
 		- architecturally implemented as another tool usually a rag system talking to vector database where memories are stored ang retrieved
+- how to test?
+	- have a set of test case prompts
+	- use another LM, provide set of evaluation rules to it, for it to validate the responses that we receive from the agent
+	- LM validates if the response meet the requirements, factually grounded, did it follow negative constraints
+- how to debug?
+	- using observability tools, using ***open telemetry traces*** (yet to understand)
+	- trace gives us a detailed step by step log of the agents entire thought process and its trajectory:
+		- reasoning
+		- tool chosen
+		- exact parameters sent to the tool
+		- observation
+	- when a user reports weird behaviour or failure, we add it to the test cases that we already have
+		- allows us to simulate later and do the entire debug process
+- security and scaling
+	- security has to be of multiple layers: defense in depth
+	- starting simple: hardcoded rules enforced by code(ex: block any spend above x amount)
+	- add AI based guard models, AI checking AI
+	- looks out for risky steps b4 execution and stopping execution of potentially risk actions
+	- we need to provide agents with an Identity
+		- ex: sales related agents need to be given the identity of sales agent, with identity we will be able to control what what it can do and what it should not
+	- agents do not act as a user, they are a new actor in our system, so it needs its own secure verifiable identity
+	- how would this be applicable to level 4 or 3 agents?
+		- risk
+		- agent governance required through a central control plane or gateway -> single point of control
+		- all traffic: user to agent, agent to tool, agent to agent
+		- authentication, enforces policies etc...
+		- all logs collected here
+- how do these agents learn?
+	- from analyzing logs, traces, user feedback, runtime experience, external signals(updated company policies)
+	- this feedback loop starts of optimization such as: improving context engineering, refining system prompts, optimizing and creating tools
+- agent-gym
+	- for complex multi agent systems
+	- having a dedicated safe, off-prod env where we can simulate interactions, use synthetic data, involve domain experts to stress test and optimize how agents collab
+- ex: 
+	- google co-scientist (level 3 or 4 for scientific research), alphavolve(level 4 -> discover and optimize algos)
