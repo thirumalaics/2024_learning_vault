@@ -84,4 +84,12 @@
 		- tool execution errors
 			- when tool execution fails due to some issue, the tool can return the result object with a certain error flag set to true
 			- descriptive error message can be part of the result object
-- 
+- standardization advantages
+	- low barrier to entry
+	- reusability with mcp registry
+		- allows agents to be eventually autonomous finding tools at runtime
+	- decoupling agent and tools
+- risks
+	- tool overload is one of the non-security challenges
+		- bloating the mode context with tool related information
+		- solution 
