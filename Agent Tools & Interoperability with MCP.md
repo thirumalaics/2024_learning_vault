@@ -1,0 +1,87 @@
+- tools are agent's hands and eyes
+- tool is a function or a program that the llm would want to execute in order to perform an action that cannot be done by the model natively
+- the action itself falls into two buckets
+	- information retrieval
+	- doing something out in the real world
+- MCP: solution that avoids having m * n solution 
+	- m -> number of models
+	- n -> number of tools
+	- decouples the mode and the tool
+- open standard to stream line the integration
+- there different types of tools
+	- function tools
+		- defined by devs explicitly
+		- doc string required
+	- built-in tool
+		- provided by model service provider
+		- ex: gemini being able to do web search and execute code
+	- agent tool
+		- calling on another agent without handing off the entire conversation
+		- delegation
+- we can also group tools based on what they do
+	- data retrieval
+	- action-execution
+	- connecting to other sw
+	- human in the loop tools
+		- DNU
+		- in cases where the agent has to stop and ask the human in the loop a question for clarification
+- best practices to make tools that work reliably
+	- be descriptive with the function name and the docstring
+		- since all this is fed into model's context
+	- the doc string should describe what the tool achieves rather than how it achieves
+		- why not mention how it is implemented?
+			- might confuse the model with irrelevant information while it tries to achieve something
+	- should be simple high level task
+	- do not write thin wrappers of already existing API calls that the org has
+	- rigorously test the input and output schema within the tool
+	- keep the output concise and do not pollute the model's context
+		- if there are lot of info to return, return it as an URI rather than dumping the entire content on the model
+			- artifact service of google's agent development kit
+		- if there is an error, then make sure to send out actionable error message
+		- this adds to the time taken for the model to reason
+- MCP
+	- inspired by the language server protocol by borrowing the core architectural idea
+	- three component
+		- server
+			- program that hosts the tools and capabilities
+			- listens to tool calls from the client, execute the tool and send the result back
+		- client
+			- the communication module through which the communication takes place
+			- embedded within the host
+			- maintains the connection to the server
+			- manage the session lifecycle
+			- send the command to execute tools
+		- host
+			- main application that the end user interacts with
+			- deals with user experience
+			- orchestrates the agent's thinking process
+			- decides when the tools are needed
+			- enforces any safety guard rails or policies
+			- like a traffic cop
+			- works as a the caller
+			- as per the pod: decide
+	- this separation helps devs building the agent logic in the host to focus on reasoning
+	- while other teams might be providing the tools required
+	- communication layer is json rpc 2.0
+		- text based std
+	- transport layer:
+		- stdio
+		- streamable http
+			- sse(server send events)
+			- sever can stream results back
+	- mcp enforces standardized json schema for tools and input schema explaining what the tool expects 
+		- optionally output schema 
+	- the results can be 
+		- structured 
+			- json object that strictly conforms to the output schema
+			- preferred as model can reason easily
+		- unstructured
+			- audio, video, text etc
+
+	- two types of errors:
+		- std json rpc protocol errors
+			- trying to execute a tool that does not exist or parameter issues
+		- tool execution errors
+			- when tool execution fails due to some issue, the tool can return the result object with a certain error flag set to true
+			- descriptive error message can be part of the result object
+- 
