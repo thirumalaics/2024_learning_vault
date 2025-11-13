@@ -92,4 +92,17 @@
 - risks
 	- tool overload is one of the non-security challenges
 		- bloating the mode context with tool related information
-		- solution 
+		- solution is to have an indexed database which would be searched at the time of need to find the appropriate tool and it will be loaded into context
+			- rag approach for tools
+			- the search yields top 3-5 tools
+	- security issues
+		- no strong authentication and authorization
+		- confused deputy
+			- mcp server with high prev
+			- low prev user tricks the model into asking the mcp server to perform a sensitive op
+			- model requests server, server is the confused deputy
+			- prompt injection leading to privilege escalation through the tool server
+		- all this because protocol does not involve end user auth
+		- soln: wrap the mcp protocol with layered external centralized governance security
+			- dont expose mcp server directly
+			- api gateway: apigee handles the robust authentication and checks of finegrained authorization, rate limiting, logging and filtering malicious inputs before they reach server and LLM
