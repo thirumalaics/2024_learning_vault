@@ -27,7 +27,13 @@
 		4. Upload Context: new information gathered during the turn is uploaded to persistent storage
 			- bg process, allowing the agent to complete execution while memory consolidation or other post processing occurs asynch
 - Session 
-	- started by a new prompt
+	- encapsulates the immediate dialogue history and working memory for single, continuous conversation
+	- a user can have multiple sessions but each session functions as a distinct, disconnected log of a specific interaction
+	- every session contains two key components: events(chronological history) and state(agent's working memory)
+	- common types of events include:
+		- user input
+		- agent response
+		- tool call
 	- ends when the user leaves the conversation
 	- tracks the history of the conversation and the agent's working memory for that interaction
 - Memory
