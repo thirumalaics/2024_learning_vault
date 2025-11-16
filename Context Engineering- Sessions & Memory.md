@@ -39,3 +39,18 @@
 - Memory
 	- long term memory
 	- consolidated knowledge across sessions
+
+f
+
+To enable Large Language Models (LLMs) to remember, learn, and personalize interactions, developers must dynamically assemble and manage information within their context window—a process known as Context Engineering.
+
+These core concepts are summarized in the whitepaper below: 
+• Context Engineering: The process of dynamically assembling and managing information within an LLM's context window to enable stateful, intelligent agents. 
+• Sessions: The container for an entire conversation with an agent, holding the chronological history of the dialogue and the agent's working memory
+• Memory: The mechanism for long-term persistence, capturing and consolidating key information across multiple sessions to provide a continuous and personalized experience for LLM agents.
+
+Outside of their training data, their reasoning and awareness are confined to the information provided within the "context window" of a single API call. This presents a fundamental problem, as AI agents must be equipped with operating instructions identifying what actions can be taken, the evidential and factual data to reason over, and the immediate conversational information that defines the current task. To build stateful, intelligent agents that can remember, learn, and personalize interactions, developers must construct this context for every turn of a conversation. This dynamic assembly and management of information for an LLM is known as Context Engineering.
+
+Context Engineering represents an evolution from traditional Prompt Engineering. Prompt engineering focuses on crafting optimal, often static, system instructions. Conversely, Context Engineering addresses the entire payload, dynamically constructing a state-aware prompt based on the user, conversation history, and external data. It involves strategically selecting, summarizing, and injecting different types of information to maximize relevance while minimizing noise. External systems—such as RAG databases, session stores, and memory managers—manage much of this context. The agent framework must orchestrate these systems to retrieve and assemble context into the final prompt.
+
+1205

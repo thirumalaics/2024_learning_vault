@@ -34,21 +34,9 @@
               "icon": "lucide-file",
               "title": "Context Engineering- Sessions & Memory"
             }
-          },
-          {
-            "id": "5a736f65bab957d5",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.3"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -192,7 +180,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5a736f65bab957d5",
+  "active": "fddf95e8bf341630",
   "lastOpenFiles": [
     "Introduction to Agents.md",
     "Context Engineering- Sessions & Memory.md",
