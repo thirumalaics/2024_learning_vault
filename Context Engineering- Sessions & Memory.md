@@ -11,10 +11,25 @@
 		- context engineering fights this using dynamic history mutation
 			- summarization, selective pruning or other compaction strategy
 			- to preserve vital information while managing the overall token count
-	- context engineering: address the entire payload, dynamically constructing a state-aware prompt based on the user, conversation history, and external data
+	- context engineering: address the entire payload, dynamically constructing a state-aware prompt based on the ***evidential or factual information***, ***context to guide reasoning*** and ***immediate conversational information***
 		- is like giving the chef mise en place: all the ingredients prepped - high quality, all the tools, dietary needs of the customer
 		- has more tailored information that would help in responding better to the current prompt
 		- pulls relevant bits from long term memory, fetching docs using RAG and adding the outputs from tools or convo summary that were just used
+	- context to guide reasoning:
+		- system instructions that sets the personal and constraints
+		- tool schema information that provides the information on what tools are available
+		- few shot examples, curated examples that guide the model's reasoning process
+	- evidential and factual data
+		- long term memory for the user
+		- factual data retrieved using RAGs
+		- Tool outputs
+		- sub-agent outputs: the output from an agent to which a task was delegated
+		- artifacts: non textual data associated with user or session
+	- immediate conversational information:
+		- conversation history
+		- state/scratchpad: temporary, in-progress information or calculations the agent uses for its immediate reasoning process
+		- user's prompt that need to be addressed
+	- the data that is retrieved from long term memory or using RAGs are results of search for relevant information relating to the query
 	- fight against context rot has to be continuous: context management
 	- steps in context management: 
 		1. fetch context: context is retrieved
@@ -34,13 +49,33 @@
 		- user input
 		- agent response
 		- tool call
-	- ends when the user leaves the conversation
+		- tool output
+	- state - structured working memory or scratchpad
+		- holds temporary, structured data relevant to the current conversation
+		- as the conversation progresses, it may mutate the state based on logic in the agent
 	- tracks the history of the conversation and the agent's working memory for that interaction
+	- different frameworks handles sessions differently
+		- ADK uses an explicit Session object that contains a list of Event objects and a separate state object
+			- the session is like a filing cabinet, with one folder for the conversation history(events) and another for working memory(state)
+		- LangGraph does not have a formal session object
+			- state is the session
+			- state object holds the conversation history and all other working data
+			- unlike the append only log of a traditional session, langgraph state is mutable
+			- history compaction can alter the record inplace
+			- useful for managing long convos and token limits
+	- session for multi-agent systems
+		- multiple agents collaborate
+			- for efficiency, they must share information
+		- history can be shared or separate
+		- shared: all agents read an write to a central log
+			- clutter easily
+		- separate: black boxes that communication using tool like calls
+			- loose rich shared context
 - Memory
 	- long term memory
 	- consolidated knowledge across sessions
 
-f
+
 
 To enable Large Language Models (LLMs) to remember, learn, and personalize interactions, developers must dynamically assemble and manage information within their context window—a process known as Context Engineering.
 
@@ -49,8 +84,4 @@ These core concepts are summarized in the whitepaper below:
 • Sessions: The container for an entire conversation with an agent, holding the chronological history of the dialogue and the agent's working memory
 • Memory: The mechanism for long-term persistence, capturing and consolidating key information across multiple sessions to provide a continuous and personalized experience for LLM agents.
 
-Outside of their training data, their reasoning and awareness are confined to the information provided within the "context window" of a single API call. This presents a fundamental problem, as AI agents must be equipped with operating instructions identifying what actions can be taken, the evidential and factual data to reason over, and the immediate conversational information that defines the current task. To build stateful, intelligent agents that can remember, learn, and personalize interactions, developers must construct this context for every turn of a conversation. This dynamic assembly and management of information for an LLM is known as Context Engineering.
-
-Context Engineering represents an evolution from traditional Prompt Engineering. Prompt engineering focuses on crafting optimal, often static, system instructions. Conversely, Context Engineering addresses the entire payload, dynamically constructing a state-aware prompt based on the user, conversation history, and external data. It involves strategically selecting, summarizing, and injecting different types of information to maximize relevance while minimizing noise. External systems—such as RAG databases, session stores, and memory managers—manage much of this context. The agent framework must orchestrate these systems to retrieve and assemble context into the final prompt.
-
-1205
+1530
