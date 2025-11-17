@@ -63,17 +63,38 @@
 			- unlike the append only log of a traditional session, langgraph state is mutable
 			- history compaction can alter the record inplace
 			- useful for managing long convos and token limits
-	- session for multi-agent systems
+	- multi-agent systems
 		- multiple agents collaborate
 			- for efficiency, they must share information
-		- history can be shared or separate
-		- shared: all agents read an write to a central log
-			- clutter easily
-		- separate: black boxes that communication using tool like calls
-			- loose rich shared context
+		- agent frameworks handle session history for multi-agent systems using one of two primary approaches: 
+			- a shared, unified history where all agents contribute to a single log
+			- individual histories where each agent maintains its own perspective
+		- the choice between the history management depends on the nature of the task and the desired collaboration style between the agents
+		
+	- shared unified history model
+		- will be perfect for tightly coupled sub-tasks where on agent's output will be used as the input for the next agent
+			- multi-step problem solving process
+		- even with shared history, a sub-agent might process the log before passing it to the LLM
+	- separate, individual history model
+		- all intermediate thoughts and tool calls, reasoning steps are kept within the sub-agent and are not shared outside
+		- the sub-agents are act like a black box
+	- what is the difference between context and history?
+		- session history: permanent, unabridged transcript of the entire conversation
+		- context: crafted information payload sent to the LLM for a single turn
+			- agent constructs this context by selecting only a relevant excerpt from the history or by adding special formatting
+	- session history needs to under the law of policies and various security laws
+		- PIIs to be redacted before data is persisted
+		- TTL: session time to live and the event order must be deterministic
+			- as retrieving and processing session history is a intensive task
+	- history compaction becomes necessary as the sessions get larger
+		- one noob strat is to start with the most recent token as the right end of a sliding window and go back till a threshold of tokens, retaining just this portion of tokens
+		- recursive summarization: use the llm. periodically pass an old chunk of the convo history and use Llm to summarize the chunk. The summary replaces the original set of messages
+			- computational heavy
+			- hence, asynchronous operation triggered after a period of inactivity or number of turns
 - Memory
 	- long term memory
 	- consolidated knowledge across sessions
+	- 
 
 
 
@@ -84,4 +105,5 @@ These core concepts are summarized in the whitepaper below:
 • Sessions: The container for an entire conversation with an agent, holding the chronological history of the dialogue and the agent's working memory
 • Memory: The mechanism for long-term persistence, capturing and consolidating key information across multiple sessions to provide a continuous and personalized experience for LLM agents.
 
-1530
+1732
+1807
