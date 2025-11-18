@@ -127,9 +127,44 @@
 			- this is the specialized service or component that takes the potential memory identified by the agent and handles its entire lifecycle
 	- lifecycle within memory manager
 		- extraction: key information distilled from the source data
+			- based on the agent's purpose, rules, topic definition
 		- consolidation: curates memories to merge duplicative entities
+			- memories can also be deleted based on it's relevance
+			- confidence scores are calculate based on whether the memory was inferred or the user mentioned it explicitly
 		- storage: persists the memory to persistent databases
 		- retrieval: fetches relevant memories to provide context for new interactions
+			- retrieving semantically similar memory is not always the best
+			- we need scores to filter through memories: relevance, similarity, recency, importance(how critical did the system deem this memory)
+			- proactive retrieval strategy
+				- we fetch relevant memory at the start of every turn
+				- adds latency
+			- reactive retrieval strategy
+				- memory provided as a tool and agent decides when to call
+			- inference is the next step after retrieval
+				- we retrieved the perfect mem, now it is about how we place them in our prompts
+				- placement signal's authority 
+					- memories in system instruction carry a lot of weight
+						- good for stable facts, like user profile
+						- risky if the mem is slightly wrong as it can bias the response
+					- injecting into the convo history
+						- noisier, confuses the agent to think such a thing was said by the user or agent itself
+			- testing
+				- recall and precision calculated for memory generation
+				- recall and k score(whether the relevant mem showed up in the top k) for retrieval
+				- latency checks
+				- end-to-end task success: having this mem system helps the user achieve the goal effectively
+					- we use another llm to score across test cases
+	- declarative memory: knowing what
+	- procedural memory: skills, workflow
+	- memory can be stored in various forms in vector dbs where semantic search is best suited, 
+	- knowledge graphs stores are good option as well to store such information
+		- in cases where would like to store relational information
+	- memories are in text format even if session inputs are of different formats
+	- agent can be provided memory as a tool
+		- create_memory, query memory
+		- during the convo the llm can make use of these
+	
+	
 
 
 To enable Large Language Models (LLMs) to remember, learn, and personalize interactions, developers must dynamically assemble and manage information within their context window—a process known as Context Engineering.
@@ -139,6 +174,4 @@ These core concepts are summarized in the whitepaper below:
 • Sessions: The container for an entire conversation with an agent, holding the chronological history of the dialogue and the agent's working memory
 • Memory: The mechanism for long-term persistence, capturing and consolidating key information across multiple sessions to provide a continuous and personalized experience for LLM agents.
 
-1732
-1807
-1636
+41
