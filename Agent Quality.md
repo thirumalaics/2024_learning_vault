@@ -19,8 +19,60 @@
 	- emergent unintended behavior
 		- agents develop weird superstition about what actions get rewarded 
 		- finds clever loopholes in system rules in order to achieve goal
-- it is not about validation anymore: did we build as per the spec
-- effectiveness: 
-- efficiency
-- robustness
-- safety
+- how does the testing in regular programming and agents differ?
+	- in traditional programming, we perform verification
+		- we check if what we built matches the spec
+		- did we build the product right?
+	- whereas in agent evaluation, we perform validation
+		- there is non-determinism involved as the agent's core logic is probabilistic and failure is not explicit crashes
+		- did we build the right product
+- 4 key pillars of quality
+	- effectiveness: did the agent achieve what the user intended
+		- customer service agent: not just about closing the agent but also whether the agent solved the complaint
+	- efficiency: solved well, cheaply, quickly
+		- complexity of the path
+	- robustness: curveball handling
+		- API errors, nw issues, unclear instructions from user
+		- how does the agent handle
+	- safety and alignment
+		- dealing with prompt injection
+		- sticking to constraints, ethics and avoiding harm
+- how to judge the agent against these 5 pillars?
+	- outside in hierarchy
+	- start with the result and understand if the result satisfies the user
+	- once failure is identified, we move to the inside out view
+	- we analyze the agent's approach by systematically assessing every component of its execution strategy
+	- ![[Pasted image 20251119123603.png]]
+- what are the output evaluation metrics?
+	- Task success Rate:
+		- a binary (or graded) score of whether the final output was correct, complete and solved the user's problem
+	- User Satisfaction
+		- for interactive agents this can be direct user feedback(thumbs up and down) or a customer satisfaction score(CSAT)
+	- Overall Quality
+		- if the agent's goal was quantitative(summarize these 10 articles), the metric might be accuracy or completeness(ex: did it summarize all 10?)
+- what are the components of the execution trajectory? 
+	- LLM Planning - the thought: is the llm itself is the problem
+	- Tool Usage - selection and parameterization
+	- tool response interpretation
+	- RAG performance
+	- trajectory efficiency and robustness
+	- multi-agent dynamics
+- what are the common failures at the planning stage?
+	- hallucinations, nonsensical or off-topic responses, context pollution or repetitive output loops
+- what are the failures during tool usage?
+	- calling of wrong tools, failing to call a necessary tool, hallucinating tool names or parameter names/types, or calling one unnecessarily
+	- even if appropriate tool is selected, failure can be seen by providing missing parameters, incorrect data types, or malformed json for API call
+- what are the failures during tool response interpretation?
+	- the response being ignored for next course of action
+	- wrong insights retrieved from the response
+	- misinterpretation of data
+	- not recognizing the error state returned by the tool(ex: API 404 error)
+- what are the failures with RAG Performance?
+	- retrieving irrelevant or outdated or incorrect data
+	- ignoring the retrieved data and hallucinating an answer
+- what evaluations are done while checking for trajectory efficiency and robustness?
+	- the process: exposing inefficient resource allocation, such as an excessive number of API calls, high latency or redundant 
+- what evaluation takes place with multi-agent dynamics?
+	- trajectories involve multiple agents
+	- check inter-agent communication logs to check for misunderstandings or communication loops and ensure agents are adhering to their defined roles without conflicting with others
+- 1251
