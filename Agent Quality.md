@@ -75,4 +75,50 @@
 - what evaluation takes place with multi-agent dynamics?
 	- trajectories involve multiple agents
 	- check inter-agent communication logs to check for misunderstandings or communication loops and ensure agents are adhering to their defined roles without conflicting with others
-- 1251
+- how do we perform evaluation covering all these components?
+	- hybrid approach: automated systems provide scale, but human judgement remains crucial arbiter of quality
+- how are automated metrics useful?
+	- great place to start
+	- useful from the aspect of reproducibility, surface level measurement and benchmarking outputs
+	- they are not efficient in marking the reasoning or user value
+- what are some of the automated metrics?
+	- String-based similarity(ROGUE, BLEU): comparing generated text to references
+	- embedding based similarity(BERTScore, cosine similarity): semantic closeness
+	- Task-specific benchmarks, ex: TruthfulQA
+- tip from the paper for regression testing
+	- save trajectory and result of a successful turn for a prompt
+	- after any changes, use the same prompt and test it out
+	- if we run the test case later and if the agent deviates from the expected, we know something is broken
+- after we use automated metrics, what is the next step? 
+	- LLM as a judge
+	- this scales the testing that can be done
+- what goes on with LLM as a judge?
+	- involves using a powerful, state of the art mode(like gemini advanced) to evaluate the outputs of another agent based on the input that was given
+	- we provide judge LLM with the agent's output, the original prompt, the golden answer or reference and a detailed evaluation rubric(ex: Rate the helpfulness, correctness, and safety of this response on a scale of 1-5, explain your reasoning)
+	- a better way to implement this method of testing is to give the same prompt to both current prod agent and the dev agent, pass the responses to a judge and tell it to pick a winner based on a rubric(depending upon the task at hand)
+		- a high win rate is far more reliable signal of improvement than a small change in an absolute 1-5 score
+- what lacks with LLM as a judge approach?
+	- even LLM as a judge is at a surface level, as it only gives us a feeling of whether the response is helpful, clear and better
+	- the trajectory is still not looked at
+- what are solutions to overcome shortcomings of LLM as a judge approach?
+	- agent as a judge
+- what goes on with agent as a judge approach of testing?
+	- a specialized agent is used to test
+	- entire trajectory is looked at and assessed
+	- key dimensions of evaluation include:
+		- plan quality: was the plan logically structured and feasible? 
+		- tool use: were the right tools chosen and applied correctly?
+		- context handling: did the agent use prior information effectively? 
+	- we must configure the agent framework to log and export the trace, including the internal plan, the list of tools chosen and the exact arguments passed
+	- then, create a specialized critic agent with a prompt(rubric) that asks it to evaluate this trace object directly
+	- the questions must be specific: was the initial plan logical, was the tool choice appropriate, were the arguments passed correctly 
+- what are the shortcomings of agent as a judge?
+	- lacks deep subjectivity and complex domain knowledge
+- what's the next level solution for testing?
+	- human in the loop evaluation
+- what is Human in The Loop Evaluation  not?
+	- in certain areas, human evaluation is not objective ground truth
+	- assessing creative quality or nuanced tone
+- what is the use of HITLE?
+	- ensuring agent's behavior aligns with complex human values, contextual needs, and domain-specific accuracy
+- 2046
