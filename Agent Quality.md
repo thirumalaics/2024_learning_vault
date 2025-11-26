@@ -133,7 +133,35 @@
 		- this includes attempts to generate hate speech, reveal private info, propagate harmful stereotypes etc
 	- automated filters & human review: implementing technical filters to catch policy violations and coupling them with human review
 	- adherence to guidelines: explicitly evaluating the agent's outputs against predefined ethical guidelines and principles to ensure alignment and prevent unintended consequences
-- r
-- 1403
-- 1422
+- how can we design guardrails?
+	- ADK provides us capabilities to add guardrails as plugins(reusable modules)
+	- the plugin we create would register it's methods with the framework's available ***callbacks***
+	- ex: our plugin's check_input_safety() method would register with the before_model_callback
+		- this method's job is to run a prompt injection classifier
+	- ex: check_output_pii() method would register with the after_model_callback
+		- checks for pii in the output
+- what is the difference between monitoring and observability?
+	- monitoring is like checking if the line chef follows a recipe to to the dot where we verify a known and predictable process
+	- observability: understanding the process and reasoning and quality of these tasks
+- what are the three pillars of observability?
+	- logs, traces and metrics
+- how are logs similar and different than the usual case?
+	- timestamped entries in the agent's diary
+	- they tell us what happened
+	- in case of agents, we need logs that can help us reconstruct the agent's thought process
+	- a structured json format is the gold standard
+	- some components that should be captured are: prompt/response pairs, intermediate reasoning steps, structured tool calls and any changes to the agent's internal state
+- what is tracing? 
+	- traces stitch the individual logs(spans) together to help us under the cause effect relationship end-to-end
+	- tracing follows single task - from initial query to the final result
+	- A Trace reveals the full causal chain: User Query → RAG Search (failed) → Faulty Tool Call (received null input) → LLM Error (confused by bad tool output) → Incorrect Final Answer
+- what are the key elements of an agent trace?
+	- the modern tracing is build on standards like openTelemetry
+	- spans: individual named operations within a trace
+		- an llm_call span, a tool_execution span
+	- attributes: rich metadata attached to each span - prompt_id, latency_ms, token_count, user_id
+	- context propagation: magic link that links spans together via a unique trace_id
+		- allows trace services to assemble the full picture
+- 1558
+- 1629
 https://www.youtube.com/watch?v=LFQRy-Ci-lk
