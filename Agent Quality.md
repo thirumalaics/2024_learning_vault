@@ -116,10 +116,24 @@
 	- lacks deep subjectivity and complex domain knowledge
 - what's the next level solution for testing?
 	- human in the loop evaluation
-- what is Human in The Loop Evaluation  not?
+- what is Human in The Loop Evaluation not?
 	- in certain areas, human evaluation is not objective ground truth
 	- assessing creative quality or nuanced tone
 - what is the use of HITLE?
 	- ensuring agent's behavior aligns with complex human values, contextual needs, and domain-specific accuracy
-- 2046
+- what are the key functions that are part of HITL? 
+	- domain expertise: domain experts to evaluate factual correctness and adherence to specific industry standards
+	- interpreting nuance: complex ethical alignment, tone, creativity, user intent
+	- creating the golden set: which will act as a benchmark, involves curating comprehensive evaluation set, defining the objectives for success, and crafting a robust suite of testcases
+	- for really important tasks, HITL becomes a security mechanism where the human approves or rejects an action
+- how to make HITL efficient?
+	- provide with a UI where one side the conversation history is displayed and on the other we see the agent's internal reasoning
+- how is safety evaluated?
+	- systematic red teaming: actively trying to break the agent using negative cases
+		- this includes attempts to generate hate speech, reveal private info, propagate harmful stereotypes etc
+	- automated filters & human review: implementing technical filters to catch policy violations and coupling them with human review
+	- adherence to guidelines: explicitly evaluating the agent's outputs against predefined ethical guidelines and principles to ensure alignment and prevent unintended consequences
+- r
+- 1403
+- 1422
 https://www.youtube.com/watch?v=LFQRy-Ci-lk
