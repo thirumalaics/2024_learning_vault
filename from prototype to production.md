@@ -1,0 +1,18 @@
+- 80% of the effort is spent on the ***infra***, ***security***, and ***validation*** needed to make it reliable and safe, this can involve: 
+	- setting up guard rails
+	- configuring proper authentication
+	- setting up monitoring
+	- setting up for continuous evaluation
+- principles from devops and MLOps provide a foundation but not sufficient
+- why principles from devops and MLOps are not sufficient?
+	- the agentic systems's dynamic, stateful, interactive nature requires us to evolve in our operational discipline
+	- whereas the principles from the above ops are useful for static ML models and other systems
+- what are the demands of agentic systems?
+	- dynamic tool orchestration:
+		- an agent's trajectory is assembled on the fly as it picks and chooses tools
+		- this requires robust versioning, access control, and observability for a system that behaves differently every time
+			- versioning for what?
+	- scalable state management: session and memory management is crucial
+	- unpredictable cost & latency: smart budgeting and caching required as agent may take any one of the many paths to solve a problem
+- how to address the demands of agentic systems?
+	- automated evaluation, automated deployment and comprehensive observability

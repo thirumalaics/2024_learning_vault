@@ -196,6 +196,6 @@
 - capturing so much logs can become costly and add latency, what is the solution?
 	- dynamic sample: trace 10 % of all successful requests but 100% of all failures
 	- prod with lower higher level and dev with lower
-- 44
+- 52
 - 1629
 https://www.youtube.com/watch?v=LFQRy-Ci-lk
