@@ -182,6 +182,20 @@
 - what are the effectiveness system metrics?
 	- task completion rate: % of traces that successfully reach a designated success span
 	- tool usage frequency: a count of how often each tool(ex: get_weather) appears as a span name, revealing which tools are most valuable
-- 0715
+- what are quality metrics?
+	- are second-order metrics derived by applying judgement frameworks
+	- what are the judgement frameworks
+	- to assess the agent's reasoning and final output quality itself
+	- these are not simple counters or averages
+	- this is where all the llm as a judge, agent as a judge and HITL come in - > judgement framework
+- what are examples of quality metrics?
+	- correctness & accuracy: did the agent provide a factually correct answer? if it summarized a content, was the summary true to it's content?
+	- trajectory adherence: did the agent follow the intended path or "ideal recipe" for a given task? did it call the right tools in the right order?
+	- safety & responsibility: did the agent's response avoid harmful, biased or inappropriate content?
+	- helpfulness & relevance: was the agent's final response actually helpful to the user and relevant to their query
+- capturing so much logs can become costly and add latency, what is the solution?
+	- dynamic sample: trace 10 % of all successful requests but 100% of all failures
+	- prod with lower higher level and dev with lower
+- 44
 - 1629
 https://www.youtube.com/watch?v=LFQRy-Ci-lk
