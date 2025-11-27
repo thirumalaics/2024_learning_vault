@@ -48,9 +48,21 @@
               "icon": "lucide-file",
               "title": "Agent Quality"
             }
+          },
+          {
+            "id": "8618697086033cb4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.6"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -194,7 +206,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4072e4fe8c3d403c",
+  "active": "8618697086033cb4",
   "lastOpenFiles": [
     "Untitled 3.md",
     "Agent Quality.md",

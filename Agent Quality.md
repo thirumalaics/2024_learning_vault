@@ -162,6 +162,26 @@
 	- attributes: rich metadata attached to each span - prompt_id, latency_ms, token_count, user_id
 	- context propagation: magic link that links spans together via a unique trace_id
 		- allows trace services to assemble the full picture
-- 1558
+- what are metrics? 
+	- quantitative, aggregated health scores that give us an immediate, at a glance understanding of our agent's overall performance
+	- derived by aggregating the data from our logs and traces over time
+	- they answer: "how well did the performance go, on average?"
+	- metrics can be divided into two different categories: 
+		- the directly measurable system metrics 
+		- the more complex, evaluative quality metrics
+- what are system metrics?
+	- quantitative measures of operational health
+	- purely calculated from the attributes on our logs and traces
+	- applies different aggregation functions
+- what are the key performance system metrics?
+	- latency(p50/p99): median and 99th percentile response time calculated by aggregating the duration_ms attribute from the traces
+	- error rate: % of traces that contain a span with an error = true
+- what are the key cost system metrics? 
+	- tokens per task: the average of the token_count attribute across all traces, which is vital for managing LLM costs
+	- api cost per run: token_count * model pricing
+- what are the effectiveness system metrics?
+	- task completion rate: % of traces that successfully reach a designated success span
+	- tool usage frequency: a count of how often each tool(ex: get_weather) appears as a span name, revealing which tools are most valuable
+- 0715
 - 1629
 https://www.youtube.com/watch?v=LFQRy-Ci-lk
