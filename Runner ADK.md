@@ -1,0 +1,21 @@
+- what is Runner?
+	- class defined under google.adk.runners
+	- engine that brings agents to life
+	- acts as a bridge between our application code(which initiates the interaction) and the agent
+- what are the core responsibilities of the runner?
+	- session management
+		- create, update and retrieve sessions
+		- save, update and retrieve state
+		- load conversation history
+	- Agent invocation
+		- identify correct root agents to invoke or resume
+		- can be called with run_async or run_live
+	- context creation
+		- it constructs context object
+		- provides agent with necessary info(session, service, user input, run configuration)
+	- event streaming
+		- agent sends event objects asynchronously
+		- runner ensures these are available to our application
+	- input handling
+		- processes new user messages
+		- potentially saving input blobs as artifacts before passing them to the agent
