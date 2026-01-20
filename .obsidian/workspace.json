@@ -76,9 +76,21 @@
               "icon": "lucide-file",
               "title": "Runner ADK"
             }
+          },
+          {
+            "id": "bcbb57fa00b644cf",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -135,8 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -222,7 +233,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8f5e9364d676842",
+  "active": "bcbb57fa00b644cf",
   "lastOpenFiles": [
     "from prototype to production.md",
     "Runner ADK.md",
