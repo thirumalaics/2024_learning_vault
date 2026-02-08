@@ -109,16 +109,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1day.md",
+                "file": "GCP/BQ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1day"
+              "title": "BQ"
+            }
+          },
+          {
+            "id": "29c14b203793f912",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -261,8 +273,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aba92fb34018912b",
+  "active": "29c14b203793f912",
   "lastOpenFiles": [
+    "GCP/Data.md",
+    "GCP/GCS.md",
     "1day.md",
     "from prototype to production.md",
     "Runner ADK.md",
@@ -288,8 +302,6 @@
     "Db Data Engineer Associate/2024-07-27.md",
     "Db Data Engineer Associate/2024-07-26.md",
     "Db Data Engineer Associate/2024-07-25.md",
-    "Db Data Engineer Associate/2024-07-24.md",
-    "Db Data Engineer Associate/2024-07-23.md",
     "inance",
     "Pasted image 20250115094822.png",
     "Pasted image 20250114164945.png",
