@@ -1,0 +1,54 @@
+- lossy compression of the data that it was trained on
+- what makes the lossy nature permissible is the ability to predict word by word
+- every time a word is predicted, it is fed back in to the network in order to generate the next
+- when someone says a model has 70b parameters, it is the sum of all the parameters across nodes
+- per node is there only a single parameter?
+- there is mug-up that happens. in that case, any response that we get is not 100% accurate
+	- it is the best guess
+- transformer neural network architecture:
+![[Pasted image 20260214195909.png]]
+- we have complete picture of what mathematical operation happens across each stage in the neural network
+- since the parameters are dispersed across the nn, and all we know is how to adjust these parameters iteratively to make the model better
+- we do not know how these billions of parameters come to together and work to provide a respectable output
+- the knowledge that the llm contains is not questionable from all directions
+	- reversal cure:
+		- who is tom cruise's mother?
+			- xxxx -> the model answers correctly
+		- who is xxx's son?
+			- I don't know
+	- so the learning of knowledge seems to be one dimensional
+- pretraining: is the training that focuses on training the model on huge amounts of data without bothering too much about the quality of the data
+	- this is done just to come up with initial set of weights
+- finetuning: this is the second instance of training where the focus shifts to train the model(which already has parameters as a result of the first session of training)
+	- what happens here is called the alignment
+	- alignment to the data that is relevant to the task(s) at hand
+	- as part of the training, there can changes to the formatting of the responses as well
+	- the training takes place on the data that is prepared, focusing on quality, format
+	- the examples shown were : question and answer pairs
+![[Pasted image 20260214202132.png]]
+
+- correcting misbehavior involves:
+	- fetching the conversation where the model answered incorrectly
+	- for the same question, we ask a person to overwrite with the correct answer
+	- and add this to the training sample
+	- we go back to step 1
+- there is one more stage of training, which involves using comparison labels
+	- we can ask the model to generate responses(three different times)
+	- out of these three we pick the one that is better
+	- stage three uses these comparisons to further finetuning the model
+	- this process is called reinforcement learning from human feedback - optional stage 3
+- labeling instructions 
+- increasingly labeling is a human-machine collaboration
+- llms can follow the labeling instructions themselves and create for us sample of responses
+	- our role would be of oversight: slicing the sample of responses and stitching them together as we see fit
+	- llms can review and critique labels based on the instructions
+	- or we can entirely leave it to the llms to generate the labeling
+- ![[Pasted image 20260214203653.png]]
+- LLM scaling laws
+	- the performance of the LLM: accuracy of the next word predicting task is a smooth and well-predictable function that depends on :
+		- N:the number of parameters in the network
+		- D: the amount of text we train on
+		- no topping 
+- algorithmic progress in LM: 
+	- improvement in efficiency and performance due to better algorithms, techniques and architecture rather than just larger hardware or data
+	- the compute required to achieve a set progress has halved in the last 9 moths
