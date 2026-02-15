@@ -70,3 +70,36 @@
 	- in narrow domains, there can be decent reward criteria
 - one more axis of improvement: customization
 - ![[Pasted image 20260215102019.png]]
+- we can draw parallel between LLM ecosystem and the OS
+	- in this parallel, LLM is the kernel
+	- it coordinates many resources(compute, sw and other infra)
+	- like linux, there are open source LLMs
+	- context ~ RAM
+		- constantly the contents are altered by the kernel depending on the task
+	- disk - Embeddings
+	- ethernet - browser
+	- and there are many other parallels in terms of processing: multi-threading, multi-processing and speculative execution
+	- RAM - user space and kernel space
+- the security issues:
+	- jail breaking:
+		- role base prompts can get responses whose similar direct request would have been avoided
+		- the same question encoded in a different encoding scheme can get us a response
+			- this is because during training usually the questions to avoid are specified in english or some other languages but not in other encodings
+				- do not take it in a literal sense that questions are explicitly mentioned during the training
+				- iow: models are trained to avoid harmful queries in english predominantly
+![[Pasted image 20260215183727.png]]
+![[Pasted image 20260215183445.png]]
+
+- the text added is UTS, generated as a result of an optimizer, it emits a single suffix that can be suffixedd to jail break the model
+	- this is not static, using the optimizer a lot of suffixes can be generated  
+![[Pasted image 20260215183834.png]]
+- noise in the message jailbreaks the model
+
+![[Pasted image 20260215184053.png]]
+- hijacking the llm by giving it, what looks like a new prompt and taking over the prompt
+![[Pasted image 20260215184217.png]]
+- the link when clicked shows that the website a prompt injection website
+![[Pasted image 20260215184542.png]]
+![[Pasted image 20260215184856.png]]
+
+![[Pasted image 20260215185111.png]]
