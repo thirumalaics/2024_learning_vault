@@ -52,3 +52,21 @@
 - algorithmic progress in LM: 
 	- improvement in efficiency and performance due to better algorithms, techniques and architecture rather than just larger hardware or data
 	- the compute required to achieve a set progress has halved in the last 9 moths
+- tool use becomes necessary for even math computation
+- ai as of 2023 could only do system 1 thinking
+- ai companies interested in having the ai do system 2 thinking, taking more time than the instinctive system 1 thinking
+- self-improvement: 
+	- is one the two stages of learning, initially done in the case of alphago model
+		- the first stage was imitating expert human players
+			- this stage of learning helps alphago to become as best as the best human's play that it got trained on
+			- learn by imitating best of human players
+	- has a reward function that is referred during the training phase
+		- the training phase happens in a sandbox where millions of games are played
+		- what is the reward is not clear
+		- are both sides played by the AI? 
+- extrapolating this to open language domain is the problem to solve
+	- because in what cases does the reward function give a positive output to the model? 
+	- as of now, in open language models imitiation is the form of training
+	- in narrow domains, there can be decent reward criteria
+- one more axis of improvement: customization
+- ![[Pasted image 20260215102019.png]]

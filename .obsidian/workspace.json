@@ -189,7 +189,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -277,6 +278,7 @@
   },
   "active": "29c14b203793f912",
   "lastOpenFiles": [
+    "Pasted image 20260215102019.png",
     "Pasted image 20260214203653.png",
     "Pasted image 20260214202132.png",
     "Pasted image 20260214195909.png",
@@ -313,7 +315,6 @@
     "Pasted image 20250109084511.png",
     "Pasted image 20250109083633.png",
     "Pasted image 20250108100334.png",
-    "Pasted image 20250107210308.png",
     "Hadoop, the definitive guide",
     "PowerBI/Get Started with Data Analytics/Get Started building with Power BI",
     "PowerBI/Get Started with Data Analytics/Discover Data Analytics",
