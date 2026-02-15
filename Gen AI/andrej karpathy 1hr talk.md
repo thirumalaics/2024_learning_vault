@@ -1,4 +1,4 @@
-- lossy compression of the data that it was trained on
+	- lossy compression of the data that it was trained on
 - what makes the lossy nature permissible is the ability to predict word by word
 - every time a word is predicted, it is fed back in to the network in order to generate the next
 - when someone says a model has 70b parameters, it is the sum of all the parameters across nodes
