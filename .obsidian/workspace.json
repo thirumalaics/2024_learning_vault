@@ -130,9 +130,23 @@
               "icon": "lucide-file",
               "title": "andrej karpathy 1hr talk"
             }
+          },
+          {
+            "id": "a9cef56dadd6a69d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Annual report.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Annual report"
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -189,8 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "eb5959fabeee5f4e",
@@ -276,8 +289,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "29c14b203793f912",
+  "active": "a9cef56dadd6a69d",
   "lastOpenFiles": [
+    "Gen AI/andrej karpathy 1hr talk.md",
+    "Annual report.md",
     "Pasted image 20260215185111.png",
     "Pasted image 20260215184856.png",
     "Pasted image 20260215184642.png",
@@ -288,9 +303,7 @@
     "Pasted image 20260215183834.png",
     "Pasted image 20260215183727.png",
     "Pasted image 20260215183445.png",
-    "Pasted image 20260215183009.png",
     "Airflow.md",
-    "Gen AI/andrej karpathy 1hr talk.md",
     "Airflow Interview Questions.md",
     "Context Engineering- Sessions & Memory.md",
     "end-to-end data life cycle.md",
