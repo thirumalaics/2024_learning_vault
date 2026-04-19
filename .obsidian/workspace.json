@@ -144,9 +144,21 @@
               "icon": "lucide-file",
               "title": "Annual report"
             }
+          },
+          {
+            "id": "4a95a3ee7eed5ab0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.4"
+            }
           }
         ],
-        "currentTab": 9
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -289,7 +301,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a9cef56dadd6a69d",
+  "active": "4a95a3ee7eed5ab0",
   "lastOpenFiles": [
     "Gen AI/andrej karpathy 1hr talk.md",
     "Annual report.md",
