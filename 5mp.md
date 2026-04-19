@@ -1,0 +1,5 @@
+-- encoder only models are used for language representation
+-- have the same components as a encoder in transformer(with both encoder and decoder)
+	-- encoder block: self-attention followed by feedforward neural networks
+-- the \[CLS\] or classification token, which is used as the representation for the entire input
+-- we use the \[CLS\] token as the input embedding for fine-tuning the model on specific tasks, like classifcation
