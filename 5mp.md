@@ -2,4 +2,21 @@
 -- have the same components as a encoder in transformer(with both encoder and decoder)
 	-- encoder block: self-attention followed by feedforward neural networks
 -- the \[CLS\] or classification token, which is used as the representation for the entire input
--- we use the \[CLS\] token as the input embedding for fine-tuning the model on specific tasks, like classifcation
+-- we use the \[CLS\] token as the input embedding for fine-tuning the model on specific tasks, like classification
+-- training these encoder stacks can be  difficult
+-- one technique that is used to train is masked language modeling
+	-- part of the input is masked for the model to predict
+	-- masking here means : in the sequence: I love Llamas -> I <MASK> Llamas can be given as input and the model predicts what takes the mask's place
+	-- this type of training(where the model is tasked with prediction) is difficult, but allows bert to create more accurate representations of the input
+
+-- bert-like models are commonly used for transfer-learning
+-- transfer learning: pretrain it for language modeling and then fine-tune it for a specific task
+	-- ex: training BERT on the Wikipedia, makes it learn the semantic and contextual nature of text
+	-- then the trained model can be finetuned it for a specific task(like text classification)
+-- bert-like models generate embeddings at almost every step in their architecture
+-- this also makes bert models feature extraction machines without the need to fine-tune them on a specific task
+-- encoder only models are also called as representation models to differentiate them from decoder only, which we refer to as generative models
+-- the main distinction between these models is not on architecture and the way these models work
+-- it is what they do: representation models mainly focus on representing language, for instance, by creating embedding, for instance by creating embedding and typically they do not generate text
+-- contrast, generative models focus primarily on generating text and typically are not trained to generate embeddings
+-- 
