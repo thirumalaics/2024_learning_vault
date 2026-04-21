@@ -20,3 +20,14 @@
 -- it is what they do: representation models mainly focus on representing language, for instance, by creating embedding, for instance by creating embedding and typically they do not generate text
 -- contrast, generative models focus primarily on generating text and typically are not trained to generate embeddings
 -- 
+
+
+how does the tokenizer break down text? 
+-- three major factors
+-- model design time is when the tokenization method is chosen
+-- ex: BytePairEncoding, WordPiece
+-- the goal of any tokenization method is to optimize an efficient set of tokens to represent a text dataset
+-- choices of vocabulary size and allowed special tokens
+-- specific dataset on which the tokenizer is trained on
+	-- even with same methods and parameters, a tokenizer trained on English text dataset will be different from another trained on code dataset or multilingual text dataset
+-- 
