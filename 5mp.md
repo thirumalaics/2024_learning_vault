@@ -30,4 +30,4 @@ how does the tokenizer break down text?
 -- choices of vocabulary size and allowed special tokens
 -- specific dataset on which the tokenizer is trained on
 	-- even with same methods and parameters, a tokenizer trained on English text dataset will be different from another trained on code dataset or multilingual text dataset
--- 
+
